@@ -5,35 +5,32 @@ Completed on 2026-06-22.
 
 ## Objective
 
-Turn the 2XKO Research Vault into a practical internal content collection system.
+Create the initial decision-first 2XKO character intelligence records using the Noa/DBFZ reasoning order.
 
 ## Scope
 
-- Capture Character, Source Type, Source Link, Notes, Tags, and Verification Status.
-- Persist working records locally in the browser.
-- Search records and filter by source, status, and tag.
-- Track source links and record dates.
-- Export the combined vault as JSON for review and later data promotion.
-- Keep the direct internal route while removing it from public 2XKO navigation.
-- Keep the implementation static, modular, and small.
+- Add one small JSON file for Ahri, Braum, Darius, Ekko, Illaoi, Jinx, Yasuo, Senna, and Thresh.
+- Use the same character intelligence structure in every file.
+- Preserve Identity -> Strengths -> Weaknesses -> Partners -> Fuses -> Routes -> Matchups -> Community Tech.
+- Mark every unverified conclusion as TODO instead of inventing advice.
+- Keep recommendation arrays ready for future reviewed records.
+- Include the files in the existing static build.
 
 ## Out Of Scope
 
-- No public wiki presentation.
-- No backend, account system, database, or cloud write API.
-- No automatic promotion into recommendations.
-- No public submission workflow.
-- No DBFZ changes.
+- No move lists, commands, frame data, controls, or encyclopedia content.
+- No speculative partners, Fuses, routes, or matchup claims.
+- No new public character interface.
+- No DBFZ data changes.
 
 ## Success Criteria
 
-- Internal users can add and retain research records locally.
-- Search and combined filters update results immediately.
-- Tags are normalized into reusable chips.
-- Source links and verification states remain visible.
-- Exported JSON can become the reviewed source for synergies, routes, matchups, and Fuse recommendations.
-- The vault is not linked from public 2XKO navigation.
+- All nine requested files exist under `data/games/2xko`.
+- Every file uses the same keys and value types.
+- TODO content is clearly unverified.
+- No wiki-style fields are introduced.
+- `npm run build` copies the records into `dist`.
 
 ## Notes
 
-The direct route is hidden, not authenticated. Real access control requires a future backend and role system.
+Research Vault evidence should be reviewed before replacing any TODO value.

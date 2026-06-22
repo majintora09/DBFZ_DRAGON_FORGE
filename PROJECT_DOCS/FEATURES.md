@@ -135,6 +135,27 @@ Implemented:
 
 The vault is removed from public 2XKO navigation. Static hosting cannot provide real authentication, so the direct route is hidden rather than secured.
 
+## 2XKO Character Intelligence
+
+Status: Source Structure Ready
+
+Nine small source records live under `data/games/2xko`:
+
+- Ahri, Braum, Darius, Ekko, Illaoi, Jinx, Yasuo, Senna, and Thresh.
+
+Each record follows:
+
+- Character.
+- Identity, playstyle, and difficulty.
+- Strengths and weaknesses.
+- Archetypes.
+- Recommended partners and Fuses.
+- Synergy and matchup notes.
+- Routes and community tech.
+- Decision questions.
+
+Unverified conclusions are TODO-marked and recommendation arrays remain empty. The files contain no move lists, commands, controls, or frame data. `data/games.js` exposes the intelligence root and file IDs for future loaders.
+
 ## Project Documentation Workflow
 
 Status: Active

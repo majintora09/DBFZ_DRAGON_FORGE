@@ -1,0 +1,16 @@
+{
+  "character": "Ekko",
+  "playstyle": "TODO: Verify the decision-relevant playstyle from reviewed sources.",
+  "difficulty": "TODO: Verify practical learning difficulty.",
+  "identity": "TODO: Define what this pick contributes to a duo and what support it needs.",
+  "strengths": ["TODO: Add verified strengths that affect team-building decisions."],
+  "weaknesses": ["TODO: Add verified weaknesses that a partner or Fuse should solve."],
+  "archetypes": ["TODO: Add verified playstyle and team-role tags."],
+  "recommendedPartners": [],
+  "recommendedFuses": [],
+  "synergyNotes": ["TODO: Explain what kinds of partners make this gameplan more stable."],
+  "matchupNotes": ["TODO: Record actionable matchup problems and team-level adjustments."],
+  "routes": [],
+  "communityTech": ["TODO: Add source-backed tech after Research Vault review."],
+  "questions": ["Who should I pair with this character?", "What fuse works best?", "What should I learn first?"]
+}

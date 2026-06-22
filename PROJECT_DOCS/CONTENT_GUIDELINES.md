@@ -93,6 +93,29 @@ Rules:
 - Tags should describe future uses such as Synergy, Routes, Matchups, Fuses, or a practical team need.
 - Export and review records before merging them into static source JSON.
 
+## 2XKO Character Intelligence Format
+
+Use the Noa reasoning order:
+
+1. Character.
+2. Identity.
+3. Strengths.
+4. Weaknesses.
+5. Partners.
+6. Fuses.
+7. Routes.
+8. Matchups.
+9. Community Tech.
+
+Rules:
+
+- Keep every character file small and manually editable.
+- Use the same keys and value types across the roster.
+- Leave recommendation arrays empty until reviewed evidence exists.
+- Mark unverified prose with `TODO:`.
+- Promote evidence from Research Vault only after source and verification review.
+- Never add move lists, frame data, commands, controls, or general encyclopedia sections.
+
 ## Tags
 Good:
 - Pressure

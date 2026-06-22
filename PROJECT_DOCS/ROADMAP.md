@@ -64,6 +64,8 @@ Use `TASKS.md` as the active project work queue.
 
 ## Completed
 
+- Initial Noa-style 2XKO character intelligence structure for nine characters.
+- Shared decision-first schema with explicit TODO placeholders for unverified conclusions.
 - Internal 2XKO Research Vault collection workspace.
 - Local draft persistence, search, source/status/tag filters, and JSON export.
 - Research Vault removed from public 2XKO navigation.
@@ -201,6 +203,7 @@ The DBFZ Lab continues evolving from a simple Team Builder into a DBFZ companion
 ### Phase 3: 2XKO Expansion
 
 - [x] Decision-support data foundation.
+- [x] Character intelligence source files.
 - [x] Mock character recommendation flow.
 - [x] Ranked duo recommendation prototype.
 - [ ] Fuse explanations.

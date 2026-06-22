@@ -28,6 +28,8 @@ window.FG_LAB_GAMES = [
     entryRoute: "/games/2xko",
     features: ["Characters", "Team Builder", "Fuses", "Synergies", "Routes"],
     dataRoot: "/public/data/2xko",
+    intelligenceRoot: "/data/games/2xko",
+    intelligenceFiles: ["ahri", "braum", "darius", "ekko", "illaoi", "jinx", "yasuo", "senna", "thresh"],
     decisionPrompts: [
       "Who should I pair with?",
       "What Fuse fits this duo?",

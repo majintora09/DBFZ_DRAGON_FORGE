@@ -6,6 +6,10 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Added
 
+- Added Noa-style decision-first intelligence files for Ahri, Braum, Darius, Ekko, Illaoi, Jinx, Yasuo, Senna, and Thresh.
+- Added shared Identity, Strengths, Weaknesses, Partners, Fuses, Routes, Matchups, Community Tech, and Questions fields.
+- Added explicit TODO placeholders and empty recommendation collections for unverified 2XKO knowledge.
+- Added 2XKO intelligence root and file IDs to the shared game config.
 - Added an internal 2XKO Research Vault capture form with character, source, link, notes, tags, and verification fields.
 - Added local browser persistence and JSON export for research drafts.
 - Added vault search plus Source Type, Verification Status, and Tag filters.
@@ -37,6 +41,7 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Changed
 
+- Documented the Research Vault -> review -> character intelligence promotion workflow.
 - Removed the Research Vault from public 2XKO navigation and public portal callouts.
 - Upgraded `public/data/2xko/research-vault.json` to the structured version 2 record format.
 - Replaced the conventional `npm start` server hook with the explicitly local-only `npm run dev` command.
