@@ -74,6 +74,25 @@ Each partner recommendation should include:
 
 The card should answer "Why is this partner recommended?" without requiring expansion. Mock or unverified records must carry a visible status label.
 
+## Research Vault Record Format
+
+Required fields:
+
+- Character or system topic.
+- Source Type.
+- Source Link when available.
+- Concise Notes.
+- Reusable Tags.
+- Verification Status: Unverified, Needs Review, or Verified.
+
+Rules:
+
+- Collection notes are internal evidence, not public guide copy.
+- Keep claims attached to their source.
+- Do not promote unverified records into recommendation data.
+- Tags should describe future uses such as Synergy, Routes, Matchups, Fuses, or a practical team need.
+- Export and review records before merging them into static source JSON.
+
 ## Tags
 Good:
 - Pressure

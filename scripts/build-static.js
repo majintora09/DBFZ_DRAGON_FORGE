@@ -27,7 +27,7 @@ const routes = [
 fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output, { recursive: true });
 
-copyFiles(["styles.css", "app.js", "platform.js", "synergy-engine.js", "_redirects"]);
+copyFiles(["styles.css", "research-vault.css", "app.js", "platform.js", "synergy-engine.js", "research-vault.js", "_redirects"]);
 copyTree("data", "data", (source) => !source.endsWith(".md"));
 copyTree("assets/backgrounds", "assets/backgrounds");
 copyFiles(["assets/manifest.js"]);

@@ -64,6 +64,9 @@ Use `TASKS.md` as the active project work queue.
 
 ## Completed
 
+- Internal 2XKO Research Vault collection workspace.
+- Local draft persistence, search, source/status/tag filters, and JSON export.
+- Research Vault removed from public 2XKO navigation.
 - GitHub -> Cloudflare Pages 0 EUR deployment handoff.
 - Production output verified without `server.js` or any server runtime.
 - Real dependency-free static build output in `dist`.

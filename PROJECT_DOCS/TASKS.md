@@ -38,7 +38,7 @@ Important but not blocking.
 - Maintain frame data readability where it supports decisions, without expanding FG Lab into a frame-data wiki.
 - Keep DBZ Broly tagged as Grappler.
 - Keep character page clicks separate from Team Builder modal behavior.
-- Add verified 2XKO research records before building recommendations.
+- Use the completed Research Vault workflow to add and review 2XKO records before building recommendations.
 - Replace Synergy Engine mock records with reviewed recommendations before presenting them as gameplay guidance.
 - Populate the completed 2XKO character, Fuse, synergy, route, matchup, and community-note schemas from reviewed sources.
 - Build 2XKO partner and Fuse recommendation logic only after the supporting research is verified.

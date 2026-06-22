@@ -6,6 +6,11 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Added
 
+- Added an internal 2XKO Research Vault capture form with character, source, link, notes, tags, and verification fields.
+- Added local browser persistence and JSON export for research drafts.
+- Added vault search plus Source Type, Verification Status, and Tag filters.
+- Added source origin, updated-date, and verification tracking on research cards.
+- Added dedicated responsive Research Vault JavaScript and CSS modules.
 - Added a focused `CLOUDFLARE_PAGES.md` GitHub deployment guide targeting 0 EUR monthly hosting.
 - Added `.node-version` to pin Cloudflare builds to Node 20.
 - Added a real dependency-free static exporter that writes to `dist`.
@@ -32,6 +37,8 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Changed
 
+- Removed the Research Vault from public 2XKO navigation and public portal callouts.
+- Upgraded `public/data/2xko/research-vault.json` to the structured version 2 record format.
 - Replaced the conventional `npm start` server hook with the explicitly local-only `npm run dev` command.
 - Verified all 17 routes and nine core runtime assets with zero static-preview failures.
 - Verified production output excludes `server.js`, package runtime files, and `node_modules`.

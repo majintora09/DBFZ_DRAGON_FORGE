@@ -5,32 +5,35 @@ Completed on 2026-06-22.
 
 ## Objective
 
-Prepare FG Lab for a 0 EUR GitHub-to-Cloudflare Pages deployment.
+Turn the 2XKO Research Vault into a practical internal content collection system.
 
 ## Scope
 
-- Keep `npm run build` as a complete static export to `dist`.
-- Remove any production-facing dependency on `server.js`.
-- Verify all generated routes and runtime assets.
-- Preserve `_redirects` in the production output.
-- Add exact Cloudflare Pages GitHub deployment instructions.
-- Pin the Cloudflare build environment to Node 20.
+- Capture Character, Source Type, Source Link, Notes, Tags, and Verification Status.
+- Persist working records locally in the browser.
+- Search records and filter by source, status, and tag.
+- Track source links and record dates.
+- Export the combined vault as JSON for review and later data promotion.
+- Keep the direct internal route while removing it from public 2XKO navigation.
+- Keep the implementation static, modular, and small.
 
 ## Out Of Scope
 
-- No paid services.
-- No database, Workers, Functions, or production server.
-- No visual or content changes.
-- No custom domain requirement.
+- No public wiki presentation.
+- No backend, account system, database, or cloud write API.
+- No automatic promotion into recommendations.
+- No public submission workflow.
+- No DBFZ changes.
 
 ## Success Criteria
 
-- Cloudflare publishes only `dist`.
-- `dist` contains no `server.js`, package scripts, or server runtime.
-- Every known route has a physical page and static fallback.
-- Instructions describe the GitHub -> Cloudflare Pages flow.
-- Monthly hosting cost can remain 0 EUR.
+- Internal users can add and retain research records locally.
+- Search and combined filters update results immediately.
+- Tags are normalized into reusable chips.
+- Source links and verification states remain visible.
+- Exported JSON can become the reviewed source for synergies, routes, matchups, and Fuse recommendations.
+- The vault is not linked from public 2XKO navigation.
 
 ## Notes
 
-`server.js` may remain as an explicitly local-only `dev` and `preview` helper.
+The direct route is hidden, not authenticated. Real access control requires a future backend and role system.

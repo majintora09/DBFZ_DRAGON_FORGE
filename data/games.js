@@ -77,8 +77,8 @@ window.FG_LAB_GAMES = [
       },
       "research-vault": {
         title: "2XKO Research Vault",
-        eyebrow: "Source Tracker",
-        summary: "A lightweight review queue for videos, Discord findings, streams, tournament footage, and personal lab notes.",
+        eyebrow: "Internal Tool",
+        summary: "Collect, tag, verify, and export source-backed notes before they become recommendations.",
       },
     },
   },

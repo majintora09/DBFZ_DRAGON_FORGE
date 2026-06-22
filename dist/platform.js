@@ -30,8 +30,6 @@
     "#videoLibrary": "/games/dbfz/routes",
   };
 
-  let researchRecords = [];
-
   function renderGameCards() {
     if (!gameCardGrid) return;
     gameCardGrid.innerHTML = games
@@ -63,7 +61,6 @@
       ["Fuses", "/games/2xko/fuses"],
       ["Synergies", "/games/2xko/synergies"],
       ["Routes", "/games/2xko/routes"],
-      ["Research Vault", "/games/2xko/research-vault"],
     ];
     twoXkoNav.innerHTML = routes.map(([label, route]) => `<a href="${deploymentPath(route)}" data-route="${route}">${label}</a>`).join("");
   }
@@ -150,10 +147,10 @@
     if (!twoXkoContent || !twoXkoGame) return;
     const section = route.replace("/games/2xko", "").replace(/^\//, "") || "overview";
     const page = twoXkoGame.pages?.[section] || twoXkoGame.pages.overview;
-    twoXkoNav?.querySelectorAll("a").forEach((link) => link.toggleAttribute("aria-current", normalizeRoute(link.getAttribute("href")) === route));
+    twoXkoNav?.querySelectorAll("a").forEach((link) => link.toggleAttribute("aria-current", normalizeRoute(link.dataset.route) === route));
 
     if (section === "research-vault") {
-      twoXkoContent.innerHTML = researchVaultMarkup(page);
+      window.FG_LAB_RESEARCH_VAULT?.render(twoXkoContent, page);
       return;
     }
 
@@ -176,10 +173,6 @@
         <p>${page.summary}</p>
       </header>
       <section class="portal-feature-grid">${featureCards}</section>
-      <aside class="portal-research-callout">
-        <div><span>Research first</span><strong>Keep early conclusions reviewable.</strong></div>
-        <button class="platform-action platform-action--secondary" type="button" data-route="/games/2xko/research-vault">Open Research Vault</button>
-      </aside>
     `;
   }
 
@@ -206,43 +199,6 @@
     return labels.map((label) => `<article class="portal-feature-card portal-feature-card--compact"><span>Planned module</span><h2>${label}</h2><p>${page.summary}</p></article>`).join("");
   }
 
-  function researchVaultMarkup(page) {
-    const records = researchRecords.length ? researchRecords : [{ character: "No records yet", sourceType: "Research queue", link: "", notes: "Add records in public/data/2xko/research-vault.json.", tags: ["Pending"], verified: false }];
-    return `
-      <header class="portal-page-heading">
-        <p class="eyebrow">${page.eyebrow}</p>
-        <h1>${page.title}</h1>
-        <p>${page.summary}</p>
-      </header>
-      <section class="research-vault-list">
-        ${records.map((record) => `
-          <article class="research-record">
-            <div class="research-record__header">
-              <div><span>${record.sourceType}</span><h2>${record.character}</h2></div>
-              <strong class="platform-status platform-status--${record.verified ? "active" : "early-build"}">${record.verified ? "Verified" : "Needs Review"}</strong>
-            </div>
-            <p>${record.notes}</p>
-            <div class="research-tags">${(record.tags || []).map((tag) => `<span>${tag}</span>`).join("")}</div>
-            ${record.link ? `<a href="${record.link}" target="_blank" rel="noreferrer">Open source</a>` : `<span class="research-link-pending">Link pending</span>`}
-          </article>
-        `).join("")}
-      </section>
-    `;
-  }
-
-  async function loadResearchVault() {
-    try {
-      const source = window.FG_LAB_ASSET_PATH?.("public/data/2xko/research-vault.json") || "public/data/2xko/research-vault.json";
-      const response = await fetch(source);
-      if (!response.ok) return;
-      const data = await response.json();
-      researchRecords = data.records || [];
-      if (currentRoute() === "/games/2xko/research-vault") renderTwoXkoPage(currentRoute());
-    } catch {
-      researchRecords = [];
-    }
-  }
-
   document.addEventListener("click", (event) => {
     const target = event.target.closest("[data-route]");
     if (!target) return;
@@ -256,7 +212,7 @@
   renderGameCards();
   renderTwoXkoNav();
   document.querySelectorAll("a[data-route]").forEach((link) => link.setAttribute("href", deploymentPath(link.dataset.route)));
-  loadResearchVault();
+  window.FG_LAB_RESEARCH_VAULT?.load(twoXkoGame);
   window.FG_LAB_SYNERGY_ENGINE?.load(twoXkoGame);
   renderRoute();
 })();

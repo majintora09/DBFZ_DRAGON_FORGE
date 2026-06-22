@@ -117,6 +117,24 @@ Implemented:
 
 The prototype uses mock Yasuo, Ahri, Darius, and Ekko records for interface testing. It does not use frame data and does not claim the recommendations are verified.
 
+## 2XKO Research Vault
+
+Status: Internal Collection Tool
+
+Implemented:
+
+- Direct internal route at `/games/2xko/research-vault`.
+- Character, Source Type, Source Link, Notes, Tags, and Verification Status fields.
+- Local browser persistence for working records.
+- Search across characters, sources, notes, and tags.
+- Combined Source Type, Verification Status, and Tag filters.
+- Source links, seed/local origin, and updated-date tracking.
+- JSON export for review and later promotion into synergies, routes, matchups, and Fuse recommendations.
+- Responsive two-column and one-column layouts.
+- Dedicated `research-vault.js` and `research-vault.css` modules.
+
+The vault is removed from public 2XKO navigation. Static hosting cannot provide real authentication, so the direct route is hidden rather than secured.
+
 ## Project Documentation Workflow
 
 Status: Active

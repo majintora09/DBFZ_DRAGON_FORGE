@@ -1,22 +1,28 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-06-22",
   "records": [
     {
+      "id": "general-fuse-rules",
       "character": "General Systems",
-      "sourceType": "Personal notes",
-      "link": "",
+      "sourceType": "Personal Notes",
+      "sourceLink": "",
       "notes": "Document confirmed Fuse behavior and tag rules before converting them into recommendations.",
       "tags": ["Fuses", "Tag System"],
-      "verified": false
+      "verificationStatus": "needs-review",
+      "createdAt": "2026-06-22",
+      "updatedAt": "2026-06-22"
     },
     {
+      "id": "tournament-duo-patterns",
       "character": "Tournament Roster",
       "sourceType": "Tournament",
-      "link": "",
+      "sourceLink": "",
       "notes": "Track stable duo patterns and common assist choices once public footage is reviewed.",
       "tags": ["Duos", "Match Footage"],
-      "verified": false
+      "verificationStatus": "unverified",
+      "createdAt": "2026-06-22",
+      "updatedAt": "2026-06-22"
     }
   ]
 }

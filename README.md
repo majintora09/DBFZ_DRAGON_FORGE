@@ -36,3 +36,8 @@ FG Lab is currently in active development.
 
 Feedback, ideas, and contributions are welcome.
 
+## Internal 2XKO Research Vault
+
+The direct `/games/2xko/research-vault` route collects source-backed notes before they become recommendations. It supports local capture, search, source/status/tag filters, browser persistence, and JSON export.
+
+It is intentionally absent from public 2XKO navigation. Static hosting means the route is hidden, not access-controlled.
