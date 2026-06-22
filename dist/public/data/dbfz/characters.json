@@ -1,0 +1,366 @@
+{
+  "generatedAt": "2026-06-18T10:57:12.227Z",
+  "source": "Dustloop",
+  "characters": [
+    {
+      "id": "ssj-goku",
+      "name": "SSj Goku",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ssj-goku.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "goku-blue",
+      "name": "Goku Blue",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(SSGSS)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/goku-blue.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "base-goku",
+      "name": "Base Goku",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/base-goku.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "gt-goku",
+      "name": "GT Goku",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(GT)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/gt-goku.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "ui-goku",
+      "name": "UI Goku",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(Ultra_Instinct)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ui-goku.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "bardock",
+      "name": "Bardock",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Bardock/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/bardock.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "goku-black",
+      "name": "Goku Black",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_Black/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/goku-black.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "zamasu",
+      "name": "Zamasu",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Zamasu_(Fused)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/zamasu.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "ssj-vegeta",
+      "name": "SSj Vegeta",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ssj-vegeta.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "vegeta-blue",
+      "name": "Vegeta Blue",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta_(SSGSS)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/vegeta-blue.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "base-vegeta",
+      "name": "Base Vegeta",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/base-vegeta.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "super-baby-2",
+      "name": "Super Baby 2",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Super_Baby_2/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/super-baby-2.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "vegito-blue",
+      "name": "Vegito Blue",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegito_(SSGSS)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/vegito-blue.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "gogeta-blue",
+      "name": "Gogeta Blue",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gogeta_(SSGSS)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/gogeta-blue.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "ssj4-gogeta",
+      "name": "SSj4 Gogeta",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gogeta_(SS4)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ssj4-gogeta.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "teen-gohan",
+      "name": "Teen Gohan",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gohan_(Teen)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/teen-gohan.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "adult-gohan",
+      "name": "Adult Gohan",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gohan_(Adult)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/adult-gohan.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "videl",
+      "name": "Videl",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Videl/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/videl.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "gotenks",
+      "name": "Gotenks",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gotenks/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/gotenks.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "trunks",
+      "name": "Trunks",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Trunks/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/trunks.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "piccolo",
+      "name": "Piccolo",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Piccolo/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/piccolo.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "krillin",
+      "name": "Krillin",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Krillin/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/krillin.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "yamcha",
+      "name": "Yamcha",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Yamcha/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/yamcha.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "tien",
+      "name": "Tien",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Tien/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/tien.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "master-roshi",
+      "name": "Master Roshi",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Master_Roshi/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/master-roshi.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "frieza",
+      "name": "Frieza",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Frieza/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/frieza.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "cooler",
+      "name": "Cooler",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Cooler/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/cooler.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "nappa",
+      "name": "Nappa",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Nappa/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/nappa.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "ginyu",
+      "name": "Ginyu",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Captain_Ginyu/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ginyu.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "cell",
+      "name": "Cell",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Cell/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/cell.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "majin-buu",
+      "name": "Majin Buu",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Majin_Buu/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/majin-buu.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "kid-buu",
+      "name": "Kid Buu",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Kid_Buu/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/kid-buu.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "janemba",
+      "name": "Janemba",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Janemba/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/janemba.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "hit",
+      "name": "Hit",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Hit/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/hit.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "beerus",
+      "name": "Beerus",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Beerus/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/beerus.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "android-16",
+      "name": "Android 16",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_16/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/android-16.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "android-17",
+      "name": "Android 17",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_17/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/android-17.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "android-18",
+      "name": "Android 18",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_18/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/android-18.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "android-21-majin",
+      "name": "Android 21 (Majin)",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_21/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/android-21-majin.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "android-21-lab-coat",
+      "name": "Android 21 (Lab Coat)",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_21_(Lab_Coat)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/android-21-lab-coat.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "dbz-broly",
+      "name": "DBZ Broly",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Broly/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/dbz-broly.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "dbs-broly",
+      "name": "DBS Broly",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Broly_(DBS)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/dbs-broly.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "kefla",
+      "name": "Kefla",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Kefla/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/kefla.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "jiren",
+      "name": "Jiren",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Jiren/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/jiren.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    },
+    {
+      "id": "ssj4-goku-daima",
+      "name": "SSj4 Goku (Daima)",
+      "source": "Dustloop",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(SS4%2C_DAIMA)/Frame_Data",
+      "frameDataPath": "/public/data/dbfz/frame-data/ssj4-goku-daima.json",
+      "lastImported": "2026-06-18T10:57:12.227Z"
+    }
+  ]
+}

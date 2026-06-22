@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "YYYY-MM-DDTHH:mm:ss.sssZ",
+  "source": "https://www.dustloop.com/w/DBFZ",
+  "characters": {
+    "character-id": {
+      "characterId": "character-id",
+      "name": "Character Name",
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Character/Frame_Data",
+      "importedAt": "YYYY-MM-DDTHH:mm:ss.sssZ",
+      "moves": [
+        {
+          "name": "5L",
+          "damage": "400",
+          "startup": "6",
+          "active": "3",
+          "recovery": "15",
+          "blockAdvantage": "-3",
+          "hitAdvantage": "0",
+          "invulnerability": "",
+          "notes": "",
+          "raw": {
+            "move": "5L",
+            "damage": "400",
+            "startup": "6"
+          }
+        }
+      ]
+    }
+  }
+}

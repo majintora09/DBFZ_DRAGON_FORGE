@@ -1,82 +1,88 @@
 # Deploying FG Lab
 
-This is currently a static website. It does not need a backend.
+FG Lab builds to a completely static `dist` folder. Production hosting does not need Node, a server, a database, or a paid service.
 
-## Easiest Options
-
-### Netlify Drop
-
-1. Go to Netlify Drop.
-2. Drag the project folder into the page.
-3. Netlify gives you a shareable URL.
-
-### GitHub Pages
-
-1. Put the project in a GitHub repo.
-2. Enable GitHub Pages.
-3. Set the source to the repo root.
-
-### Vercel
-
-1. Import the repo.
-2. Use static/no framework settings.
-3. Deploy.
-
-## Files Needed Online
-
-Required:
-
-- `index.html`
-- `styles.css`
-- `app.js`
-- `platform.js`
-- `_redirects`
-- `data/games.js`
-- `data/characters-data.js`
-- `data/polished-overrides.js`
-- `data/knowledge-db.js`
-- `data/frame-data.local.js`
-- `public/data/dbfz/*`
-- `public/data/dbfz/frame-data/*`
-- `public/data/2xko/research-vault.json`
-- `assets/manifest.js`
-- `assets/backgrounds/background.webp`
-- `public/characters/portraits/*`
-
-Optional/local-only:
-
-- `transcript.txt`
-- `tools/*`
-- `public/characters/raw/*`
-- `data/characters.raw.json`
-- `data/character-notes.cleaned.md`
-- `data/frame-data.schema.json`
-- `scripts/import-dustloop.js`
-- `COMMUNITY_INTELLIGENCE.md`
-
-Keep optional files if you want to keep editing and regenerating data from the same hosted repo. Remove optional files if you want a smaller public upload.
-
-## Before Sharing
-
-Run:
+## Build Locally
 
 ```powershell
 npm install
-npm run import-dustloop
 npm run build
-node --check app.js
-node --check platform.js
-node --check data/polished-overrides.js
-node --check assets/manifest.js
-node tools\build_asset_manifest.js
 ```
 
-Then refresh the page and check:
+Build output: `dist`
 
-- The root game-selection page opens.
-- DBFZ deep links retain current functionality.
-- 2XKO placeholder routes and Research Vault open.
-- All portraits load.
-- Search and filters work.
-- Dragging into team slots works.
-- Recommended partners do not duplicate the current team.
+Optional local preview:
+
+```powershell
+npm run preview
+```
+
+Open `http://127.0.0.1:4173`.
+
+## Cloudflare Pages
+
+Cloudflare Pages can deploy the repository on its free plan.
+
+For the focused GitHub -> Cloudflare walkthrough, see `CLOUDFLARE_PAGES.md`.
+
+1. Push the project to GitHub.
+2. In Cloudflare, open **Workers & Pages** and create a Pages project.
+3. Connect the GitHub repository.
+4. Use these build settings:
+   - Framework preset: `None`
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - Root directory: leave blank
+   - Node version: `20`
+5. Deploy.
+
+No environment variables are required for a normal `*.pages.dev` deployment. The generated `_redirects` file provides the static fallback, and physical route pages keep direct links refreshable.
+
+## GitHub Pages
+
+The repository includes `.github/workflows/deploy-pages.yml`.
+
+1. Push the repository to GitHub using the `main` branch.
+2. Open **Settings -> Pages**.
+3. Set **Source** to `GitHub Actions`.
+4. Run **Deploy FG Lab to GitHub Pages**, or push to `main`.
+
+The workflow automatically builds with:
+
+```text
+FG_LAB_BASE_PATH=/<repository-name>/
+```
+
+This keeps scripts, JSON, images, navigation, and direct route refreshes working on GitHub project Pages. The deployment artifact is the `dist` folder.
+
+To build the GitHub Pages version locally in PowerShell:
+
+```powershell
+$env:FG_LAB_BASE_PATH = "/YOUR_REPOSITORY_NAME/"
+npm run build
+Remove-Item Env:FG_LAB_BASE_PATH
+```
+
+## Static Route Support
+
+The build generates physical `index.html` files for:
+
+- FG Lab home and roadmap.
+- All DBFZ portal routes.
+- All current 2XKO portal routes.
+- 2XKO Research Vault and Synergy Engine.
+
+It also generates:
+
+- `dist/404.html` for GitHub Pages fallback.
+- `dist/_redirects` for Cloudflare Pages fallback.
+- `dist/.nojekyll` for GitHub Pages.
+- `dist/build-info.json` with the base path and generated route list.
+
+## Deployment Boundaries
+
+- No paid service is required.
+- No database is required.
+- No production server process is required.
+- `server.js` is only a local preview helper.
+- Dustloop imports remain a local content preparation step, not live production scraping.

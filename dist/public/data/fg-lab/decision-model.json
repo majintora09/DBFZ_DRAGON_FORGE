@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "purpose": "Tell players what works together, why it works, what it costs, and what to do next.",
+  "decisionFlow": [
+    "question",
+    "context",
+    "recommendation",
+    "reasons",
+    "tradeoffs",
+    "nextActions"
+  ],
+  "entities": {
+    "game": {
+      "required": ["id", "name"],
+      "connectsTo": ["character", "fuse", "synergy", "route", "matchup", "communityNote"]
+    },
+    "character": {
+      "required": ["id", "gameId", "name"],
+      "decisionFields": [
+        "overview",
+        "strengths",
+        "weaknesses",
+        "recommendedPartnerIds",
+        "recommendedFuseIds",
+        "matchupIds",
+        "recommendedRouteIds",
+        "communityNoteIds"
+      ]
+    },
+    "fuse": {
+      "required": ["id", "gameId", "name", "reason"],
+      "optional": ["difficulty", "tags", "tradeoffs", "sourceIds"]
+    },
+    "synergy": {
+      "required": ["id", "gameId", "characterId", "partnerId", "score", "reason"],
+      "optional": ["difficulty", "tags", "fuseIds", "playstyles", "solves", "tradeoffs", "nextActions", "confidence", "sourceIds"]
+    },
+    "route": {
+      "required": ["id", "gameId", "characterIds", "goal", "recommendation"],
+      "optional": ["fuseIds", "difficulty", "requirements", "reasons", "tradeoffs", "nextActions", "sourceIds"]
+    },
+    "matchup": {
+      "required": ["id", "gameId", "subjectIds", "opponentIds", "problem", "recommendation"],
+      "optional": ["reasons", "tradeoffs", "nextActions", "sourceIds"]
+    },
+    "communityNote": {
+      "required": ["id", "gameId", "topic", "recommendation", "verificationStatus"],
+      "optional": ["characterIds", "fuseIds", "routeIds", "setup", "payoff", "risk", "sourceIds", "tags"]
+    }
+  }
+}

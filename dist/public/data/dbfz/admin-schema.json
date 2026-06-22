@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18T06:30:02.928Z",
+  "roles": {
+    "viewer": {
+      "label": "Viewer",
+      "summary": "Browse only.",
+      "permissions": [
+        "browse",
+        "search",
+        "team_builder"
+      ]
+    },
+    "contributor": {
+      "label": "Contributor",
+      "summary": "Suggest edits for review.",
+      "permissions": [
+        "suggest_edits",
+        "submit_notes"
+      ]
+    },
+    "editor": {
+      "label": "Editor",
+      "summary": "Approve and modify character data.",
+      "permissions": [
+        "approve_edits",
+        "publish_updates",
+        "publish_character_data",
+        "publish_training_lab",
+        "publish_movie_room"
+      ]
+    },
+    "admin": {
+      "label": "Admin",
+      "summary": "Full control over users, permissions, and site content.",
+      "permissions": [
+        "manage_users",
+        "manage_permissions",
+        "manage_site_content",
+        "publish_all"
+      ]
+    }
+  },
+  "editableCharacterFields": [
+    "name",
+    "portrait",
+    "roles",
+    "tags",
+    "archetype",
+    "overview",
+    "wants",
+    "strengths",
+    "weaknesses",
+    "metrics",
+    "bestPartners",
+    "goodPartners",
+    "carePartners",
+    "assistTags",
+    "assistNotes",
+    "synergyTags",
+    "dhcNotes",
+    "matchups",
+    "community"
+  ],
+  "editableTrainingLabFields": [
+    "category",
+    "title",
+    "summary",
+    "deepDive",
+    "keyTakeaways",
+    "relatedTags"
+  ],
+  "editableMovieRoomFields": [
+    "scope",
+    "title",
+    "characterIds",
+    "shellIds",
+    "teamIds",
+    "summary",
+    "tags",
+    "resources",
+    "recommendationHooks"
+  ],
+  "storagePlan": [
+    "Static JSON records now",
+    "Browser local drafts for ZIP deploy testing",
+    "Swap storage adapter to Supabase/Netlify Identity for real multi-user auth later"
+  ]
+}

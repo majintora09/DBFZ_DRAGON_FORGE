@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-22",
+  "status": "mock",
+  "synergies": [
+    {
+      "id": "yasuo-ahri",
+      "gameId": "2xko",
+      "characterId": "yasuo",
+      "partnerId": "ahri",
+      "score": 9,
+      "reason": "Adds controlled space and flexible tag pressure, giving Yasuo cleaner ways to begin offense.",
+      "difficulty": "Intermediate",
+      "tags": ["Neutral", "Pressure", "Tag Routes", "Control"]
+    },
+    {
+      "id": "yasuo-darius",
+      "gameId": "2xko",
+      "characterId": "yasuo",
+      "partnerId": "darius",
+      "score": 8,
+      "reason": "Turns successful pressure into direct damage and gives the duo a simple, forceful win condition.",
+      "difficulty": "Beginner Friendly",
+      "tags": ["Damage", "Rushdown", "Beginner Friendly"]
+    },
+    {
+      "id": "yasuo-ekko",
+      "gameId": "2xko",
+      "characterId": "yasuo",
+      "partnerId": "ekko",
+      "score": 8,
+      "reason": "Creates layered movement and mixup routes for players willing to manage a more technical offense.",
+      "difficulty": "Advanced",
+      "tags": ["Mixups", "Tag Routes", "Pressure"]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18",
+  "topics": [
+    "Character Guide",
+    "Shell Breakdown",
+    "Assist Example",
+    "Combo Route",
+    "TOD Route",
+    "Matchup Notes",
+    "Community Clip"
+  ],
+  "videos": [
+    {
+      "id": "team-builder-overview-placeholder",
+      "title": "Team Builder Overview",
+      "topic": "Shell Breakdown",
+      "characters": ["Frieza", "Android 18", "DBS Broly"],
+      "tags": ["Team Theory", "Recommended Order", "Shell Logic"],
+      "url": "",
+      "summary": "Placeholder for a walkthrough explaining how to read team recommendations, strengths, and synergy notes."
+    },
+    {
+      "id": "assist-types-placeholder",
+      "title": "Assist Type Examples",
+      "topic": "Assist Example",
+      "characters": [],
+      "tags": ["Beam Assist", "Lockdown Assist", "Tracking Assist", "DP Assist"],
+      "url": "",
+      "summary": "Placeholder for clips showing what each assist category solves in real matches or training mode."
+    },
+    {
+      "id": "character-guide-template",
+      "title": "Character Guide Template",
+      "topic": "Character Guide",
+      "characters": [],
+      "tags": ["Gameplan", "Strengths", "Weaknesses", "Frame Data"],
+      "url": "",
+      "summary": "Use this entry shape for future character guides. Add a URL, characters, tags, and concise learning notes."
+    }
+  ]
+}

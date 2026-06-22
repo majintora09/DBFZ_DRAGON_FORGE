@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18",
+  "nodeTypes": [
+    "character",
+    "tag",
+    "archetype",
+    "assist",
+    "playstyle",
+    "shell",
+    "team"
+  ],
+  "archetypeLinks": [
+    {
+      "from": "Battery",
+      "to": "Cashout",
+      "label": "feeds",
+      "notes": "Battery characters gain value when the rest of the team can spend the meter they build."
+    },
+    {
+      "from": "Neutral",
+      "to": "Resource Advantage",
+      "label": "creates",
+      "notes": "Stable neutral wins give the team more chances to build meter, call assists safely, and choose when to cash out."
+    },
+    {
+      "from": "Lockdown Assist",
+      "to": "Mix",
+      "label": "enables",
+      "notes": "Long blockstun and predictable screen control make layered offense easier to run."
+    },
+    {
+      "from": "Corner Carry",
+      "to": "Level 3 Oki",
+      "label": "sets up",
+      "notes": "Teams that move the opponent to the corner can turn knockdowns and supers into stronger follow-up pressure."
+    },
+    {
+      "from": "DHC Routes",
+      "to": "Cashout",
+      "label": "converts into",
+      "notes": "Good DHC paths let the team turn a starter into the character with the best remaining reward."
+    }
+  ]
+}

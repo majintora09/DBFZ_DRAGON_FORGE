@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "templates": [
+    {
+      "id": "character-synergy-template",
+      "title": "Character Synergy Template",
+      "summary": "A structured checklist for building complete character guide pages, team placement notes, assist analysis, DHC routes, and matchup impact.",
+      "sections": [
+        {
+          "title": "Character Identity",
+          "items": [
+            "Primary roles",
+            "Team archetypes",
+            "One-sentence summary"
+          ]
+        },
+        {
+          "title": "What This Character Contributes",
+          "items": [
+            "Damage strengths, weaknesses, and notes",
+            "Neutral strengths, weaknesses, and notes",
+            "Mix strengths, weaknesses, and notes",
+            "Support strengths, weaknesses, and notes",
+            "Resource economy: builds meter, spends meter, benefits from meter"
+          ]
+        },
+        {
+          "title": "Team Placement",
+          "items": [
+            "Point viability, reason, and requirements",
+            "Mid viability, reason, and requirements",
+            "Anchor viability, reason, and requirements",
+            "Preferred position and explanation"
+          ]
+        },
+        {
+          "title": "Assist Analysis",
+          "items": [
+            "A Assist provides neutral, mix, combo extensions, utility, best partners, weak partners",
+            "B Assist provides neutral, mix, combo extensions, utility, best partners, weak partners",
+            "C Assist provides neutral, mix, combo extensions, utility, best partners, weak partners"
+          ]
+        },
+        {
+          "title": "DHC Synergy",
+          "items": [
+            "Characters that love DHCing into this character",
+            "Characters this character loves DHCing into",
+            "Special DHC interactions"
+          ]
+        },
+        {
+          "title": "Best Team Archetypes",
+          "items": [
+            "Control to cashout",
+            "Mix to kill",
+            "Rushdown to pressure"
+          ]
+        },
+        {
+          "title": "Win Conditions",
+          "items": [
+            "Primary win condition",
+            "Secondary win condition",
+            "Late-game win condition"
+          ]
+        },
+        {
+          "title": "Team Building Questions",
+          "items": [
+            "What teammates does this character want?",
+            "What teammates does this character struggle with?",
+            "Does the team need damage, neutral, mix, support, or meter?"
+          ]
+        },
+        {
+          "title": "Matchup Impact",
+          "items": [
+            "Strong against",
+            "Struggles against",
+            "Team types it helps beat",
+            "Team types it struggles to support against"
+          ]
+        },
+        {
+          "title": "Summary",
+          "items": [
+            "Why pick this character?",
+            "Why avoid this character?",
+            "Final verdict"
+          ]
+        }
+      ]
+    }
+  ],
+  "characterGuides": []
+}

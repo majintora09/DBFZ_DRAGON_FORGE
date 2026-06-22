@@ -7,11 +7,39 @@ This file tracks implemented and active features. Do not remove implementation d
 ## Stack
 
 - Plain HTML/CSS/JavaScript static frontend.
-- Static/Netlify-friendly project.
-- Netlify ZIP upload deployment.
+- Static build compatible with Cloudflare Pages, GitHub Pages, and Netlify.
+- Dependency-free build output in `dist`.
 - Local JSON data under `public/data/dbfz`.
 - Node scripts for local import/build utilities.
 - No Laravel, PHP, Artisan, live browser scraping, or iframe-based frame data.
+
+## Static Deployment
+
+Status: Active
+
+Implemented:
+
+- `npm run build` clears and rebuilds `dist`.
+- Runtime JavaScript, CSS, local JSON, backgrounds, and optimized portraits are copied.
+- Seventeen supported routes receive physical `index.html` files.
+- Cloudflare Pages fallback is emitted as `dist/_redirects`.
+- GitHub Pages fallback and Jekyll bypass are emitted as `dist/404.html` and `dist/.nojekyll`.
+- `FG_LAB_BASE_PATH` supports GitHub project sites.
+- Runtime routing and JSON paths understand the configured deployment base.
+- GitHub Actions workflow publishes `dist` for free.
+- `npm run preview` serves the built output locally for smoke testing only.
+
+Production does not use `server.js`, Node, a database, or a paid service.
+
+Cloudflare deployment details:
+
+- GitHub-connected Cloudflare Pages project.
+- Build command: `npm run build`.
+- Output directory: `dist`.
+- Framework preset: None.
+- Node 20 pinned through `.node-version`.
+- No environment variables, Functions, Workers, or paid features required.
+- `npm run dev` and `npm run preview` are explicitly local-only helpers.
 
 ## Multi-Game Platform
 

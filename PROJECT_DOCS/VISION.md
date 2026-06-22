@@ -208,7 +208,7 @@ The design target is:
 
 ## Deployment Philosophy
 
-Current deployment is static and Netlify-friendly.
+Current deployment is fully static and compatible with Netlify, Cloudflare Pages, and GitHub Pages.
 
 That means:
 
@@ -219,5 +219,7 @@ That means:
 - No iframe dependency for frame data.
 - Local JSON should power the site.
 - Node scripts can import/build data locally before deployment.
+- Production hosting should only publish the generated `dist` folder.
+- No production server or database is required.
 
 Future backend/database work is possible, but it should be planned deliberately and not assumed during normal feature work.

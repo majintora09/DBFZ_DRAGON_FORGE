@@ -2,7 +2,7 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 
-const root = process.cwd();
+const root = path.resolve(process.argv[2] || process.cwd());
 const port = 4173;
 const host = "127.0.0.1";
 const types = {
@@ -50,5 +50,5 @@ http
     });
   })
   .listen(port, host, () => {
-    console.log(`FG Lab on http://${host}:${port}`);
+    console.log(`FG Lab serving ${root} on http://${host}:${port}`);
   });

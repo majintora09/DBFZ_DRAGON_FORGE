@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18",
+  "modules": [
+    {
+      "id": "team-builder-vs-training-lab",
+      "category": "Platform",
+      "title": "How To Use Team Builder vs Training Lab",
+      "summary": "Use Team Builder for fast picks. Use Training Lab when you want to understand the reasoning behind those picks.",
+      "deepDive": "The Team Builder should answer: who fits, who covers the gap, and what order makes sense. The Training Lab answers: why that coverage matters, how the shell plays neutral, what the assists unlock, and what the team still lacks.",
+      "keyTakeaways": [
+        "Team Builder is for quick recommendations and roster filtering.",
+        "Training Lab is for the deeper explanation behind team identity.",
+        "Character Database stores frame data, tags, strengths, weaknesses, and notes."
+      ],
+      "relatedTags": ["Team Builder", "Training Lab", "Character Database"]
+    },
+    {
+      "id": "team-roles",
+      "category": "Team Theory",
+      "title": "Point, Mid, Anchor: What The Slots Actually Mean",
+      "summary": "Slots are not rigid labels. They describe resource timing, assist value, and how much help a character needs.",
+      "deepDive": "Point usually spends assists to start offense and build the first resource lead. Mid usually brings strong assists, DHC value, or stabilizes the team after the opener. Anchor usually wants solo control, meter, Spark value, and clean comeback routes. The best order is often the order that gives each character the help they need at the right time.",
+      "keyTakeaways": [
+        "Point cares most about starting neutral and building tempo.",
+        "Mid often carries the shell through assist value and DHC routes.",
+        "Anchor needs solo threat, meter usage, or comeback stability."
+      ],
+      "relatedTags": ["Point", "Mid", "Anchor", "DHC Routes"]
+    },
+    {
+      "id": "shell-logic",
+      "category": "Team Theory",
+      "title": "Shell Logic: Why Two Characters Work Together",
+      "summary": "A shell is a small gameplan: one character creates the problem, the other makes that problem safer or more rewarding.",
+      "deepDive": "Good shells usually solve at least one major question: how do we enter neutral, how do we lock them down, how do we convert stray hits, how do we cash out, or how do we keep oki? Strong shells do not need to solve every problem, but they should create a clear reason to pick both characters together.",
+      "keyTakeaways": [
+        "Look for what one character needs and what the partner naturally gives.",
+        "Strong shells often combine neutral cover, lockdown, routing, or DHC value.",
+        "A weaker shell can still work if the third character patches the missing category."
+      ],
+      "relatedTags": ["Assist Extension", "Corner Carry", "Safe Tag Routes"]
+    },
+    {
+      "id": "assist-types",
+      "category": "Assists",
+      "title": "Assist Types: Beam, Lockdown, DP, Tracking, Neutral, Mix",
+      "summary": "Assist labels should describe the job the assist does for the team, not just what the move looks like.",
+      "deepDive": "Beam and neutral assists help approach or control space. Lockdown assists create time for pressure, mix, or setup. DP assists defend space and interrupt approaches. Tracking assists keep combos and confirms simple. Mix assists create enough blockstun, position, or timing to force real layered offense.",
+      "keyTakeaways": [
+        "Beam and neutral assists solve approach problems.",
+        "Lockdown and mix assists solve pressure problems.",
+        "Tracking and combo assists solve conversion problems."
+      ],
+      "relatedTags": ["Beam Assist", "Lockdown Assist", "DP Assist", "Tracking Assist", "Neutral Assist", "Mix Assist"]
+    },
+    {
+      "id": "archetype-coverage",
+      "category": "Character Choice",
+      "title": "Archetype Coverage",
+      "summary": "A team usually feels better when its archetypes cover different phases of the match.",
+      "deepDive": "Rushdown characters want help forcing contact. Zoners want protection and conversion support. Grapplers need ways to make opponents block or hesitate. Setplay characters need time, knockdowns, and routing. Battery characters need partners who spend meter well. Support characters need teammates that actually benefit from their assist identity.",
+      "keyTakeaways": [
+        "Rushdown plus lockdown creates repeatable offense.",
+        "Zoner plus tracking or defensive support improves screen control.",
+        "Battery plus high-damage anchors creates a clear resource plan."
+      ],
+      "relatedTags": ["Rushdown", "Zoner", "Grappler", "Battery", "Support", "Setplay"]
+    },
+    {
+      "id": "recommended-order",
+      "category": "Team Theory",
+      "title": "Recommended Order: Why The Team Builder Suggests It",
+      "summary": "Recommended order should explain resource flow, not just assign Point/Mid/Anchor labels.",
+      "deepDive": "The app favors characters with neutral and mix earlier because they benefit from assists. It favors strong support, cashout, and comeback value later. That order is a starting point, not a law. If a player has a specific combo route, DHC route, or comfort pick, the best order can change.",
+      "keyTakeaways": [
+        "Start with who needs assists to function.",
+        "Place strong support where their assist matters most.",
+        "Leave the character with the best solo plan, meter spend, or Spark value for later."
+      ],
+      "relatedTags": ["Recommended Order", "Meter Build Synergy", "TOD Synergy"]
+    }
+  ]
+}

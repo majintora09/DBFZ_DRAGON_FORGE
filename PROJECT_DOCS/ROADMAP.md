@@ -64,6 +64,12 @@ Use `TASKS.md` as the active project work queue.
 
 ## Completed
 
+- GitHub -> Cloudflare Pages 0 EUR deployment handoff.
+- Production output verified without `server.js` or any server runtime.
+- Real dependency-free static build output in `dist`.
+- Physical route generation for Cloudflare Pages and GitHub Pages.
+- Configurable GitHub project-site base path.
+- Free Cloudflare Pages and GitHub Pages deployment documentation.
 - 2XKO Synergy Engine v1 with ranked partner reasoning.
 - Reusable recommendation cards backed by local decision data.
 - Shared FG Lab decision-support data contract.
@@ -332,7 +338,7 @@ Focused bugfix pass completed:
 
 ## Deployment Constraint
 
-Current deployment is Netlify ZIP upload.
+FG Lab deploys as a static `dist` folder to free hosting.
 
 Do not assume:
 
@@ -351,4 +357,12 @@ npm run import-dustloop
 npm run build
 ```
 
-Then upload the project ZIP to Netlify.
+Build output: `dist`.
+
+Supported free hosts:
+
+- Cloudflare Pages.
+- GitHub Pages.
+- Netlify static upload.
+
+No runtime server or database is required.

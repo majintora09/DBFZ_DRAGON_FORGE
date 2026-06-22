@@ -1,0 +1,23 @@
+{
+  "basePath": "/",
+  "routes": [
+    "/roadmap",
+    "/games/dbfz",
+    "/games/dbfz/team-builder",
+    "/games/dbfz/characters",
+    "/games/dbfz/synergies",
+    "/games/dbfz/routes",
+    "/games/dbfz/playstyles",
+    "/games/dbfz/knowledge-map",
+    "/games/dbfz/training-lab",
+    "/games/dbfz/videos",
+    "/games/2xko",
+    "/games/2xko/characters",
+    "/games/2xko/team-builder",
+    "/games/2xko/fuses",
+    "/games/2xko/synergies",
+    "/games/2xko/routes",
+    "/games/2xko/research-vault"
+  ],
+  "generatedAt": "2026-06-22T09:09:14.449Z"
+}

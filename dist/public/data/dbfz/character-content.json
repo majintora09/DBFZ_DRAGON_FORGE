@@ -1,0 +1,1942 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18T06:30:02.924Z",
+  "storage": "static-json",
+  "records": {
+    "ssj-goku": {
+      "id": "ssj-goku",
+      "name": "SSj Goku",
+      "roles": [
+        "All-rounder",
+        "Damage",
+        "Support"
+      ],
+      "archetype": "Aggressive all-rounder with strong neutral angles, high damage routes, and flexible assists.",
+      "overview": "Aggressive all-rounder with strong neutral angles, high damage routes, and flexible assists.",
+      "strengths": [
+        "Great beam and angled projectile control.",
+        "High combo damage with practical routes.",
+        "Strong DHC and support value."
+      ],
+      "weaknesses": [
+        "Mix is solid but not naturally oppressive.",
+        "Some pressure relies on readable left-right or Dragon Fist layers."
+      ],
+      "wants": [
+        "fast assists",
+        "tracking cover",
+        "pressure extension"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 5,
+        "support": 8,
+        "ease": 8
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "goku-blue": {
+      "id": "goku-blue",
+      "name": "Goku Blue",
+      "roles": [
+        "Point",
+        "Rushdown",
+        "Mix"
+      ],
+      "archetype": "High-skill point character with strong mobility, command grab pressure, and powerful corner routes.",
+      "overview": "High-skill point character with strong mobility, command grab pressure, and powerful corner routes.",
+      "strengths": [
+        "Excellent approach angles.",
+        "Real strike-throw and left-right pressure.",
+        "Strong level 3 mix and corner damage."
+      ],
+      "weaknesses": [
+        "Takes practice to optimize.",
+        "Can overcommit if movement is not covered."
+      ],
+      "wants": [
+        "neutral cover",
+        "flexible lockdown",
+        "combo conversion"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 9,
+        "support": 5,
+        "ease": 4
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "base-goku": {
+      "id": "base-goku",
+      "name": "Base Goku",
+      "roles": [
+        "Support",
+        "Grappler",
+        "Anchor"
+      ],
+      "archetype": "Explosive support/anchor with elite command grabs, Spirit Bomb value, and terrifying limit-break damage.",
+      "overview": "Explosive support/anchor with elite command grabs, Spirit Bomb value, and terrifying limit-break damage.",
+      "strengths": [
+        "Huge solo damage and meter dump value.",
+        "Strong command grab game.",
+        "Excellent DHC payoff."
+      ],
+      "weaknesses": [
+        "Needs routing knowledge for best Spirit Bomb setups.",
+        "Neutral is strong but specific."
+      ],
+      "wants": [
+        "side-switch routes",
+        "quick assists",
+        "meter plan"
+      ],
+      "metrics": {
+        "damage": 10,
+        "neutral": 7,
+        "mix": 7,
+        "support": 9,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "gt-goku": {
+      "id": "gt-goku",
+      "name": "GT Goku",
+      "roles": [
+        "Support",
+        "Mobility",
+        "Mix"
+      ],
+      "archetype": "Small, mobile support with strong assist utility, tricky movement, and Spirit Bomb cashout.",
+      "overview": "Small, mobile support with strong assist utility, tricky movement, and Spirit Bomb cashout.",
+      "strengths": [
+        "Excellent neutral-assist value.",
+        "Strong mobility-based mix.",
+        "Great meter dump routes."
+      ],
+      "weaknesses": [
+        "Small normals can feel limiting.",
+        "Needs clean movement and setup timing."
+      ],
+      "wants": [
+        "neutral help",
+        "blockstun",
+        "confirm assists"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 7,
+        "mix": 8,
+        "support": 9,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "ui-goku": {
+      "id": "ui-goku",
+      "name": "UI Goku",
+      "roles": [
+        "Defense",
+        "Neutral",
+        "Damage"
+      ],
+      "archetype": "Defensive counter-poke character with strong neutral control, reversals, and dangerous level 3 pressure.",
+      "overview": "Defensive counter-poke character with strong neutral control, reversals, and dangerous level 3 pressure.",
+      "strengths": [
+        "Many defensive answers.",
+        "Strong full-screen pokes.",
+        "Very threatening level 3 mix."
+      ],
+      "weaknesses": [
+        "Some options are punishable when predictable.",
+        "Optimal routes can be precise."
+      ],
+      "wants": [
+        "lockdown",
+        "meter plan",
+        "assist extensions"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 7,
+        "support": 6,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "bardock": {
+      "id": "bardock",
+      "name": "Bardock",
+      "roles": [
+        "Point",
+        "Rushdown",
+        "Pressure"
+      ],
+      "archetype": "Straightforward rushdown fighter with fast lariats, strong pressure rhythm, and reliable team fit.",
+      "overview": "Straightforward rushdown fighter with fast lariats, strong pressure rhythm, and reliable team fit.",
+      "strengths": [
+        "Fast approach tools.",
+        "Simple pressure structure.",
+        "Good routes and DHC compatibility."
+      ],
+      "weaknesses": [
+        "Can be linear without assist cover.",
+        "Needs help versus strong zoning."
+      ],
+      "wants": [
+        "beam assist",
+        "lockdown",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 6,
+        "mix": 6,
+        "support": 6,
+        "ease": 8
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "goku-black": {
+      "id": "goku-black",
+      "name": "Goku Black",
+      "roles": [
+        "Neutral",
+        "Support",
+        "All-rounder"
+      ],
+      "archetype": "Clean neutral character with beam control, teleport layers, and easy team integration.",
+      "overview": "Clean neutral character with beam control, teleport layers, and easy team integration.",
+      "strengths": [
+        "Comfortable beam and normals.",
+        "Good team-friendly assist value.",
+        "Stable combo structure."
+      ],
+      "weaknesses": [
+        "Mix is not his biggest strength.",
+        "Can feel honest without assists."
+      ],
+      "wants": [
+        "mix assists",
+        "pressure cover",
+        "damage partners"
+      ],
+      "metrics": {
+        "damage": 6,
+        "neutral": 8,
+        "mix": 5,
+        "support": 8,
+        "ease": 8
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "zamasu": {
+      "id": "zamasu",
+      "name": "Zamasu",
+      "roles": [
+        "Setplay",
+        "Mobility",
+        "Damage"
+      ],
+      "archetype": "Technical setplay character with flight movement, strong oki concepts, and unique tag/super routes.",
+      "overview": "Technical setplay character with flight movement, strong oki concepts, and unique tag/super routes.",
+      "strengths": [
+        "High ceiling setplay.",
+        "Strong movement and positioning.",
+        "Creative DHC/tag utility."
+      ],
+      "weaknesses": [
+        "Requires routing and setup knowledge.",
+        "Can struggle if denied setup time."
+      ],
+      "wants": [
+        "blockstun",
+        "setup supers",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 6,
+        "mix": 8,
+        "support": 6,
+        "ease": 3
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "ssj-vegeta": {
+      "id": "ssj-vegeta",
+      "name": "SSj Vegeta",
+      "roles": [
+        "Support",
+        "Neutral",
+        "Pressure"
+      ],
+      "archetype": "Classic support Vegeta with strong assist value, clean neutral, and simple pressure tools.",
+      "overview": "Classic support Vegeta with strong assist value, clean neutral, and simple pressure tools.",
+      "strengths": [
+        "Reliable assist utility.",
+        "Good ki blast and neutral checks.",
+        "Easy team placement."
+      ],
+      "weaknesses": [
+        "Solo mix is limited.",
+        "Damage is not the main selling point."
+      ],
+      "wants": [
+        "mix partners",
+        "damage anchors",
+        "lockdown"
+      ],
+      "metrics": {
+        "damage": 6,
+        "neutral": 7,
+        "mix": 5,
+        "support": 9,
+        "ease": 8
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "vegeta-blue": {
+      "id": "vegeta-blue",
+      "name": "Vegeta Blue",
+      "roles": [
+        "Point",
+        "Rushdown",
+        "Mix"
+      ],
+      "archetype": "Explosive point character with rekka pressure, strong corner carry, and scary assist-backed mix.",
+      "overview": "Explosive point character with rekka pressure, strong corner carry, and scary assist-backed mix.",
+      "strengths": [
+        "High-pressure offense.",
+        "Strong corner routes.",
+        "Good meter build and snowball."
+      ],
+      "weaknesses": [
+        "Needs assists for best mix.",
+        "Can overextend if pressure is challenged."
+      ],
+      "wants": [
+        "lockdown",
+        "barrier/safety",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 7,
+        "mix": 9,
+        "support": 5,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "base-vegeta": {
+      "id": "base-vegeta",
+      "name": "Base Vegeta",
+      "roles": [
+        "Point",
+        "Mix",
+        "Damage"
+      ],
+      "archetype": "High-ceiling point with oppressive corner loops, strong oki, and excellent damage when mastered.",
+      "overview": "High-ceiling point with oppressive corner loops, strong oki, and excellent damage when mastered.",
+      "strengths": [
+        "Excellent mix and oki.",
+        "Strong loop damage.",
+        "Great point tempo."
+      ],
+      "weaknesses": [
+        "Execution-heavy.",
+        "Needs corner/routing knowledge."
+      ],
+      "wants": [
+        "neutral assists",
+        "lockdown",
+        "combo stability"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 7,
+        "mix": 9,
+        "support": 5,
+        "ease": 3
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "super-baby-2": {
+      "id": "super-baby-2",
+      "name": "Super Baby 2",
+      "roles": [
+        "Zoner",
+        "Support",
+        "Control"
+      ],
+      "archetype": "Screen-control specialist with strong projectiles, stolen-assist pressure, and excellent team utility.",
+      "overview": "Screen-control specialist with strong projectiles, stolen-assist pressure, and excellent team utility.",
+      "strengths": [
+        "Controls awkward screen angles.",
+        "Strong assist and DHC value.",
+        "Great at slowing matches down."
+      ],
+      "weaknesses": [
+        "Can be rushed if patterns are predictable.",
+        "Needs matchup awareness."
+      ],
+      "wants": [
+        "defensive cover",
+        "mix partners",
+        "cashout"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 10,
+        "mix": 6,
+        "support": 8,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "vegito-blue": {
+      "id": "vegito-blue",
+      "name": "Vegito Blue",
+      "roles": [
+        "Point",
+        "Neutral",
+        "Damage"
+      ],
+      "archetype": "Dominant neutral bully with huge buttons, strong confirms, and high team flexibility.",
+      "overview": "Dominant neutral bully with huge buttons, strong confirms, and high team flexibility.",
+      "strengths": [
+        "Excellent buttons and screen presence.",
+        "Reliable damage and corner carry.",
+        "Strong assist usability."
+      ],
+      "weaknesses": [
+        "Mix can be more assist-dependent.",
+        "Predictable pressure can be reflected/challenged."
+      ],
+      "wants": [
+        "lockdown",
+        "mix support",
+        "defensive assist"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 9,
+        "mix": 6,
+        "support": 7,
+        "ease": 7
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "gogeta-blue": {
+      "id": "gogeta-blue",
+      "name": "Gogeta Blue",
+      "roles": [
+        "Point",
+        "Damage",
+        "Mix"
+      ],
+      "archetype": "Explosive point/pivot with strong normals, huge damage routes, and high reward from assists.",
+      "overview": "Explosive point/pivot with strong normals, huge damage routes, and high reward from assists.",
+      "strengths": [
+        "Huge damage.",
+        "Strong pressure with assist backing.",
+        "Good corner carry."
+      ],
+      "weaknesses": [
+        "Needs help to make offense airtight.",
+        "Can be resource-hungry."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral assists",
+        "meter plan"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 8,
+        "mix": 7,
+        "support": 6,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "ssj4-gogeta": {
+      "id": "ssj4-gogeta",
+      "name": "SSj4 Gogeta",
+      "roles": [
+        "Point",
+        "Mix",
+        "Snowball"
+      ],
+      "archetype": "Momentum monster with scary pressure, Dragon Ball threat, and strong assist-backed mix.",
+      "overview": "Momentum monster with scary pressure, Dragon Ball threat, and strong assist-backed mix.",
+      "strengths": [
+        "Strong mix and pressure.",
+        "Unique Dragon Ball win condition.",
+        "Great snowball once started."
+      ],
+      "weaknesses": [
+        "Can need assist help in neutral.",
+        "Some options are high commitment."
+      ],
+      "wants": [
+        "neutral cover",
+        "lockdown",
+        "meter support"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 7,
+        "mix": 9,
+        "support": 6,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "teen-gohan": {
+      "id": "teen-gohan",
+      "name": "Teen Gohan",
+      "roles": [
+        "Point",
+        "Rushdown",
+        "Damage"
+      ],
+      "archetype": "Fast pressure character with dangerous staggers, strong damage, and scary assist-backed offense.",
+      "overview": "Fast pressure character with dangerous staggers, strong damage, and scary assist-backed offense.",
+      "strengths": [
+        "Explosive pressure.",
+        "High damage routes.",
+        "Strong point momentum."
+      ],
+      "weaknesses": [
+        "Needs clean confirms.",
+        "Can be scramble-heavy."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral cover",
+        "defensive assist"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 7,
+        "mix": 8,
+        "support": 5,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "adult-gohan": {
+      "id": "adult-gohan",
+      "name": "Adult Gohan",
+      "roles": [
+        "Point",
+        "Scaling",
+        "Mix"
+      ],
+      "archetype": "Level-up character who becomes more dangerous as resources and momentum build.",
+      "overview": "Level-up character who becomes more dangerous as resources and momentum build.",
+      "strengths": [
+        "Strong leveled pressure.",
+        "Great scaling payoff.",
+        "Flexible routes."
+      ],
+      "weaknesses": [
+        "Needs meter/levels to peak.",
+        "Early game is more modest."
+      ],
+      "wants": [
+        "meter support",
+        "level-up routes",
+        "lockdown"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 7,
+        "mix": 8,
+        "support": 6,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "videl": {
+      "id": "videl",
+      "name": "Videl",
+      "roles": [
+        "Rushdown",
+        "Mix",
+        "Support"
+      ],
+      "archetype": "Mobile pressure character with evasive movement, layered offense, and tricky assist synergy.",
+      "overview": "Mobile pressure character with evasive movement, layered offense, and tricky assist synergy.",
+      "strengths": [
+        "Tricky pressure patterns.",
+        "Good mobility.",
+        "Strong left-right ideas."
+      ],
+      "weaknesses": [
+        "No traditional reflect changes defense.",
+        "Some routes are character/team specific."
+      ],
+      "wants": [
+        "defensive assist",
+        "lockdown",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 6,
+        "mix": 8,
+        "support": 6,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "gotenks": {
+      "id": "gotenks",
+      "name": "Gotenks",
+      "roles": [
+        "Setplay",
+        "Mix",
+        "Support"
+      ],
+      "archetype": "Ghost oki specialist with layered pressure, strong blockstun assists, and deep combo/setplay routes.",
+      "overview": "Ghost oki specialist with layered pressure, strong blockstun assists, and deep combo/setplay routes.",
+      "strengths": [
+        "Elite oki potential.",
+        "Strong assist value.",
+        "Layered pressure and mix."
+      ],
+      "weaknesses": [
+        "Setups take practice.",
+        "Can be complex under pressure."
+      ],
+      "wants": [
+        "neutral cover",
+        "assist regeneration",
+        "cashout supers"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 6,
+        "mix": 10,
+        "support": 9,
+        "ease": 3
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "trunks": {
+      "id": "trunks",
+      "name": "Trunks",
+      "roles": [
+        "Neutral",
+        "Mobility",
+        "Mix"
+      ],
+      "archetype": "Stylish neutral/mobility character with flips, strong pokes, and creative left-right pressure.",
+      "overview": "Stylish neutral/mobility character with flips, strong pokes, and creative left-right pressure.",
+      "strengths": [
+        "Great movement options.",
+        "Strong neutral buttons.",
+        "Creative mix routes."
+      ],
+      "weaknesses": [
+        "High skill ceiling.",
+        "Needs precision to make mix tight."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral assists",
+        "level 3 spacing"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 8,
+        "mix": 8,
+        "support": 6,
+        "ease": 4
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "piccolo": {
+      "id": "piccolo",
+      "name": "Piccolo",
+      "roles": [
+        "Setplay",
+        "Neutral",
+        "Support"
+      ],
+      "archetype": "Orb/setplay character with strong screen control, layered pressure, and unique assist value.",
+      "overview": "Orb/setplay character with strong screen control, layered pressure, and unique assist value.",
+      "strengths": [
+        "Strong orb pressure.",
+        "Good anti-air/control tools.",
+        "Great setup synergy."
+      ],
+      "weaknesses": [
+        "Requires planning.",
+        "Can be awkward without setup time."
+      ],
+      "wants": [
+        "blockstun",
+        "setup routes",
+        "damage partners"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 8,
+        "mix": 8,
+        "support": 8,
+        "ease": 4
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "krillin": {
+      "id": "krillin",
+      "name": "Krillin",
+      "roles": [
+        "Support",
+        "Utility",
+        "Mix"
+      ],
+      "archetype": "Utility support with rocks, Senzu, tricky pressure, and strong team-specific routes.",
+      "overview": "Utility support with rocks, Senzu, tricky pressure, and strong team-specific routes.",
+      "strengths": [
+        "Unique support tools.",
+        "Good setup utility.",
+        "Can enable unusual team plans."
+      ],
+      "weaknesses": [
+        "Requires matchup and item awareness.",
+        "Neutral can be unconventional."
+      ],
+      "wants": [
+        "damage partners",
+        "stable neutral",
+        "meter users"
+      ],
+      "metrics": {
+        "damage": 6,
+        "neutral": 6,
+        "mix": 7,
+        "support": 9,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "yamcha": {
+      "id": "yamcha",
+      "name": "Yamcha",
+      "roles": [
+        "Support",
+        "Rushdown",
+        "Pressure"
+      ],
+      "archetype": "Close-range pressure support with strong assist value and fast scramble offense.",
+      "overview": "Close-range pressure support with strong assist value and fast scramble offense.",
+      "strengths": [
+        "Great pressure assist.",
+        "Fast close-range offense.",
+        "Good team glue."
+      ],
+      "weaknesses": [
+        "Can struggle to force neutral alone.",
+        "Needs help reaching ideal range."
+      ],
+      "wants": [
+        "neutral cover",
+        "damage partner",
+        "lockdown"
+      ],
+      "metrics": {
+        "damage": 6,
+        "neutral": 5,
+        "mix": 7,
+        "support": 9,
+        "ease": 7
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "tien": {
+      "id": "tien",
+      "name": "Tien",
+      "roles": [
+        "Support",
+        "Damage",
+        "Anchor"
+      ],
+      "archetype": "High-damage support/anchor with strong supers, solid assists, and excellent cashout.",
+      "overview": "High-damage support/anchor with strong supers, solid assists, and excellent cashout.",
+      "strengths": [
+        "Great super damage.",
+        "Reliable support value.",
+        "Strong comeback threat."
+      ],
+      "weaknesses": [
+        "Resource/life cost matters.",
+        "Neutral is solid rather than dominant."
+      ],
+      "wants": [
+        "meter build",
+        "neutral cover",
+        "mix point"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 6,
+        "mix": 5,
+        "support": 8,
+        "ease": 7
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "master-roshi": {
+      "id": "master-roshi",
+      "name": "Master Roshi",
+      "roles": [
+        "Technical",
+        "Mix",
+        "Support"
+      ],
+      "archetype": "Technical movement character with unique mobility, strong assists, and creative pressure.",
+      "overview": "Technical movement character with unique mobility, strong assists, and creative pressure.",
+      "strengths": [
+        "Unique defensive/movement tools.",
+        "Strong assist utility.",
+        "Creative mix potential."
+      ],
+      "weaknesses": [
+        "No normal super dash changes routing.",
+        "High learning curve."
+      ],
+      "wants": [
+        "easy confirms",
+        "neutral partners",
+        "routing practice"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 7,
+        "mix": 8,
+        "support": 8,
+        "ease": 2
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "frieza": {
+      "id": "frieza",
+      "name": "Frieza",
+      "roles": [
+        "Point",
+        "Zoner",
+        "Golden"
+      ],
+      "archetype": "Screen-control zoner who becomes a fast mix threat once Golden Frieza is online.",
+      "overview": "Screen-control zoner who becomes a fast mix threat once Golden Frieza is online.",
+      "strengths": [
+        "Controls many screen angles with fast 5S, discs, orbs, pillars, lasers, and long normals.",
+        "Golden Frieza gives speed, double air dash pressure, reverse beat, and stronger confirms.",
+        "Self-sufficient combos, strong space traps, and good universal mix because 2L hits low."
+      ],
+      "weaknesses": [
+        "Golden is once per match and timer-based.",
+        "A and B assists are awkward or low blockstun."
+      ],
+      "wants": [
+        "lockdown",
+        "tracking assists",
+        "meter for Golden"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 10,
+        "mix": 8,
+        "support": 5,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "cooler": {
+      "id": "cooler",
+      "name": "Cooler",
+      "roles": [
+        "Neutral",
+        "Defense",
+        "Support"
+      ],
+      "archetype": "Anti-zoning bruiser with huge normals, strong defensive tools, and high super damage.",
+      "overview": "Anti-zoning bruiser with huge normals, strong defensive tools, and high super damage.",
+      "strengths": [
+        "Great anti-projectile tools.",
+        "Huge buttons and whiff punishes.",
+        "Strong DHC damage."
+      ],
+      "weaknesses": [
+        "Mix is more limited.",
+        "Some pressure gaps can be challenged."
+      ],
+      "wants": [
+        "lockdown",
+        "tracking assists",
+        "mix partners"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 5,
+        "support": 7,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "nappa": {
+      "id": "nappa",
+      "name": "Nappa",
+      "roles": [
+        "Setplay",
+        "Mix",
+        "Snowball"
+      ],
+      "archetype": "Saibamen setplay character with terrifying restands and some of the strongest advantage states.",
+      "overview": "Saibamen setplay character with terrifying restands and some of the strongest advantage states.",
+      "strengths": [
+        "Massive reset/mix reward.",
+        "Great snowball after setup.",
+        "Unique team routing."
+      ],
+      "weaknesses": [
+        "Neutral needs help.",
+        "Setups are complex and team-specific."
+      ],
+      "wants": [
+        "corner carry",
+        "long assists",
+        "safe tag routes"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 4,
+        "mix": 10,
+        "support": 5,
+        "ease": 2
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "ginyu": {
+      "id": "ginyu",
+      "name": "Ginyu",
+      "roles": [
+        "Setplay",
+        "Support",
+        "Chaos"
+      ],
+      "archetype": "Summon-heavy character who controls tempo with Ginyu Force calls and unique body-swap threat.",
+      "overview": "Summon-heavy character who controls tempo with Ginyu Force calls and unique body-swap threat.",
+      "strengths": [
+        "Strong summon pressure.",
+        "Unique team disruption.",
+        "Creative routing."
+      ],
+      "weaknesses": [
+        "Very high management burden.",
+        "Needs call order awareness."
+      ],
+      "wants": [
+        "space control",
+        "lockdown",
+        "setup time"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 7,
+        "mix": 8,
+        "support": 7,
+        "ease": 2
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "cell": {
+      "id": "cell",
+      "name": "Cell",
+      "roles": [
+        "All-rounder",
+        "Mix",
+        "Point"
+      ],
+      "archetype": "Classic all-rounder with strong buttons, movement, pressure, and flexible team placement.",
+      "overview": "Classic all-rounder with strong buttons, movement, pressure, and flexible team placement.",
+      "strengths": [
+        "Balanced kit.",
+        "Good pressure and mix routes.",
+        "Works with many assists."
+      ],
+      "weaknesses": [
+        "Needs team help to become truly oppressive.",
+        "Some routes are spacing dependent."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral cover",
+        "damage partners"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 8,
+        "support": 7,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "majin-buu": {
+      "id": "majin-buu",
+      "name": "Majin Buu",
+      "roles": [
+        "Setplay",
+        "Mix",
+        "Technical"
+      ],
+      "archetype": "Fat toss setplay character with strong restands, unusual pressure, and high team-specific reward.",
+      "overview": "Fat toss setplay character with strong restands, unusual pressure, and high team-specific reward.",
+      "strengths": [
+        "Strong restand situations.",
+        "Tricky pressure.",
+        "High payoff with the right assists."
+      ],
+      "weaknesses": [
+        "Unusual routing.",
+        "Needs setup knowledge."
+      ],
+      "wants": [
+        "long blockstun",
+        "restand routes",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 5,
+        "mix": 9,
+        "support": 6,
+        "ease": 3
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "kid-buu": {
+      "id": "kid-buu",
+      "name": "Kid Buu",
+      "roles": [
+        "Support",
+        "Mix",
+        "Pressure"
+      ],
+      "archetype": "Elite pressure support with strong lockdown, fast offense, and very flexible team value.",
+      "overview": "Elite pressure support with strong lockdown, fast offense, and very flexible team value.",
+      "strengths": [
+        "Excellent assist utility.",
+        "Strong mix support.",
+        "Great pressure rhythm."
+      ],
+      "weaknesses": [
+        "Damage is not always the main draw.",
+        "Needs clean routing for best value."
+      ],
+      "wants": [
+        "damage partners",
+        "neutral shell",
+        "meter users"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 7,
+        "mix": 9,
+        "support": 10,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "janemba": {
+      "id": "janemba",
+      "name": "Janemba",
+      "roles": [
+        "Anchor",
+        "Neutral",
+        "Mix"
+      ],
+      "archetype": "Teleporting neutral/anchor character with strong space control, sword normals, and tricky mix.",
+      "overview": "Teleporting neutral/anchor character with strong space control, sword normals, and tricky mix.",
+      "strengths": [
+        "Excellent screen control.",
+        "Strong anchor value.",
+        "Teleport and projectile layers."
+      ],
+      "weaknesses": [
+        "Needs precision for best mix.",
+        "Some tools are commitment-heavy."
+      ],
+      "wants": [
+        "blockstun",
+        "meter plan",
+        "setup routes"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 9,
+        "mix": 7,
+        "support": 7,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "hit": {
+      "id": "hit",
+      "name": "Hit",
+      "roles": [
+        "Neutral",
+        "Counter",
+        "Pressure"
+      ],
+      "archetype": "Grounded neutral specialist with stance pressure, counters, and strong whiff-punish control.",
+      "overview": "Grounded neutral specialist with stance pressure, counters, and strong whiff-punish control.",
+      "strengths": [
+        "Strong ground control.",
+        "Unique defensive/counterplay.",
+        "Great punishes."
+      ],
+      "weaknesses": [
+        "Air control is more specific.",
+        "Needs matchup knowledge."
+      ],
+      "wants": [
+        "air-cover assists",
+        "lockdown",
+        "damage partners"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 8,
+        "mix": 6,
+        "support": 6,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "beerus": {
+      "id": "beerus",
+      "name": "Beerus",
+      "roles": [
+        "Setplay",
+        "Neutral",
+        "Mix"
+      ],
+      "archetype": "Orb setplay character with strong space traps, creative pressure, and strong assist-backed offense.",
+      "overview": "Orb setplay character with strong space traps, creative pressure, and strong assist-backed offense.",
+      "strengths": [
+        "Orb control creates layered pressure.",
+        "Strong setplay routes.",
+        "Good neutral traps."
+      ],
+      "weaknesses": [
+        "Needs setup time.",
+        "Can be complex to pilot."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral cover",
+        "routing practice"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 8,
+        "mix": 8,
+        "support": 7,
+        "ease": 4
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "android-16": {
+      "id": "android-16",
+      "name": "Android 16",
+      "roles": [
+        "Grappler",
+        "Damage",
+        "Support"
+      ],
+      "archetype": "Command-grab bruiser with huge damage, strong armor ideas, and simple scary offense.",
+      "overview": "Command-grab bruiser with huge damage, strong armor ideas, and simple scary offense.",
+      "strengths": [
+        "High grab reward.",
+        "Strong damage.",
+        "Good team cashout."
+      ],
+      "weaknesses": [
+        "Needs help getting in.",
+        "Mix is strike-throw focused."
+      ],
+      "wants": [
+        "neutral cover",
+        "lockdown",
+        "fast assists"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 5,
+        "mix": 7,
+        "support": 6,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "android-17": {
+      "id": "android-17",
+      "name": "Android 17",
+      "roles": [
+        "Point",
+        "Pressure",
+        "Support"
+      ],
+      "archetype": "Mobile pressure character with rekka layers, barrier utility, and strong team flexibility.",
+      "overview": "Mobile pressure character with rekka layers, barrier utility, and strong team flexibility.",
+      "strengths": [
+        "Great pressure variety.",
+        "Strong assist value.",
+        "Good mobility."
+      ],
+      "weaknesses": [
+        "Can be execution/timing heavy.",
+        "Needs routing comfort."
+      ],
+      "wants": [
+        "lockdown",
+        "damage partner",
+        "neutral cover"
+      ],
+      "metrics": {
+        "damage": 7,
+        "neutral": 7,
+        "mix": 8,
+        "support": 8,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "android-18": {
+      "id": "android-18",
+      "name": "Android 18",
+      "roles": [
+        "Mid",
+        "Support",
+        "Mix"
+      ],
+      "archetype": "Support/mix character built around 17 calls, barrier safety, and elite level 3 positioning.",
+      "overview": "Support/mix character built around 17 calls, barrier safety, and elite level 3 positioning.",
+      "strengths": [
+        "One of the best level 3 mix situations because the spacing works from basically anywhere.",
+        "Barrier assist protects risky movement and lets rushdown characters force awkward decisions.",
+        "17 calls add neutral cover, combo routes, lockdown, and layered pressure."
+      ],
+      "weaknesses": [
+        "Some 17 call pressure is timing-specific.",
+        "Barrier is punishable if predictable."
+      ],
+      "wants": [
+        "lockdown",
+        "space control",
+        "level 3 routes"
+      ],
+      "metrics": {
+        "damage": 6,
+        "neutral": 7,
+        "mix": 10,
+        "support": 9,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "android-21-majin": {
+      "id": "android-21-majin",
+      "name": "Android 21 (Majin)",
+      "roles": [
+        "All-rounder",
+        "Steals",
+        "Mix"
+      ],
+      "archetype": "Toolbox character with steals, strong neutral, command-grab pressure, and flexible routes.",
+      "overview": "Toolbox character with steals, strong neutral, command-grab pressure, and flexible routes.",
+      "strengths": [
+        "Huge tool variety.",
+        "Strong steal reward.",
+        "Good neutral and mix."
+      ],
+      "weaknesses": [
+        "Must track available steals.",
+        "Best options vary by matchup."
+      ],
+      "wants": [
+        "lockdown",
+        "steal routes",
+        "stable assists"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 8,
+        "support": 7,
+        "ease": 4
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "android-21-lab-coat": {
+      "id": "android-21-lab-coat",
+      "name": "Android 21 (Lab Coat)",
+      "roles": [
+        "All-rounder",
+        "Rushdown",
+        "Control"
+      ],
+      "archetype": "Strong all-round rushdown character with debuff threat, barrier utility, and reliable pressure.",
+      "overview": "Strong all-round rushdown character with debuff threat, barrier utility, and reliable pressure.",
+      "strengths": [
+        "Very complete toolkit.",
+        "Strong pressure and control.",
+        "Good team flexibility."
+      ],
+      "weaknesses": [
+        "Needs careful routing for best value.",
+        "Can be resource/timing dependent."
+      ],
+      "wants": [
+        "lockdown",
+        "meter plan",
+        "damage partners"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 8,
+        "support": 8,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "dbz-broly": {
+      "id": "dbz-broly",
+      "name": "DBZ Broly",
+      "roles": [
+        "Anchor",
+        "Zoner",
+        "Grappler"
+      ],
+      "archetype": "Armored zoner/grappler with huge screen control, scary grabs, and excellent anchor presence.",
+      "overview": "Armored zoner/grappler with huge screen control, scary grabs, and excellent anchor presence.",
+      "strengths": [
+        "Great armor and projectiles.",
+        "Strong anchor threat.",
+        "Huge command-grab fear."
+      ],
+      "weaknesses": [
+        "Large body and commitments matter.",
+        "Needs smart defensive routing."
+      ],
+      "wants": [
+        "lockdown",
+        "meter plan",
+        "fast support"
+      ],
+      "metrics": {
+        "damage": 9,
+        "neutral": 9,
+        "mix": 7,
+        "support": 7,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "dbs-broly": {
+      "id": "dbs-broly",
+      "name": "DBS Broly",
+      "roles": [
+        "Mid",
+        "Anchor",
+        "Damage"
+      ],
+      "archetype": "Strike-throw bruiser with giant reward, meter build, and great DHC value.",
+      "overview": "Strike-throw bruiser with giant reward, meter build, and great DHC value.",
+      "strengths": [
+        "Huge damage and meter build, especially through long routes and auto-combo routing.",
+        "Level 3 powers him up with damage, armor-break state, and passive ki generation.",
+        "Long buttons, armor on key tools, command grabs, and strong strike-throw pressure."
+      ],
+      "weaknesses": [
+        "Not a true high-low monster.",
+        "Some neutral tools are committal or predictable."
+      ],
+      "wants": [
+        "neutral cover",
+        "fast lockdown",
+        "meter plan"
+      ],
+      "metrics": {
+        "damage": 10,
+        "neutral": 7,
+        "mix": 7,
+        "support": 7,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "kefla": {
+      "id": "kefla",
+      "name": "Kefla",
+      "roles": [
+        "Point",
+        "Rushdown",
+        "Pressure"
+      ],
+      "archetype": "Fast rushdown point with strong movement, beam-to-mix ideas, and flexible super routes.",
+      "overview": "Fast rushdown point with strong movement, beam-to-mix ideas, and flexible super routes.",
+      "strengths": [
+        "Great pressure tempo.",
+        "Strong corner carry.",
+        "Good projectile answers."
+      ],
+      "weaknesses": [
+        "Needs assist timing for best mix.",
+        "Some routes can drop late in scaling."
+      ],
+      "wants": [
+        "defensive assists",
+        "lockdown",
+        "meter routes"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 8,
+        "mix": 8,
+        "support": 6,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "jiren": {
+      "id": "jiren",
+      "name": "Jiren",
+      "roles": [
+        "Defense",
+        "Neutral",
+        "Damage"
+      ],
+      "archetype": "Defensive neutral monster with counters, armor-style answers, and high damage confirms.",
+      "overview": "Defensive neutral monster with counters, armor-style answers, and high damage confirms.",
+      "strengths": [
+        "Strong counterplay.",
+        "Great neutral punishment.",
+        "High damage output."
+      ],
+      "weaknesses": [
+        "Pressure can be more read-based.",
+        "Some tools are baitable."
+      ],
+      "wants": [
+        "low-pushback assists",
+        "combo extensions",
+        "mix cover"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 9,
+        "mix": 6,
+        "support": 7,
+        "ease": 6
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    },
+    "ssj4-goku-daima": {
+      "id": "ssj4-goku-daima",
+      "name": "SSj4 Goku (Daima)",
+      "roles": [
+        "Support",
+        "Rushdown",
+        "Mix"
+      ],
+      "archetype": "Mobile DLC fighter with strong assists, flip/dash pressure, and broad tag synergy.",
+      "overview": "Mobile DLC fighter with strong assists, flip/dash pressure, and broad tag synergy.",
+      "strengths": [
+        "Excellent assist value.",
+        "Strong tag-in combo extensions.",
+        "Good level 3 and assist-backed mix."
+      ],
+      "weaknesses": [
+        "Some movement options are punishable.",
+        "Needs control to avoid overcommitting."
+      ],
+      "wants": [
+        "lockdown",
+        "neutral cover",
+        "tag synergy"
+      ],
+      "metrics": {
+        "damage": 8,
+        "neutral": 7,
+        "mix": 8,
+        "support": 9,
+        "ease": 5
+      },
+      "tags": [],
+      "assistTags": [],
+      "synergyTags": [],
+      "bestPartners": [],
+      "goodPartners": [],
+      "carePartners": [],
+      "assistNotes": "",
+      "dhcNotes": "",
+      "matchups": [],
+      "community": [],
+      "portrait": ""
+    }
+  }
+}

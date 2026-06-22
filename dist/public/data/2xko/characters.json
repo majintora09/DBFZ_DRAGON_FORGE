@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-22",
+  "status": "mock",
+  "characters": [
+    {
+      "id": "yasuo",
+      "gameId": "2xko",
+      "name": "Yasuo",
+      "overview": "A momentum-focused point character who benefits from partners that stabilize the approach or amplify a clean opening.",
+      "strengths": ["Pressure after gaining momentum", "Flexible duo offense", "Strong payoff from coordinated tags"],
+      "weaknesses": ["Needs help controlling space", "Route choices can become technical"],
+      "recommendedPartnerIds": ["ahri", "darius", "ekko"],
+      "recommendedFuseIds": ["freestyle", "double-down"],
+      "recommendedRouteIds": ["safe-tag-confirm", "corner-carry-route"],
+      "notes": ["Example content for testing the recommendation interface."]
+    },
+    { "id": "ahri", "gameId": "2xko", "name": "Ahri" },
+    { "id": "darius", "gameId": "2xko", "name": "Darius" },
+    { "id": "ekko", "gameId": "2xko", "name": "Ekko" }
+  ]
+}

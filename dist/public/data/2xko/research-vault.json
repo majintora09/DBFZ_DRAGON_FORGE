@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-22",
+  "records": [
+    {
+      "character": "General Systems",
+      "sourceType": "Personal notes",
+      "link": "",
+      "notes": "Document confirmed Fuse behavior and tag rules before converting them into recommendations.",
+      "tags": ["Fuses", "Tag System"],
+      "verified": false
+    },
+    {
+      "character": "Tournament Roster",
+      "sourceType": "Tournament",
+      "link": "",
+      "notes": "Track stable duo patterns and common assist choices once public footage is reviewed.",
+      "tags": ["Duos", "Match Footage"],
+      "verified": false
+    }
+  ]
+}

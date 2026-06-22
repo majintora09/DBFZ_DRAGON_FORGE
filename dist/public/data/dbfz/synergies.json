@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "relationships": [],
+  "template": {
+    "characterA": "Janemba",
+    "characterAId": "janemba",
+    "characterB": "Vegito",
+    "characterBId": "vegito-blue",
+    "tags": [
+      "DHC Routes",
+      "Corner Carry",
+      "Assist Extension"
+    ],
+    "notes": "Strong DHC conversion and corner carry routes.",
+    "videoUrl": ""
+  }
+}

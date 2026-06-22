@@ -1,0 +1,279 @@
+{
+  "source": "Dustloop",
+  "startedAt": "2026-06-18T10:57:12.227Z",
+  "finishedAt": "2026-06-18T10:57:27.511Z",
+  "totalCharacters": 45,
+  "imported": [
+    {
+      "id": "ssj-goku",
+      "name": "SSj Goku",
+      "moveCount": 51,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku/Frame_Data"
+    },
+    {
+      "id": "goku-blue",
+      "name": "Goku Blue",
+      "moveCount": 40,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(SSGSS)/Frame_Data"
+    },
+    {
+      "id": "base-goku",
+      "name": "Base Goku",
+      "moveCount": 51,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku/Frame_Data"
+    },
+    {
+      "id": "gt-goku",
+      "name": "GT Goku",
+      "moveCount": 41,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(GT)/Frame_Data"
+    },
+    {
+      "id": "ui-goku",
+      "name": "UI Goku",
+      "moveCount": 53,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(Ultra_Instinct)/Frame_Data"
+    },
+    {
+      "id": "bardock",
+      "name": "Bardock",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Bardock/Frame_Data"
+    },
+    {
+      "id": "goku-black",
+      "name": "Goku Black",
+      "moveCount": 40,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_Black/Frame_Data"
+    },
+    {
+      "id": "zamasu",
+      "name": "Zamasu",
+      "moveCount": 42,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Zamasu_(Fused)/Frame_Data"
+    },
+    {
+      "id": "ssj-vegeta",
+      "name": "SSj Vegeta",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta/Frame_Data"
+    },
+    {
+      "id": "vegeta-blue",
+      "name": "Vegeta Blue",
+      "moveCount": 46,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta_(SSGSS)/Frame_Data"
+    },
+    {
+      "id": "base-vegeta",
+      "name": "Base Vegeta",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegeta/Frame_Data"
+    },
+    {
+      "id": "super-baby-2",
+      "name": "Super Baby 2",
+      "moveCount": 46,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Super_Baby_2/Frame_Data"
+    },
+    {
+      "id": "vegito-blue",
+      "name": "Vegito Blue",
+      "moveCount": 42,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Vegito_(SSGSS)/Frame_Data"
+    },
+    {
+      "id": "gogeta-blue",
+      "name": "Gogeta Blue",
+      "moveCount": 48,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gogeta_(SSGSS)/Frame_Data"
+    },
+    {
+      "id": "ssj4-gogeta",
+      "name": "SSj4 Gogeta",
+      "moveCount": 44,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gogeta_(SS4)/Frame_Data"
+    },
+    {
+      "id": "teen-gohan",
+      "name": "Teen Gohan",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gohan_(Teen)/Frame_Data"
+    },
+    {
+      "id": "adult-gohan",
+      "name": "Adult Gohan",
+      "moveCount": 56,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gohan_(Adult)/Frame_Data"
+    },
+    {
+      "id": "videl",
+      "name": "Videl",
+      "moveCount": 50,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Videl/Frame_Data"
+    },
+    {
+      "id": "gotenks",
+      "name": "Gotenks",
+      "moveCount": 41,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Gotenks/Frame_Data"
+    },
+    {
+      "id": "trunks",
+      "name": "Trunks",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Trunks/Frame_Data"
+    },
+    {
+      "id": "piccolo",
+      "name": "Piccolo",
+      "moveCount": 42,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Piccolo/Frame_Data"
+    },
+    {
+      "id": "krillin",
+      "name": "Krillin",
+      "moveCount": 54,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Krillin/Frame_Data"
+    },
+    {
+      "id": "yamcha",
+      "name": "Yamcha",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Yamcha/Frame_Data"
+    },
+    {
+      "id": "tien",
+      "name": "Tien",
+      "moveCount": 48,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Tien/Frame_Data"
+    },
+    {
+      "id": "master-roshi",
+      "name": "Master Roshi",
+      "moveCount": 51,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Master_Roshi/Frame_Data"
+    },
+    {
+      "id": "frieza",
+      "name": "Frieza",
+      "moveCount": 35,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Frieza/Frame_Data"
+    },
+    {
+      "id": "cooler",
+      "name": "Cooler",
+      "moveCount": 45,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Cooler/Frame_Data"
+    },
+    {
+      "id": "nappa",
+      "name": "Nappa",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Nappa/Frame_Data"
+    },
+    {
+      "id": "ginyu",
+      "name": "Ginyu",
+      "moveCount": 44,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Captain_Ginyu/Frame_Data"
+    },
+    {
+      "id": "cell",
+      "name": "Cell",
+      "moveCount": 41,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Cell/Frame_Data"
+    },
+    {
+      "id": "majin-buu",
+      "name": "Majin Buu",
+      "moveCount": 36,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Majin_Buu/Frame_Data"
+    },
+    {
+      "id": "kid-buu",
+      "name": "Kid Buu",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Kid_Buu/Frame_Data"
+    },
+    {
+      "id": "janemba",
+      "name": "Janemba",
+      "moveCount": 46,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Janemba/Frame_Data"
+    },
+    {
+      "id": "hit",
+      "name": "Hit",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Hit/Frame_Data"
+    },
+    {
+      "id": "beerus",
+      "name": "Beerus",
+      "moveCount": 45,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Beerus/Frame_Data"
+    },
+    {
+      "id": "android-16",
+      "name": "Android 16",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_16/Frame_Data"
+    },
+    {
+      "id": "android-17",
+      "name": "Android 17",
+      "moveCount": 62,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_17/Frame_Data"
+    },
+    {
+      "id": "android-18",
+      "name": "Android 18",
+      "moveCount": 41,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_18/Frame_Data"
+    },
+    {
+      "id": "android-21-majin",
+      "name": "Android 21 (Majin)",
+      "moveCount": 58,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_21/Frame_Data"
+    },
+    {
+      "id": "android-21-lab-coat",
+      "name": "Android 21 (Lab Coat)",
+      "moveCount": 49,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Android_21_(Lab_Coat)/Frame_Data"
+    },
+    {
+      "id": "dbz-broly",
+      "name": "DBZ Broly",
+      "moveCount": 36,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Broly/Frame_Data"
+    },
+    {
+      "id": "dbs-broly",
+      "name": "DBS Broly",
+      "moveCount": 38,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Broly_(DBS)/Frame_Data"
+    },
+    {
+      "id": "kefla",
+      "name": "Kefla",
+      "moveCount": 36,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Kefla/Frame_Data"
+    },
+    {
+      "id": "jiren",
+      "name": "Jiren",
+      "moveCount": 37,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Jiren/Frame_Data"
+    },
+    {
+      "id": "ssj4-goku-daima",
+      "name": "SSj4 Goku (Daima)",
+      "moveCount": 47,
+      "sourceUrl": "https://www.dustloop.com/w/DBFZ/Goku_(SS4%2C_DAIMA)/Frame_Data"
+    }
+  ],
+  "failed": []
+}

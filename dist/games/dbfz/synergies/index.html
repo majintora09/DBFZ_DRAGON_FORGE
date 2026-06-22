@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FG Lab</title>
+    <script>
+      const configuredBase = "/";
+      const base = document.createElement("base");
+      base.href = configuredBase.startsWith("__")
+        ? (window.location.protocol === "file:" ? "./" : "/")
+        : configuredBase;
+      document.head.append(base);
+      window.FG_LAB_BASE_PATH = configuredBase.startsWith("__") ? "/" : configuredBase;
+      window.FG_LAB_ASSET_PATH = (path) => {
+        const value = String(path || "");
+        if (/^(?:https?:|data:|blob:)/.test(value)) return value;
+        if (window.location.protocol === "file:") return value.replace(/^\/+/, "");
+        if (window.FG_LAB_BASE_PATH !== "/" && value.startsWith(window.FG_LAB_BASE_PATH)) return value;
+        return `${window.FG_LAB_BASE_PATH}${value.replace(/^\/+/, "")}`;
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="platformHome" class="platform-shell platform-home">
+      <header class="platform-topbar">
+        <a class="platform-brand" href="/" data-route="/">
+          <strong>FG</strong>
+          <span>Lab</span>
+        </a>
+        <a href="/roadmap" data-route="/roadmap">Roadmap</a>
+      </header>
+      <section class="platform-hero">
+        <div>
+          <p class="eyebrow">Fighting Game Knowledge Platform</p>
+          <h1>Choose Your Lab</h1>
+          <p>Build teams quickly, then study the system behind them. Each game keeps its own tools, data, and visual identity.</p>
+        </div>
+      </section>
+      <section class="platform-game-section" aria-labelledby="gameSelectTitle">
+        <header>
+          <p class="eyebrow">Game Select</p>
+          <h2 id="gameSelectTitle">Enter A Lab</h2>
+        </header>
+        <div id="gameCardGrid" class="platform-game-grid"></div>
+      </section>
+      <section id="fgLabRoadmap" class="platform-roadmap" aria-labelledby="roadmapTitle">
+        <header>
+          <p class="eyebrow">FG Lab Roadmap</p>
+          <h2 id="roadmapTitle">Controlled Expansion</h2>
+        </header>
+        <div class="platform-phase-grid">
+          <article><span>Phase 1</span><h3>Platform Foundation</h3><ul><li>Game selection landing page</li><li>Shared game config</li><li>Game-based routing</li><li>Mobile navigation</li><li>Keep DBFZ stable</li></ul></article>
+          <article><span>Phase 2</span><h3>DBFZ Completion</h3><ul><li>Complete character pages</li><li>Assists and team roles</li><li>Synergy tags</li><li>Routes</li></ul></article>
+          <article><span>Phase 3</span><h3>2XKO Expansion</h3><ul><li>Character database</li><li>Duo recommendations</li><li>Fuse explanations</li><li>Tag routes</li><li>Matchup notes</li></ul></article>
+          <article><span>Phase 4</span><h3>Community Features</h3><ul><li>Submit tech and routes</li><li>Upvotes</li><li>Creator/player profiles</li></ul></article>
+        </div>
+      </section>
+    </main>
+
+    <main id="twoXkoPortal" class="platform-shell two-xko-portal" hidden>
+      <header class="game-portal-topbar">
+        <button class="platform-brand" type="button" data-route="/">
+          <strong>FG</strong>
+          <span>Lab</span>
+        </button>
+        <div class="game-portal-title"><strong>2XKO</strong><span>Early Build</span></div>
+        <nav id="twoXkoNav" class="game-portal-nav" aria-label="2XKO sections"></nav>
+      </header>
+      <section class="two-xko-banner">
+        <p class="eyebrow">2XKO Research Portal</p>
+        <strong>Build the duo. Verify the logic.</strong>
+      </section>
+      <article id="twoXkoContent" class="two-xko-content"></article>
+    </main>
+
+    <main id="dbfzPortal" class="app-shell" hidden>
+      <header class="hero">
+        <div class="top-nav">
+          <button class="brand-lockup brand-button" type="button" data-route="/">
+            <strong>DBFZ</strong>
+            <span>Team Lab</span>
+          </button>
+          <button id="menuToggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="main-nav" aria-label="Main sections">
+            <a href="/games/dbfz/team-builder" data-route="/games/dbfz/team-builder" aria-current="page">Team Builder</a>
+            <a href="/games/dbfz/playstyles" data-route="/games/dbfz/playstyles">Playstyle Teams</a>
+            <a href="/games/dbfz/knowledge-map" data-route="/games/dbfz/knowledge-map">Knowledge Map</a>
+            <a href="/games/dbfz/synergies" data-route="/games/dbfz/synergies">Training Lab</a>
+            <a href="/games/dbfz/characters" data-route="/games/dbfz/characters">Characters</a>
+            <a href="/games/dbfz/routes" data-route="/games/dbfz/routes">Videos</a>
+          </nav>
+          <div class="nav-actions">
+            <button id="mobilePreviewToggle" class="text-button preview-toggle" type="button" aria-pressed="false">Mobile Preview</button>
+            <button id="resetTeam" class="text-button" type="button">Reset Team</button>
+          </div>
+        </div>
+        <button id="navBackdrop" class="nav-backdrop" type="button" aria-label="Close navigation" hidden></button>
+        <div class="hero-copy">
+          <p class="eyebrow">DBFZ Team Lab</p>
+          <h1><span>Build Better.</span> <span>Win More.</span></h1>
+          <p>Assemble your shell, test the partner logic, and keep the full team plan visible.</p>
+        </div>
+      </header>
+
+      <section class="builder-stage app-view team-builder-view" aria-label="Team builder">
+        <section class="team-stage" aria-label="Selected team">
+          <div class="stage-header">
+            <div>
+              <p class="eyebrow">Current Team</p>
+              <h2 id="teamTitle">Selected Shell</h2>
+            </div>
+          </div>
+
+          <div id="teamSlots" class="team-slots">
+            <article class="team-card empty" data-slot="0" draggable="true">
+              <span class="slot-index">01</span>
+              <div class="team-art">+</div>
+              <div class="team-copy">
+                <strong>Drop fighter</strong>
+                <p>Click or drag from the roster tray.</p>
+              </div>
+            </article>
+            <article class="team-card empty" data-slot="1" draggable="true">
+              <span class="slot-index">02</span>
+              <div class="team-art">+</div>
+              <div class="team-copy">
+                <strong>Drop fighter</strong>
+                <p>Drag cards here to reorder.</p>
+              </div>
+            </article>
+            <article class="team-card empty" data-slot="2" draggable="true">
+              <span class="slot-index">03</span>
+              <div class="team-art">+</div>
+              <div class="team-copy">
+                <strong>Drop fighter</strong>
+                <p>The team plan updates live.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </section>
+
+      <section class="analysis-grid app-view team-builder-view" aria-label="Team analysis">
+        <article class="analysis-card team-plan-card">
+          <p class="eyebrow">Why It Works</p>
+          <div id="recommendedOrder" class="order-panel">Recommended order appears after 3 picks.</div>
+          <div id="teamPlan" class="team-plan-lines">Pick characters to start mapping the team plan.</div>
+        </article>
+        <article class="analysis-card synergy-score-card">
+          <p class="eyebrow">Strengths</p>
+          <div id="teamShape" class="meter-grid"></div>
+        </article>
+        <article class="analysis-card">
+          <p class="eyebrow">Synergy</p>
+          <div id="synergyMap" class="synergy-map"></div>
+        </article>
+      </section>
+
+      <section class="roster-dock app-view team-builder-view" aria-label="Roster tray">
+        <div class="dock-header">
+          <div>
+            <p class="eyebrow">Roster</p>
+          </div>
+          <p id="noteStatus" class="note-status">Notes loading</p>
+        </div>
+        <div class="roster-controls">
+          <input id="search" type="search" placeholder="Search fighter" aria-label="Search fighter" />
+          <select id="roleFilter" aria-label="Filter by role">
+            <option value="all">Any role</option>
+          </select>
+          <select id="metricFilter" aria-label="Filter by strongest stat">
+            <option value="all">Any stat</option>
+            <option value="damage">Damage</option>
+            <option value="neutral">Neutral</option>
+            <option value="mix">Mix</option>
+            <option value="support">Support</option>
+          </select>
+          <select id="assistTypeFilter" aria-label="Filter by assist type">
+            <option value="all">Any assist</option>
+          </select>
+          <select id="rosterTagFilter" aria-label="Filter by grouped tag">
+            <option value="all">Any grouped tag</option>
+          </select>
+          <select id="filter" aria-label="Filter polish status">
+            <option value="all">All notes</option>
+            <option value="curated">Polished</option>
+            <option value="raw">Auto-cleaned</option>
+          </select>
+        </div>
+        <div id="roster" class="roster-tray"></div>
+      </section>
+
+      <section id="charactersView" class="characters-view app-view" aria-label="Character database" hidden>
+        <aside class="character-browser">
+          <div class="database-heading">
+            <p class="eyebrow">Characters</p>
+            <h2>Knowledge Base</h2>
+          </div>
+          <div class="character-filters">
+            <input id="characterSearch" type="search" placeholder="Search character, tag, assist" aria-label="Search character database" />
+            <select id="tagTypeFilter" aria-label="Filter tag type">
+              <option value="all">All tag types</option>
+              <option value="character">Character tags</option>
+              <option value="assist">Assist tags</option>
+              <option value="synergy">Synergy tags</option>
+            </select>
+            <select id="tagFilter" aria-label="Filter by grouped tag">
+              <option value="all">Any grouped tag</option>
+            </select>
+          </div>
+          <div id="characterList" class="character-list"></div>
+        </aside>
+
+        <article class="character-page">
+          <header class="character-page-hero">
+            <div id="characterPageArt" class="character-page-art"></div>
+            <div>
+              <p class="eyebrow">Character Page</p>
+              <h2 id="characterPageName">Pick a Fighter</h2>
+              <p id="characterPageOverview">Select a character to open the full database page.</p>
+              <div id="characterPageTags" class="tag-list"></div>
+              <button id="characterEditButton" class="text-button edit-character-button" type="button" hidden>Edit Character</button>
+            </div>
+          </header>
+
+          <div class="character-section-grid">
+            <section class="knowledge-card">
+              <h3>Strengths</h3>
+              <ul id="characterStrengths"></ul>
+            </section>
+            <section class="knowledge-card">
+              <h3>Weaknesses</h3>
+              <ul id="characterWeaknesses"></ul>
+            </section>
+            <section class="knowledge-card">
+              <h3>Assists A / B / C</h3>
+              <div id="characterAssists" class="assist-grid"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Recommended Positions</h3>
+              <div id="characterPositions" class="position-grid"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Synergies</h3>
+              <div id="characterSynergies" class="note-list"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Community Notes / Tips</h3>
+              <div id="characterCommunity" class="note-list"></div>
+            </section>
+          </div>
+
+          <section class="knowledge-card frame-card">
+            <div class="frame-tools">
+              <div>
+                <p class="eyebrow">Frame Data</p>
+                <h3>Local Dustloop Import</h3>
+                <p class="data-source-note">Frame data imported from Dustloop and stored locally.</p>
+              </div>
+              <div class="frame-control-stack">
+                <input id="frameSearch" type="search" placeholder="Search moves" aria-label="Search frame data" />
+                <select id="frameGroupFilter" aria-label="Filter move type">
+                  <option value="all">All move types</option>
+                  <option value="lights">Light attacks</option>
+                  <option value="mediums">Medium attacks</option>
+                  <option value="heavies">Heavy attacks</option>
+                  <option value="qcf">QCF specials</option>
+                  <option value="qcb">QCB specials</option>
+                  <option value="other-specials">Other specials</option>
+                  <option value="supers">Supers</option>
+                </select>
+                <select id="frameViewMode" aria-label="Frame data view mode">
+                  <option value="auto">Auto view</option>
+                  <option value="table">Table view</option>
+                  <option value="cards">Card view</option>
+                </select>
+              </div>
+            </div>
+            <div class="frame-table-wrap">
+              <table class="frame-table">
+                <thead>
+                  <tr>
+                    <th data-sort="move">Move</th>
+                    <th data-sort="damage">Damage</th>
+                    <th data-sort="startup">Startup</th>
+                    <th data-sort="blockAdvantage">Block</th>
+                    <th data-sort="hitAdvantage">Hit</th>
+                    <th>Active</th>
+                    <th>Recovery</th>
+                    <th>Invuln / Notes</th>
+                  </tr>
+                </thead>
+                <tbody id="frameTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <section id="playstylesView" class="playstyles-view app-view" aria-label="Playstyle teams" hidden>
+        <aside class="synergy-filter-panel">
+          <div class="database-heading">
+            <p class="eyebrow">Playstyle Teams</p>
+            <h2>Pick a Feel</h2>
+          </div>
+          <div class="character-filters">
+            <input id="playstyleSearch" type="search" placeholder="Search playstyles" aria-label="Search playstyles" />
+          </div>
+          <div id="playstyleList" class="playstyle-list"></div>
+          <p class="data-source-note">Start from how you like fighting games to feel, then inspect characters and shells from there.</p>
+        </aside>
+        <article id="playstyleTeams" class="guide-page playstyle-page">
+          <header class="guide-hero">
+            <p class="eyebrow">Team Discovery</p>
+            <h2 id="playstyleTitle">Playstyle Teams</h2>
+            <p id="playstyleSummary">Choose a style to see characters, shell ideas, example teams, strengths, weaknesses, and why the style works.</p>
+          </header>
+
+          <section class="playstyle-detail-grid">
+            <section class="knowledge-card wide">
+              <h3>Recommended Characters</h3>
+              <div id="playstyleCharacters" class="playstyle-character-grid"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Recommended Shells</h3>
+              <div id="playstyleShells" class="note-list"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Example Teams</h3>
+              <div id="playstyleExamples" class="playstyle-team-list"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Strengths</h3>
+              <div id="playstyleStrengths" class="note-list"></div>
+            </section>
+            <section class="knowledge-card">
+              <h3>Weaknesses</h3>
+              <div id="playstyleWeaknesses" class="note-list"></div>
+            </section>
+            <section class="knowledge-card wide">
+              <h3>Why The Style Works</h3>
+              <p id="playstyleWhy" class="playstyle-why"></p>
+              <div id="playstyleTags" class="tag-list"></div>
+            </section>
+          </section>
+        </article>
+      </section>
+
+      <section id="knowledgeView" class="knowledge-view app-view" aria-label="Knowledge Map" hidden>
+        <aside class="synergy-filter-panel knowledge-map-sidebar">
+          <details id="knowledgeDrawer" class="knowledge-mobile-drawer" open>
+            <summary><span>Map Browser</span><strong>Open nodes</strong></summary>
+            <div class="knowledge-mobile-drawer-body">
+              <div class="database-heading">
+                <p class="eyebrow">Knowledge Map</p>
+                <h2>Connected DBFZ</h2>
+              </div>
+              <div class="character-filters">
+                <input id="graphSearch" type="search" placeholder="Search characters, tags, shells" aria-label="Search Knowledge Map" />
+                <select id="graphTypeFilter" aria-label="Filter graph node type">
+                  <option value="all">All node types</option>
+                  <option value="character">Characters</option>
+                  <option value="tag">Tags</option>
+                  <option value="archetype">Archetypes</option>
+                  <option value="assist">Assists</option>
+                  <option value="playstyle">Playstyles</option>
+                  <option value="shell">Shells</option>
+                  <option value="team">Teams</option>
+                </select>
+              </div>
+              <div id="graphNodeList" class="graph-node-list"></div>
+              <p class="data-source-note">Click any linked concept to keep moving through the DBFZ Knowledge Map.</p>
+            </div>
+          </details>
+        </aside>
+
+        <article id="knowledgeNetwork" class="guide-page graph-page">
+          <header class="guide-hero">
+            <p class="eyebrow">Explore Relationships</p>
+            <h2 id="graphTitle">Knowledge Map</h2>
+            <p id="graphSummary">Characters, shells, tags, assists, archetypes, playstyles, and teams are connected from the local database.</p>
+          </header>
+          <section class="graph-layout">
+            <section class="knowledge-card graph-focus-card">
+              <p class="eyebrow" id="graphFocusType">Node</p>
+              <h3 id="graphFocusTitle">Pick a node</h3>
+              <p id="graphFocusSummary">Search or click a tag anywhere on the site to explore related DBFZ content.</p>
+              <div id="graphFocusTags" class="tag-list"></div>
+            </section>
+            <section class="knowledge-card wide">
+              <h3>Connected Nodes</h3>
+              <div id="graphConnections" class="graph-connection-grid"></div>
+            </section>
+            <section class="knowledge-card wide">
+              <h3>Why This Connects</h3>
+              <div id="graphEvidence" class="note-list"></div>
+            </section>
+          </section>
+        </article>
+      </section>
+
+      <section id="guidesView" class="guides-view training-lab-view app-view" aria-label="Training lab" hidden>
+        <aside class="synergy-filter-panel">
+          <div class="database-heading">
+            <p class="eyebrow">Training Lab</p>
+            <h2>Reasoning Engine</h2>
+          </div>
+          <div class="character-filters">
+            <input id="guideSearch" type="search" placeholder="Search training topics" aria-label="Search training lab" />
+            <select id="guideTemplateSelect" aria-label="Guide template">
+              <option value="all">All topics</option>
+            </select>
+            <input id="synergySearch" type="search" placeholder="Search tags, characters, notes" aria-label="Search team logic" />
+            <select id="characterTagFilter" aria-label="Filter by character tag">
+              <option value="all">Any character tag</option>
+            </select>
+            <select id="assistTagFilter" aria-label="Filter by assist tag">
+              <option value="all">Any assist tag</option>
+            </select>
+            <select id="synergyTagFilter" aria-label="Filter by synergy tag">
+              <option value="all">Any synergy tag</option>
+            </select>
+            <select id="minBlockstunFilter" aria-label="Filter by minimum blockstun">
+              <option value="0">Any blockstun</option>
+              <option value="30">30+ blockstun</option>
+              <option value="40">40+ blockstun</option>
+            </select>
+          </div>
+          <p class="data-source-note">The Team Builder recommends. The Training Lab explains the reason behind the shell.</p>
+        </aside>
+        <article id="trainingLab" class="guide-page">
+          <header class="guide-hero">
+            <p class="eyebrow">Interactive Strategy Guide</p>
+            <h2 id="guideTitle">Training Lab</h2>
+            <p id="guideSummary">Learn why teams work, why they fail, what characters contribute, and how assists, DHCs, shells, and win conditions shape the final pick.</p>
+          </header>
+          <section class="lab-spine" aria-label="Training lab reasoning structure">
+            <article>
+              <strong>Character Identity</strong>
+              <p>Roles, archetypes, and the one-sentence reason this pick exists.</p>
+            </article>
+            <article>
+              <strong>Contributions</strong>
+              <p>Damage, neutral, mix, support, meter, and the problem being solved.</p>
+            </article>
+            <article>
+              <strong>Placement</strong>
+              <p>Point, mid, anchor, preferred order, and the support requirements.</p>
+            </article>
+            <article>
+              <strong>Partners + DHC</strong>
+              <p>Which shells convert, stabilize, cash out, or unlock specific routes.</p>
+            </article>
+            <article>
+              <strong>Win Conditions</strong>
+              <p>The match plan, late-game plan, and team-building questions to ask.</p>
+            </article>
+            <article>
+              <strong>Verdict</strong>
+              <p>Why pick, why avoid, and what kind of player/team should commit.</p>
+            </article>
+          </section>
+          <div id="guideSections" class="guide-section-grid"></div>
+          <section class="lab-discovery" aria-label="Training lab discovery">
+            <details class="lab-folder">
+              <summary><span>Assist Logic</span><strong>Open filter results</strong></summary>
+              <div id="assistResults" class="result-list"></div>
+            </details>
+            <details class="lab-folder">
+              <summary><span>Character Logic</span><strong>Open filter results</strong></summary>
+              <div id="characterTagResults" class="result-list"></div>
+            </details>
+            <details class="lab-folder">
+              <summary><span>Shell Relationships</span><strong>Open pair notes</strong></summary>
+              <div id="relationshipResults" class="result-list"></div>
+            </details>
+          </section>
+
+          <section class="movie-room" aria-label="Movie Room">
+            <header class="movie-room-header">
+              <div>
+                <p class="eyebrow">Movie Room</p>
+                <h3>Study The Footage</h3>
+                <p>Manually managed sets, guides, match footage, shell footage, and clips for character, shell, and team pages.</p>
+              </div>
+              <div class="movie-room-controls">
+                <input id="movieSearch" type="search" placeholder="Search Movie Room" aria-label="Search Movie Room" />
+                <div class="movie-filter-row">
+                  <select id="movieScopeFilter" aria-label="Filter Movie Room scope">
+                    <option value="character">Character pages</option>
+                    <option value="shell">Shell pages</option>
+                    <option value="team">Team pages</option>
+                    <option value="all">All saved pages</option>
+                  </select>
+                  <select id="movieTypeFilter" aria-label="Filter Movie Room type">
+                    <option value="all">All footage</option>
+                  </select>
+                </div>
+                <select id="movieCharacterPicker" aria-label="Choose Movie Room fighter"></select>
+                <div class="movie-team-row">
+                  <div id="movieTeamPicker" class="movie-team-picker" aria-label="Movie Room team picker"></div>
+                  <button id="movieEditTeam" class="text-button" type="button">Change Team</button>
+                </div>
+              </div>
+            </header>
+            <div id="movieRoomList" class="movie-room-list"></div>
+          </section>
+        </article>
+      </section>
+
+      <section id="videosView" class="videos-view app-view" aria-label="Video library" hidden>
+        <aside class="synergy-filter-panel">
+          <div class="database-heading">
+            <p class="eyebrow">Video Library</p>
+            <h2>Watchlist</h2>
+          </div>
+          <div class="character-filters">
+            <input id="videoSearch" type="search" placeholder="Search videos, characters, tags" aria-label="Search videos" />
+            <select id="videoCharacterFilter" aria-label="Filter videos by character">
+              <option value="all">Any character</option>
+            </select>
+            <select id="videoTopicFilter" aria-label="Filter videos by topic">
+              <option value="all">Any topic</option>
+            </select>
+          </div>
+          <p class="data-source-note">Drop guide links, combo clips, Discord breakdowns, and setplay examples here as the community adds them.</p>
+        </aside>
+        <article id="videoLibrary" class="guide-page video-library-page">
+          <header class="guide-hero">
+            <p class="eyebrow">DBFZ Study Queue</p>
+            <h2>Video Library</h2>
+            <p>Organize character guides, shell demos, combo routes, matchup notes, and future community clips.</p>
+          </header>
+          <div id="videoList" class="video-grid"></div>
+        </article>
+      </section>
+
+      <section id="adminView" class="admin-view app-view" aria-label="Admin panel" hidden>
+        <aside class="synergy-filter-panel admin-sidebar">
+          <div class="database-heading">
+            <p class="eyebrow">Admin Panel</p>
+            <h2>Data Control</h2>
+          </div>
+          <div class="character-filters">
+            <label>
+              Current Role
+              <select id="adminRoleSelect" aria-label="Current user role">
+                <option value="viewer">Viewer</option>
+                <option value="contributor">Contributor</option>
+                <option value="editor">Editor</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+            <label>
+              Character
+              <select id="adminCharacterSelect" aria-label="Character to edit"></select>
+            </label>
+          </div>
+          <div id="permissionSummary" class="permission-summary"></div>
+          <div class="admin-actions">
+            <button id="saveCharacterDraft" class="text-button" type="button">Save Draft</button>
+            <button id="publishCharacterDraft" class="text-button" type="button">Apply Locally</button>
+            <button id="exportAdminData" class="text-button" type="button">Export JSON</button>
+            <button id="clearAdminDrafts" class="text-button" type="button">Clear Local Drafts</button>
+          </div>
+          <p class="data-source-note">Static Netlify mode stores drafts in this browser. Export JSON can later feed a real backend or replace the local database files.</p>
+        </aside>
+
+        <article id="adminPanel" class="admin-panel">
+          <header class="guide-hero">
+            <p class="eyebrow">Editor Workspace</p>
+            <h2 id="adminCharacterTitle">Character Editor</h2>
+            <p id="adminModeNote">Editors can publish locally. Contributors can submit suggestions for review.</p>
+          </header>
+
+          <form id="characterEditorForm" class="editor-grid">
+            <section class="knowledge-card wide">
+              <h3>Core Profile</h3>
+              <label>Character Name <input id="editName" type="text" /></label>
+              <label>Portrait Path or URL <input id="editPortrait" type="text" placeholder="public/characters/raw/..." /></label>
+              <label>Archetype <input id="editArchetype" type="text" /></label>
+              <label>Gameplan <textarea id="editGameplan" rows="4"></textarea></label>
+              <label>Wants / Needs <textarea id="editWants" rows="3" placeholder="One per line"></textarea></label>
+            </section>
+
+            <section class="knowledge-card">
+              <h3>Ratings</h3>
+              <div id="ratingEditor" class="rating-editor"></div>
+            </section>
+
+            <section class="knowledge-card">
+              <h3>Tags</h3>
+              <label>Character Tags <select id="editTags" multiple></select></label>
+              <label>Assist Tags <select id="editAssistTags" multiple></select></label>
+              <label>Synergy Tags <select id="editSynergyTags" multiple></select></label>
+            </section>
+
+            <section class="knowledge-card">
+              <h3>Strengths / Weaknesses</h3>
+              <label>Strengths <textarea id="editStrengths" rows="6" placeholder="One per line"></textarea></label>
+              <label>Weaknesses <textarea id="editWeaknesses" rows="6" placeholder="One per line"></textarea></label>
+            </section>
+
+            <section class="knowledge-card">
+              <h3>Partners & Assists</h3>
+              <label>Best Partners <select id="editBestPartners" multiple></select></label>
+              <label>Good Partners <select id="editGoodPartners" multiple></select></label>
+              <label>Works With Care <select id="editCarePartners" multiple></select></label>
+              <label>Assist Recommendations <textarea id="editAssistNotes" rows="5" placeholder="A: Beam lockdown&#10;B: Neutral cover"></textarea></label>
+            </section>
+
+            <section class="knowledge-card wide">
+              <h3>Team Knowledge</h3>
+              <label>DHC Synergy Notes <textarea id="editDhcNotes" rows="4"></textarea></label>
+              <label>Matchup Notes <textarea id="editMatchups" rows="4" placeholder="One per line"></textarea></label>
+              <label>Community Notes / Tips <textarea id="editCommunity" rows="4" placeholder="One per line"></textarea></label>
+            </section>
+          </form>
+
+          <section class="admin-content-grid">
+            <section class="knowledge-card wide admin-editor-card">
+              <div class="section-heading-row">
+                <div>
+                  <p class="eyebrow">Training Lab</p>
+                  <h3>Reasoning Module Editor</h3>
+                </div>
+                <select id="adminTrainingSelect" aria-label="Training Lab module to edit"></select>
+              </div>
+              <div class="editor-grid compact">
+                <label>Title <input id="editTrainingTitle" type="text" /></label>
+                <label>Category <input id="editTrainingCategory" type="text" /></label>
+                <label class="wide-field">Summary <textarea id="editTrainingSummary" rows="3"></textarea></label>
+                <label class="wide-field">Deep Explanation <textarea id="editTrainingDeepDive" rows="5"></textarea></label>
+                <label>Key Takeaways <textarea id="editTrainingTakeaways" rows="5" placeholder="One per line"></textarea></label>
+                <label>Related Tags <textarea id="editTrainingTags" rows="5" placeholder="One per line"></textarea></label>
+              </div>
+              <div class="admin-actions inline">
+                <button id="saveTrainingDraft" class="text-button" type="button">Save Module Draft</button>
+                <button id="publishTrainingDraft" class="text-button" type="button">Apply Module Locally</button>
+              </div>
+            </section>
+
+            <section class="knowledge-card wide admin-editor-card">
+              <div class="section-heading-row">
+                <div>
+                  <p class="eyebrow">Movie Room</p>
+                  <h3>Study Link Editor</h3>
+                </div>
+                <select id="adminMovieSelect" aria-label="Movie Room entry to edit"></select>
+              </div>
+              <div class="editor-grid compact">
+                <label>Title <input id="editMovieTitle" type="text" /></label>
+                <label>
+                  Scope
+                  <select id="editMovieScope">
+                    <option value="character">Character</option>
+                    <option value="shell">Shell</option>
+                    <option value="team">Team</option>
+                  </select>
+                </label>
+                <label>Character IDs <textarea id="editMovieCharacterIds" rows="4" placeholder="frieza&#10;android-18"></textarea></label>
+                <label>Tags <textarea id="editMovieTags" rows="4" placeholder="One per line"></textarea></label>
+                <label class="wide-field">Summary <textarea id="editMovieSummary" rows="3"></textarea></label>
+                <label class="wide-field">Resources <textarea id="editMovieResources" rows="6" placeholder="Type | Label | URL | Notes&#10;Guides | Example guide | https://... | What this teaches"></textarea></label>
+              </div>
+              <p class="data-source-note">Resource format: Type | Label | URL | Notes. Empty URLs are allowed for planned links.</p>
+              <div class="admin-actions inline">
+                <button id="saveMovieDraft" class="text-button" type="button">Save Link Draft</button>
+                <button id="publishMovieDraft" class="text-button" type="button">Apply Link Locally</button>
+              </div>
+            </section>
+          </section>
+
+          <section class="knowledge-card wide">
+            <h3>Draft Output</h3>
+            <textarea id="adminExportOutput" rows="8" readonly></textarea>
+          </section>
+        </article>
+      </section>
+
+      <section id="characterModal" class="character-modal" aria-label="Character profile" aria-modal="true" role="dialog" hidden>
+        <button id="modalBackdrop" class="modal-backdrop" type="button" aria-label="Close character profile"></button>
+        <article class="modal-panel">
+          <button id="modalClose" class="modal-close" type="button" aria-label="Close character profile">x</button>
+          <div id="modalContent" class="modal-content"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="data/games.js"></script>
+    <script src="data/characters-data.js"></script>
+    <script src="data/polished-overrides.js"></script>
+    <script src="data/knowledge-db.js"></script>
+    <script src="data/frame-data.local.js"></script>
+    <script src="assets/manifest.js"></script>
+    <script src="app.js"></script>
+    <script src="synergy-engine.js"></script>
+    <script src="platform.js"></script>
+  </body>
+</html>

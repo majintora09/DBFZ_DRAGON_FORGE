@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": null,
+  "assists": [],
+  "template": {
+    "character": "Kid Buu",
+    "characterId": "kid-buu",
+    "assist": "A",
+    "startup": 25,
+    "blockstun": 46,
+    "hitstun": 60,
+    "tags": [
+      "Lockdown Assist",
+      "High Blockstun",
+      "40+ Blockstun",
+      "Enables 50/50"
+    ],
+    "notes": "Strong lockdown assist."
+  }
+}

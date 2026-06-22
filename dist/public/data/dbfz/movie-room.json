@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18",
+  "sourceTypes": ["manual", "auto-recommended"],
+  "types": ["Tournament Sets", "Guides", "Match Footage", "Clips", "Team Footage", "Shell Footage"],
+  "entries": [
+    {
+      "id": "base-vegeta-study-placeholder",
+      "scope": "character",
+      "title": "Base Vegeta",
+      "characterIds": ["base-vegeta"],
+      "shellIds": [],
+      "teamIds": [],
+      "summary": "Character page study shelf for Base Vegeta footage and learning links.",
+      "tags": ["Point", "Mix", "Oki", "Technical"],
+      "sourceType": "manual",
+      "resources": [
+        {
+          "label": "Tournament Sets",
+          "type": "Tournament Sets",
+          "url": "",
+          "notes": "Add high-level sets that show neutral, pressure, and routing decisions."
+        },
+        {
+          "label": "Guides",
+          "type": "Guides",
+          "url": "",
+          "notes": "Add character guides focused on gameplan, oki, and team needs."
+        },
+        {
+          "label": "Match Footage",
+          "type": "Match Footage",
+          "url": "",
+          "notes": "Add match footage showing how this pick handles common team structures."
+        },
+        {
+          "label": "Clips",
+          "type": "Clips",
+          "url": "",
+          "notes": "Add short examples for mix, confirms, and route ideas."
+        }
+      ],
+      "recommendationHooks": {
+        "matchCharacterIds": ["base-vegeta"],
+        "matchTags": ["Point", "Mix", "Oki"],
+        "futureSignals": ["character-page", "team-builder-selection", "training-lab-search"]
+      }
+    },
+    {
+      "id": "base-vegeta-android-18-shell-placeholder",
+      "scope": "shell",
+      "title": "Base Vegeta + Android 18",
+      "characterIds": ["base-vegeta", "android-18"],
+      "shellIds": ["base-vegeta+android-18"],
+      "teamIds": [],
+      "summary": "Shell page study shelf for Base Vegeta and Android 18 footage, routes, and explanations.",
+      "tags": ["Mix", "Lockdown", "Level 3 Oki", "Shell Logic"],
+      "sourceType": "manual",
+      "resources": [
+        {
+          "label": "Team Footage",
+          "type": "Team Footage",
+          "url": "",
+          "notes": "Add full team footage where this shell is part of the core gameplan."
+        },
+        {
+          "label": "Shell Footage",
+          "type": "Shell Footage",
+          "url": "",
+          "notes": "Add clips or sets showing how the two characters support each other."
+        },
+        {
+          "label": "Guides",
+          "type": "Guides",
+          "url": "",
+          "notes": "Add explanations for why the shell works, where it is fragile, and what third characters solve."
+        }
+      ],
+      "recommendationHooks": {
+        "matchCharacterIds": ["base-vegeta", "android-18"],
+        "matchTags": ["Mix", "Lockdown", "Shell Logic"],
+        "futureSignals": ["shell-page", "shared-tags", "team-builder-pair"]
+      }
+    },
+    {
+      "id": "frieza-android-18-dbs-broly-team-placeholder",
+      "scope": "team",
+      "title": "Frieza / Android 18 / DBS Broly",
+      "characterIds": ["frieza", "android-18", "dbs-broly"],
+      "shellIds": ["frieza+android-18", "android-18+dbs-broly"],
+      "teamIds": ["frieza+android-18+dbs-broly"],
+      "summary": "Team page study shelf for control, safety, and cashout examples.",
+      "tags": ["Control", "Safety", "Cashout", "Team Footage"],
+      "sourceType": "manual",
+      "resources": [
+        {
+          "label": "Team Footage",
+          "type": "Team Footage",
+          "url": "",
+          "notes": "Add full matches showing the intended team order and gameplan."
+        },
+        {
+          "label": "Shell Footage",
+          "type": "Shell Footage",
+          "url": "",
+          "notes": "Add examples of Frieza plus Android 18 safety, or Android 18 into DBS Broly reward."
+        },
+        {
+          "label": "Clips",
+          "type": "Clips",
+          "url": "",
+          "notes": "Add short moments that show the team plan clearly."
+        }
+      ],
+      "recommendationHooks": {
+        "matchCharacterIds": ["frieza", "android-18", "dbs-broly"],
+        "matchTags": ["Control", "Safety", "Cashout"],
+        "futureSignals": ["team-page", "exact-team", "team-builder-selection"]
+      }
+    }
+  ]
+}

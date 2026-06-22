@@ -8,6 +8,7 @@ This file is the active project work queue. Use it with `TASK_REQUEST.md` before
 
 Current critical work.
 
+- Keep Cloudflare Pages and GitHub Pages static builds green as routes and assets change.
 - Finish the Content Formatting + Editor UX priority.
 - Audit imported character content for raw transcript-style formatting.
 - Continue auditing character Synergies and DHC notes anywhere they still render as raw text.

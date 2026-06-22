@@ -1,39 +1,36 @@
 # Task Request
 
 Status:
-In progress.
+Completed on 2026-06-22.
 
 ## Objective
 
-Prepare FG Lab for entirely free static deployment on Cloudflare Pages and GitHub Pages.
+Prepare FG Lab for a 0 EUR GitHub-to-Cloudflare Pages deployment.
 
 ## Scope
 
-- Replace the no-op build with a real static export.
-- Write deployable output to `dist`.
-- Generate physical pages for every supported route.
-- Make routing and JSON asset loading work under a configurable GitHub project base path.
-- Preserve direct `file://` support and existing DBFZ behavior.
-- Add Cloudflare Pages and GitHub Pages deployment instructions.
-- Add a free GitHub Pages workflow.
+- Keep `npm run build` as a complete static export to `dist`.
+- Remove any production-facing dependency on `server.js`.
+- Verify all generated routes and runtime assets.
+- Preserve `_redirects` in the production output.
+- Add exact Cloudflare Pages GitHub deployment instructions.
+- Pin the Cloudflare build environment to Node 20.
 
 ## Out Of Scope
 
-- No paid hosting.
-- No database or backend.
-- No runtime Node server dependency.
-- No application redesign.
-- No content expansion.
+- No paid services.
+- No database, Workers, Functions, or production server.
+- No visual or content changes.
+- No custom domain requirement.
 
 ## Success Criteria
 
-- `npm run build` creates a complete `dist` folder.
-- Every known route has a generated `index.html`.
-- Runtime JavaScript, JSON, portraits, and backgrounds are included.
-- Cloudflare Pages can publish `dist` directly.
-- GitHub Pages can publish `dist` with the repository base path.
-- Static route and asset smoke tests pass.
+- Cloudflare publishes only `dist`.
+- `dist` contains no `server.js`, package scripts, or server runtime.
+- Every known route has a physical page and static fallback.
+- Instructions describe the GitHub -> Cloudflare Pages flow.
+- Monthly hosting cost can remain 0 EUR.
 
 ## Notes
 
-`server.js` remains a local development convenience only and is not included in the runtime output.
+`server.js` may remain as an explicitly local-only `dev` and `preview` helper.

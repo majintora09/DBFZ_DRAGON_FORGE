@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-06-18",
+  "playstyles": [
+    {
+      "id": "neutral",
+      "name": "Neutral",
+      "summary": "For players who enjoy controlling space, winning repeated interactions, and making the opponent take awkward approaches.",
+      "tags": ["Neutral", "Control", "Screen Control", "Beam Assist"],
+      "recommendedCharacters": ["ssj-goku", "frieza", "ui-goku", "janemba", "super-baby-2", "goku-black"],
+      "recommendedShells": [
+        "Neutral control plus a reliable cashout character.",
+        "Beam or screen-control support behind a point that wants safer approaches.",
+        "A self-sufficient mid or anchor that can stabilize the match after the first character falls."
+      ],
+      "exampleTeams": [
+        ["ssj-goku", "android-18", "yamcha"],
+        ["frieza", "zamasu", "base-goku"],
+        ["ui-goku", "janemba", "base-goku"]
+      ],
+      "strengths": [
+        "Often creates stable game plans.",
+        "Can slow down volatile matchups.",
+        "Makes team order and resource use easier to understand."
+      ],
+      "weaknesses": [
+        "May need a dedicated mix or damage character to close rounds.",
+        "Can become too passive if the team lacks a clear conversion plan."
+      ],
+      "whyItWorks": "The style works by making approaches predictable, then using assists, DHCs, or meter to turn clean neutral wins into repeatable advantage."
+    },
+    {
+      "id": "footsies",
+      "name": "Footsies",
+      "summary": "For players who like grounded spacing, whiff punishment, clean buttons, and patient interaction wins.",
+      "tags": ["Neutral", "Fundamentals", "Counter", "Control"],
+      "recommendedCharacters": ["hit", "jiren", "cell", "adult-gohan", "ssj-goku", "ui-goku"],
+      "recommendedShells": [
+        "A grounded point with assists that cover air approaches.",
+        "Strong neutral characters backed by a high-reward anchor.",
+        "A fundamentals core that does not need extreme setplay to function."
+      ],
+      "exampleTeams": [
+        ["hit", "ssj-goku", "tien"],
+        ["jiren", "janemba", "base-goku"],
+        ["cell", "adult-gohan", "tien"]
+      ],
+      "strengths": [
+        "Rewards clean decision making.",
+        "Can stay useful across many matchups.",
+        "Usually avoids overly fragile team plans."
+      ],
+      "weaknesses": [
+        "May struggle if the opponent ignores spacing with strong mobility.",
+        "Needs enough reward to make small wins matter."
+      ],
+      "whyItWorks": "The style works by forcing the opponent to overextend, then converting controlled interactions into corner carry, oki, or resource advantage."
+    },
+    {
+      "id": "rushdown",
+      "name": "Rushdown",
+      "summary": "For players who want to move first, create pressure quickly, and keep turns active.",
+      "tags": ["Rushdown", "Pressure", "Momentum", "Lockdown Assist"],
+      "recommendedCharacters": ["goku-blue", "bardock", "teen-gohan", "kefla", "vegito-blue", "gogeta-blue"],
+      "recommendedShells": [
+        "Fast point plus lockdown assist.",
+        "Pressure character plus high-damage cashout.",
+        "Momentum point plus anchor that can spend the meter created by long offense."
+      ],
+      "exampleTeams": [
+        ["goku-blue", "adult-gohan", "tien"],
+        ["goku-blue", "android-18", "yamcha"],
+        ["kefla", "android-17", "base-goku"]
+      ],
+      "strengths": [
+        "Can overwhelm defensive hesitation.",
+        "Often builds meter through extended pressure.",
+        "Works well with simple team goals."
+      ],
+      "weaknesses": [
+        "Can overextend without neutral cover.",
+        "Needs assists or routing to keep pressure meaningful."
+      ],
+      "whyItWorks": "The style works by forcing frequent defensive decisions and making each blocked sequence or stray hit lead into another advantage state."
+    },
+    {
+      "id": "mix",
+      "name": "Mix",
+      "summary": "For players who enjoy layered offense, left-rights, high-lows, strike-throw, and making defense uncomfortable.",
+      "tags": ["Mix", "Setplay", "Lockdown Assist", "Level 3 Oki"],
+      "recommendedCharacters": ["android-18", "kid-buu", "base-vegeta", "teen-gohan", "adult-gohan", "ssj4-gogeta"],
+      "recommendedShells": [
+        "Mix point plus high blockstun assist.",
+        "Character with strong oki plus partners that improve knockdown reward.",
+        "Assist-backed offense plus a character that converts mix into high damage."
+      ],
+      "exampleTeams": [
+        ["android-18", "dbs-broly", "base-goku"],
+        ["base-vegeta", "kid-buu", "tien"],
+        ["ssj4-gogeta", "kid-buu", "base-goku"]
+      ],
+      "strengths": [
+        "Can win from fewer neutral wins.",
+        "Rewards team-specific setup knowledge.",
+        "Pairs well with lockdown and safe-tag support."
+      ],
+      "weaknesses": [
+        "Can become assist-dependent.",
+        "Needs practice to make setups consistent."
+      ],
+      "whyItWorks": "The style works when the team repeatedly turns blockstun, knockdowns, or level 3 situations into difficult defensive guesses."
+    },
+    {
+      "id": "setplay",
+      "name": "Setplay",
+      "summary": "For players who enjoy prepared situations, setup routes, oki, and character-specific sequences.",
+      "tags": ["Setplay", "Oki", "Safe Tag Routes", "Corner Carry"],
+      "recommendedCharacters": ["zamasu", "majin-buu", "beerus", "nappa", "android-18", "piccolo"],
+      "recommendedShells": [
+        "Setup character plus lockdown or screen-control assist.",
+        "Corner-carry point into a setplay mid.",
+        "Setplay character plus anchor that can cash out when the setup opens the opponent."
+      ],
+      "exampleTeams": [
+        ["zamasu", "frieza", "base-goku"],
+        ["nappa", "android-18", "tien"],
+        ["majin-buu", "kid-buu", "base-goku"]
+      ],
+      "strengths": [
+        "Can create very specific win conditions.",
+        "Rewards lab time and route knowledge.",
+        "Often gives the team a unique identity."
+      ],
+      "weaknesses": [
+        "Can require more matchup and routing knowledge.",
+        "May need neutral support before the setup begins."
+      ],
+      "whyItWorks": "The style works by using a previous hit, knockdown, or tag route to start a planned situation where the team already knows the next layers."
+    },
+    {
+      "id": "zoning",
+      "name": "Zoning",
+      "summary": "For players who enjoy projectiles, screen control, slowing the match down, and making approaches difficult.",
+      "tags": ["Zoner", "Projectile", "Screen Control", "Control"],
+      "recommendedCharacters": ["frieza", "super-baby-2", "dbz-broly", "piccolo", "zamasu", "goku-black"],
+      "recommendedShells": [
+        "Zoner plus defensive or tracking assist.",
+        "Projectile control plus a high-reward anchor.",
+        "Screen-control shell that can still cash out when the opponent finally gets clipped."
+      ],
+      "exampleTeams": [
+        ["frieza", "android-18", "dbs-broly"],
+        ["super-baby-2", "janemba", "base-goku"],
+        ["dbz-broly", "frieza", "tien"]
+      ],
+      "strengths": [
+        "Controls pace and screen position.",
+        "Can frustrate linear approaches.",
+        "Often pairs naturally with strong anchors."
+      ],
+      "weaknesses": [
+        "Needs answers when opponents get in.",
+        "Can lack immediate mix if the team is too control-heavy."
+      ],
+      "whyItWorks": "The style works by making the opponent navigate projectiles and assists before they can start offense, then punishing rushed movement."
+    },
+    {
+      "id": "defensive",
+      "name": "Defensive",
+      "summary": "For players who prefer patience, reversals, counters, barriers, and stable decision making.",
+      "tags": ["Defense", "Counter", "Barrier", "Neutral"],
+      "recommendedCharacters": ["ui-goku", "jiren", "android-18", "android-17", "dbz-broly", "hit"],
+      "recommendedShells": [
+        "Defensive point backed by a reliable neutral assist.",
+        "Barrier or counter utility next to a character with strong reward.",
+        "Stable neutral shell with a comeback anchor."
+      ],
+      "exampleTeams": [
+        ["ui-goku", "android-18", "base-goku"],
+        ["jiren", "ssj-goku", "tien"],
+        ["hit", "janemba", "base-goku"]
+      ],
+      "strengths": [
+        "Can reduce risky scramble situations.",
+        "Rewards strong reads and patience.",
+        "Often stays functional even when behind."
+      ],
+      "weaknesses": [
+        "May need a clear way to start offense.",
+        "Can become too reactive against teams with strong setplay."
+      ],
+      "whyItWorks": "The style works by making the opponent commit first, then using defensive utility, spacing, or assists to regain control."
+    },
+    {
+      "id": "beginner-friendly",
+      "name": "Beginner Friendly",
+      "summary": "For players who want stable tools, clear roles, and teams that teach fundamentals without requiring too much specialized routing.",
+      "tags": ["Beginner Friendly", "Generalist", "Balanced", "Support"],
+      "recommendedCharacters": ["ssj-goku", "goku-black", "ssj-vegeta", "yamcha", "krillin", "cell"],
+      "recommendedShells": [
+        "Generalist point plus simple support assists.",
+        "Beam or neutral assist plus a clear anchor.",
+        "Balanced team with one character for neutral, one for pressure, and one for cashout."
+      ],
+      "exampleTeams": [
+        ["ssj-goku", "goku-black", "yamcha"],
+        ["cell", "ssj-vegeta", "tien"],
+        ["krillin", "ssj-goku", "base-goku"]
+      ],
+      "strengths": [
+        "Clear learning path.",
+        "Good for understanding team roles.",
+        "Less dependent on niche setups."
+      ],
+      "weaknesses": [
+        "May not maximize specialized win conditions.",
+        "Can feel less explosive than technical shells."
+      ],
+      "whyItWorks": "The style works by giving the player reliable tools first, making it easier to understand neutral, assists, routing, and team order."
+    },
+    {
+      "id": "technical",
+      "name": "Technical",
+      "summary": "For players who enjoy complex routes, unique resources, setup timing, and unusual character mechanics.",
+      "tags": ["Technical", "Advanced", "Setplay", "Resource-Based"],
+      "recommendedCharacters": ["zamasu", "ginyu", "nappa", "beerus", "majin-buu", "android-21-majin"],
+      "recommendedShells": [
+        "Technical point plus assists that stabilize setup timing.",
+        "Character-specific DHC or tag routes built around one central payoff.",
+        "Setup character plus simpler partners that cover neutral and cashout."
+      ],
+      "exampleTeams": [
+        ["zamasu", "adult-gohan", "base-goku"],
+        ["ginyu", "android-17", "tien"],
+        ["beerus", "janemba", "base-goku"]
+      ],
+      "strengths": [
+        "High ceiling for lab work.",
+        "Can create uncommon matchup problems.",
+        "Often gives the player a very personal team identity."
+      ],
+      "weaknesses": [
+        "Can be harder to maintain under pressure.",
+        "Requires more route and matchup knowledge."
+      ],
+      "whyItWorks": "The style works when unique mechanics are supported by partners that make the difficult parts more consistent."
+    },
+    {
+      "id": "anchor-focused",
+      "name": "Anchor Focused",
+      "summary": "For players who like building toward a strong late-game character with meter, Spark, and comeback value.",
+      "tags": ["Anchor", "Comeback", "Resource-Based", "Cashout"],
+      "recommendedCharacters": ["base-goku", "tien", "janemba", "dbz-broly", "frieza", "super-baby-2"],
+      "recommendedShells": [
+        "Point and mid generate resources for the final character.",
+        "Stable first two characters plus an anchor with solo neutral or huge meter spend.",
+        "Control shell that keeps the anchor stocked for late-game conversions."
+      ],
+      "exampleTeams": [
+        ["android-18", "dbs-broly", "base-goku"],
+        ["frieza", "android-18", "dbs-broly"],
+        ["ssj-goku", "cell", "base-goku"]
+      ],
+      "strengths": [
+        "Clear resource plan.",
+        "Can stay threatening late in the match.",
+        "Makes recommended order easier to explain."
+      ],
+      "weaknesses": [
+        "Can overvalue comeback plans if the first two characters lack pressure.",
+        "Needs enough meter generation or neutral stability to reach the desired state."
+      ],
+      "whyItWorks": "The style works by using the first part of the team to build meter, control, or damage routes, then letting the final character convert those resources."
+    }
+  ]
+}

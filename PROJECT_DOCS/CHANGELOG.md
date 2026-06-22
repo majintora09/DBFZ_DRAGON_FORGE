@@ -6,6 +6,14 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Added
 
+- Added a focused `CLOUDFLARE_PAGES.md` GitHub deployment guide targeting 0 EUR monthly hosting.
+- Added `.node-version` to pin Cloudflare builds to Node 20.
+- Added a real dependency-free static exporter that writes to `dist`.
+- Added physical pages for all 17 current FG Lab routes.
+- Added Cloudflare Pages fallback routing in the build output.
+- Added GitHub Pages `404.html`, `.nojekyll`, repository base-path support, and deployment workflow.
+- Added Cloudflare Pages and GitHub Pages deployment instructions.
+- Added `npm run preview` for local testing of the generated site.
 - Added the first 2XKO Synergy Engine at `/games/2xko/synergies`.
 - Added reusable ranked recommendation cards with score, reason, difficulty, and tags.
 - Added mock Yasuo partner recommendations for Ahri, Darius, and Ekko.
@@ -24,6 +32,12 @@ All notable project changes should be documented here. Newest entries go first.
 
 ### Changed
 
+- Replaced the conventional `npm start` server hook with the explicitly local-only `npm run dev` command.
+- Verified all 17 routes and nine core runtime assets with zero static-preview failures.
+- Verified production output excludes `server.js`, package runtime files, and `node_modules`.
+- Made platform navigation and local JSON loading deployment-base aware.
+- Changed `npm run build` from a no-op into the canonical production build.
+- Documented `dist` as the build output folder and production artifact.
 - Extended the shared decision model with Fuse entities and directional partner recommendation fields.
 - Reframed 2XKO placeholder copy around character decisions, Fuse recommendations, and goal-based route discovery.
 - Established FG Lab as a decision-first companion rather than a fighting-game wiki.

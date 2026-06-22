@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-22",
+  "status": "mock",
+  "routes": [
+    {
+      "id": "safe-tag-confirm",
+      "gameId": "2xko",
+      "characterIds": ["yasuo"],
+      "name": "Safe Tag Confirm",
+      "goal": "Turn a stable opening into duo pressure without overcommitting.",
+      "recommendation": "Learn this first when consistency matters more than maximum damage.",
+      "difficulty": "Beginner Friendly",
+      "tags": ["Tag Routes", "Pressure"]
+    },
+    {
+      "id": "corner-carry-route",
+      "gameId": "2xko",
+      "characterIds": ["yasuo"],
+      "name": "Corner Carry Route",
+      "goal": "Convert momentum into stronger screen position and continued offense.",
+      "recommendation": "Learn this after the basic confirm when screen position is the team's main payoff.",
+      "difficulty": "Intermediate",
+      "tags": ["Damage", "Rushdown", "Tag Routes"]
+    }
+  ]
+}
