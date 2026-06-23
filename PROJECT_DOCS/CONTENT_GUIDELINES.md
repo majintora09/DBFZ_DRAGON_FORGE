@@ -78,12 +78,13 @@ The card should answer "Why is this partner recommended?" without requiring expa
 
 Required fields:
 
-- Character or system topic.
-- Source Type.
-- Source Link when available.
-- Concise Notes.
-- Reusable Tags.
-- Verification Status: Unverified, Needs Review, or Verified.
+- Match.
+- Teams.
+- Timestamp.
+- Raw observation.
+- Reusable tags.
+- Confidence: Low, Medium, or High.
+- Review Status: Raw Observation, Needs Review, or Approved for Extraction.
 
 Rules:
 
@@ -91,7 +92,9 @@ Rules:
 - Keep claims attached to their source.
 - Do not promote unverified records into recommendation data.
 - Tags should describe future uses such as Synergy, Routes, Matchups, Fuses, or a practical team need.
-- Export and review records before merging them into static source JSON.
+- Do not write directly into synergy files from raw observations.
+- Review observations before creating Character Notes, Synergy Files, Route Entries, Fuse Notes, or Matchup Notes.
+- Export reviewed extraction candidates before merging anything into static source JSON.
 
 ## 2XKO Character Intelligence Format
 
@@ -255,19 +258,32 @@ Rules:
 - Contributors should suggest; Editors/Admins should publish.
 
 Keep descriptions short, structured and easy to scan.
-# Research Entry Standard
+## Research Entry Standard
 
 Research is evidence for later recommendations, not a recommendation by itself.
 
-Each entry should record:
+Research happens in two stages.
 
-- Source type and link.
+Stage 1: Raw Match Observation.
+
+Each raw observation should record:
+
+- Match.
+- Teams.
 - Timestamp for the relevant video, VOD, message, or observation.
-- Character and optional partner.
-- Optional Fuse.
+- A factual observation describing what was shown, claimed, or tested.
 - Short reusable tags.
-- A factual note describing what was shown, claimed, or tested.
 - Confidence: Low, Medium, or High.
-- Review stage: Draft, Needs Review, or Approved.
+- Source type and link when available.
 
-Approval means the entry is ready to inform a synergy file. It does not automatically verify the entire pairing, assign a rating, or establish a matchup conclusion. Keep observations separate from conclusions, and retain source metadata during export.
+Stage 2: Knowledge Extraction.
+
+After review, observations may be converted into:
+
+- Character Notes.
+- Synergy Files.
+- Route Entries.
+- Fuse Notes.
+- Matchup Notes.
+
+Approval means the observation is ready for extraction. It does not automatically verify the entire pairing, assign a rating, establish a matchup conclusion, or write into the canonical database. Keep observations separate from conclusions, and retain source metadata during export.

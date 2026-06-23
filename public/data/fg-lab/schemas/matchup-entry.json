@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fg-lab.local/schemas/matchup-entry.json",
+  "title": "FG Lab Matchup Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "gameId", "subject", "opponent", "problem", "recommendation", "tags", "sources", "verified"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "gameId": { "type": "string", "minLength": 1 },
+    "subject": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "opponent": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "problem": { "type": "string" },
+    "recommendation": { "type": "string" },
+    "tradeoffs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "verified": { "type": "boolean" }
+  }
+}

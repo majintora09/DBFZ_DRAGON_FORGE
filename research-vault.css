@@ -156,13 +156,14 @@
 
 .vault-filters {
   display: grid;
-  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr));
+  grid-template-columns: minmax(220px, 2fr) repeat(5, minmax(130px, 1fr));
   gap: 8px;
 }
 
 .vault-export-actions,
 .vault-review-actions,
-.research-record__context {
+.research-record__context,
+.vault-target-chipset {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -229,6 +230,37 @@
   font-size: 10px;
 }
 
+.vault-targets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid var(--line);
+  padding: 12px;
+}
+
+.vault-targets legend {
+  padding: 0 6px;
+  color: #9ce8ff;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.vault-targets label {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(114, 221, 255, 0.22);
+  padding: 7px 10px;
+  background: rgba(114, 221, 255, 0.05);
+}
+
+.vault-targets input {
+  width: auto;
+}
+
 .research-record__meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -272,13 +304,24 @@
   color: #fff;
 }
 
-.research-tags span {
+.research-tags span,
+.vault-target-chipset span {
   border: 1px solid rgba(114, 221, 255, 0.28);
   padding: 4px 7px;
   color: #b8efff;
   font-size: 9px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.vault-target-chipset span {
+  border-color: rgba(255, 208, 96, 0.45);
+  color: #ffd060;
+}
+
+.vault-verification--observation {
+  border-color: rgba(114, 221, 255, 0.45);
+  color: #9ce8ff;
 }
 
 .vault-verification--needs-review {

@@ -1,12 +1,19 @@
 (() => {
-  const storageKey = "fg-lab:2xko-research-vault:v2";
-  const legacyStorageKey = "fg-lab:2xko-research-vault:v1";
+  const storageKey = "fg-lab:2xko-research-vault:v3";
+  const legacyStorageKeys = ["fg-lab:2xko-research-vault:v2", "fg-lab:2xko-research-vault:v1"];
   const sourceTypes = ["YouTube", "Discord", "Stream", "Tournament", "Personal Notes"];
   const confidenceLevels = ["Low", "Medium", "High"];
-  const statuses = [
-    ["draft", "Draft"],
+  const reviewStatuses = [
+    ["observation", "Raw Observation"],
     ["needs-review", "Needs Review"],
-    ["approved", "Approved"],
+    ["approved", "Approved for Extraction"],
+  ];
+  const extractionTargets = [
+    "Character Notes",
+    "Synergy Files",
+    "Route Entries",
+    "Fuse Notes",
+    "Matchup Notes",
   ];
   const state = {
     container: null,
@@ -15,7 +22,7 @@
     localRecords: [],
     loaded: false,
     error: "",
-    filters: { query: "", source: "all", status: "all", confidence: "all", tag: "all" },
+    filters: { query: "", source: "all", review: "all", confidence: "all", tag: "all", target: "all" },
   };
 
   const escapeHtml = (value) => String(value ?? "")
@@ -34,7 +41,7 @@
       const response = await fetch(source);
       if (!response.ok) throw new Error(`Research data returned HTTP ${response.status}.`);
       const data = await response.json();
-      state.seedRecords = (data.records || []).map(normalizeRecord);
+      state.seedRecords = (data.records || []).map(normalizeObservation);
     } catch (error) {
       state.error = error.message || "Seed research data could not be loaded.";
     } finally {
@@ -57,48 +64,49 @@
     }
 
     const records = allRecords();
-    const approvedPairs = exportableRecords().length;
+    const extractionCount = approvedObservations().length;
     state.container.innerHTML = `
       <section class="research-vault-workspace" aria-labelledby="vaultTitle">
         <header class="vault-heading">
           <div>
             <p class="eyebrow">Internal Collection Workspace</p>
             <h1 id="vaultTitle">${escapeHtml(state.page?.title || "2XKO Research Vault")}</h1>
-            <p>Capture the source, review the claim, then promote approved evidence into the synergy database.</p>
+            <p>Capture raw match observations first. Review them, then extract clean knowledge for character notes, synergies, routes, Fuses, and matchups.</p>
           </div>
-          <span class="vault-internal-badge">Local JSON workflow</span>
+          <span class="vault-internal-badge">Two-stage JSON workflow</span>
         </header>
 
         <ol class="vault-workflow" aria-label="Research workflow">
-          ${["Source", "Research Entry", "Review", "Approve", "Synergy Database"].map((item, index) => `<li><span>${index + 1}</span>${item}</li>`).join("")}
+          ${["Video", "Observation", "Research Vault", "Review", "Synergy Database"].map((item, index) => `<li><span>${index + 1}</span>${item}</li>`).join("")}
         </ol>
 
         ${state.error ? `<p class="vault-message vault-message--warning">${escapeHtml(state.error)} Local drafts remain available.</p>` : ""}
 
         <details class="vault-capture" open>
-          <summary>Quick Add Entry</summary>
+          <summary>Raw Match Observation</summary>
           ${captureFormMarkup()}
         </details>
 
         <section class="vault-filter-panel" aria-labelledby="vaultFilterTitle">
           <div class="vault-filter-heading">
-            <div><p class="eyebrow">Research queue</p><h2 id="vaultFilterTitle">Find and review evidence</h2></div>
+            <div><p class="eyebrow">Research queue</p><h2 id="vaultFilterTitle">Review observations before extraction</h2></div>
             <div class="vault-export-actions">
               <button class="platform-action platform-action--secondary" type="button" data-vault-export>Export Vault</button>
-              <button class="platform-action" type="button" data-vault-export-synergies ${approvedPairs ? "" : "disabled"}>Export Synergies (${approvedPairs})</button>
+              <button class="platform-action" type="button" data-vault-export-extractions ${extractionCount ? "" : "disabled"}>Export Extractions (${extractionCount})</button>
             </div>
           </div>
           <div class="vault-filters">
-            <label><span>Search</span><input type="search" value="${escapeHtml(state.filters.query)}" placeholder="Character, partner, Fuse, notes" data-vault-filter="query" /></label>
+            <label><span>Search</span><input type="search" value="${escapeHtml(state.filters.query)}" placeholder="Match, team, tag, observation" data-vault-filter="query" /></label>
             ${selectMarkup("Source", "source", [["all", "All sources"], ...sourceTypes.map((item) => [item, item])], state.filters.source)}
-            ${selectMarkup("Stage", "status", [["all", "All stages"], ...statuses], state.filters.status)}
+            ${selectMarkup("Review", "review", [["all", "All stages"], ...reviewStatuses], state.filters.review)}
             ${selectMarkup("Confidence", "confidence", [["all", "All confidence"], ...confidenceLevels.map((item) => [item, item])], state.filters.confidence)}
+            ${selectMarkup("Target", "target", [["all", "All targets"], ...extractionTargets.map((item) => [item, item])], state.filters.target)}
             ${selectMarkup("Tag", "tag", [["all", "All tags"], ...availableTags(records).map((item) => [item, item])], state.filters.tag)}
           </div>
         </section>
 
         <section class="vault-results-section" aria-labelledby="vaultResultsTitle">
-          <div class="vault-results-heading"><h2 id="vaultResultsTitle">Research entries</h2><span id="vaultResultCount"></span></div>
+          <div class="vault-results-heading"><h2 id="vaultResultsTitle">Raw observations</h2><span id="vaultResultCount"></span></div>
           <div id="vaultResults" class="research-vault-list"></div>
         </section>
       </section>
@@ -107,22 +115,24 @@
   }
 
   function captureFormMarkup() {
-    const now = new Date();
-    const localTimestamp = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
     return `
       <form id="vaultCaptureForm" class="vault-capture-form">
-        <label><span>Character</span><input name="character" required placeholder="Yasuo" /></label>
-        <label><span>Partner</span><input name="partner" placeholder="Ahri (required for synergy export)" /></label>
-        <label><span>Fuse</span><input name="fuse" placeholder="Optional Fuse" /></label>
-        <label><span>Timestamp</span><input name="timestamp" type="datetime-local" value="${localTimestamp}" /></label>
+        <label class="vault-field-wide"><span>Match</span><input name="match" required placeholder="Sajam Slam Dunk - Winners Semis Game 1" /></label>
+        <label><span>Team 1</span><input name="teamA" placeholder="Cloud805: Yasuo + Blitzcrank" /></label>
+        <label><span>Team 2</span><input name="teamB" placeholder="Redditto/Inzem: Teemo + Ahri" /></label>
+        <label><span>Timestamp</span><input name="timestamp" placeholder="3:10:15 or 2026-06-22 18:30" /></label>
         ${selectMarkup("Source", "sourceType", sourceTypes.map((item) => [item, item]), sourceTypes[0], false)}
         ${selectMarkup("Confidence", "confidence", confidenceLevels.map((item) => [item, item]), "Medium", false)}
         <label class="vault-field-wide"><span>Source Link</span><input name="sourceLink" type="url" placeholder="https://..." /></label>
-        <label class="vault-field-wide"><span>Notes</span><textarea name="notes" rows="4" required placeholder="What was shown, claimed, or tested? Keep the observation separate from your conclusion."></textarea></label>
+        <label class="vault-field-wide"><span>Observation</span><textarea name="observation" rows="4" required placeholder="What happened in the match? Keep this factual. Do not turn it into a final recommendation yet."></textarea></label>
+        <fieldset class="vault-targets vault-field-wide">
+          <legend>Possible extraction targets</legend>
+          ${extractionTargets.map((target) => `<label><input type="checkbox" name="extractionTargets" value="${escapeHtml(target)}" /> <span>${escapeHtml(target)}</span></label>`).join("")}
+        </fieldset>
         <label class="vault-field-wide"><span>Tags</span><input name="tags" placeholder="Pressure, Tag Routes, Anti-Zoner" /></label>
         <div class="vault-form-actions vault-field-wide">
-          <p>New entries start as drafts and stay in this browser until exported.</p>
-          <button class="platform-action" type="submit">Add Draft</button>
+          <p>Stage 1 stores the observation only. Stage 2 starts after review.</p>
+          <button class="platform-action" type="submit">Add Observation</button>
         </div>
       </form>
     `;
@@ -141,35 +151,35 @@
     count.textContent = `${records.length} of ${allRecords().length}`;
     results.innerHTML = records.length
       ? records.map(recordMarkup).join("")
-      : `<article class="research-record research-record--empty"><h2>No matching entries</h2><p>Adjust the search or filters.</p></article>`;
+      : `<article class="research-record research-record--empty"><h2>No matching observations</h2><p>Adjust the search or filters.</p></article>`;
   }
 
   function recordMarkup(record) {
-    const status = statuses.find(([value]) => value === record.verificationStatus)?.[1] || "Draft";
+    const status = reviewStatuses.find(([value]) => value === record.reviewStatus)?.[1] || "Raw Observation";
     const sourceLink = safeUrl(record.sourceLink);
-    const canExport = record.verificationStatus === "approved" && record.character && record.partner;
-    const context = [record.partner && `Partner: ${record.partner}`, record.fuse && `Fuse: ${record.fuse}`].filter(Boolean);
+    const canExport = record.reviewStatus === "approved";
     return `
       <article class="research-record">
         <div class="research-record__header">
-          <div><span>${escapeHtml(record.sourceType)}</span><h2>${escapeHtml(record.character)}</h2></div>
-          <strong class="vault-verification vault-verification--${escapeHtml(record.verificationStatus)}">${escapeHtml(status)}</strong>
+          <div><span>${escapeHtml(record.sourceType)}</span><h2>${escapeHtml(record.match)}</h2></div>
+          <strong class="vault-verification vault-verification--${escapeHtml(record.reviewStatus)}">${escapeHtml(status)}</strong>
         </div>
-        ${context.length ? `<div class="research-record__context">${context.map((item) => `<strong>${escapeHtml(item)}</strong>`).join("")}</div>` : ""}
-        <p>${escapeHtml(record.notes)}</p>
+        ${record.teams.length ? `<div class="research-record__context">${record.teams.map((team) => `<strong>${escapeHtml(team)}</strong>`).join("")}</div>` : ""}
+        <p>${escapeHtml(record.observation)}</p>
+        ${record.extractionTargets.length ? `<div class="vault-target-chipset">${record.extractionTargets.map((target) => `<span>${escapeHtml(target)}</span>`).join("")}</div>` : ""}
         <div class="research-tags">${record.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
         <dl class="research-record__meta">
-          <div><dt>Timestamp</dt><dd>${escapeHtml(formatTimestamp(record.timestamp))}</dd></div>
+          <div><dt>Timestamp</dt><dd>${escapeHtml(record.timestamp || "Not recorded")}</dd></div>
           <div><dt>Confidence</dt><dd>${escapeHtml(record.confidence)}</dd></div>
         </dl>
         <div class="vault-review-actions">
-          ${record.verificationStatus === "draft" ? `<button type="button" data-vault-stage="needs-review" data-record-id="${escapeHtml(record.id)}">Send to Review</button>` : ""}
-          ${record.verificationStatus === "needs-review" ? `<button type="button" data-vault-stage="draft" data-record-id="${escapeHtml(record.id)}">Return to Draft</button><button type="button" data-vault-stage="approved" data-record-id="${escapeHtml(record.id)}">Approve</button>` : ""}
-          ${record.verificationStatus === "approved" ? `<button type="button" data-vault-stage="needs-review" data-record-id="${escapeHtml(record.id)}">Reopen Review</button>` : ""}
-          ${canExport ? `<button type="button" data-vault-export-pair="${escapeHtml(record.id)}">Export Pair JSON</button>` : ""}
+          ${record.reviewStatus === "observation" ? `<button type="button" data-vault-stage="needs-review" data-record-id="${escapeHtml(record.id)}">Send to Review</button>` : ""}
+          ${record.reviewStatus === "needs-review" ? `<button type="button" data-vault-stage="observation" data-record-id="${escapeHtml(record.id)}">Return to Observation</button><button type="button" data-vault-stage="approved" data-record-id="${escapeHtml(record.id)}">Approve for Extraction</button>` : ""}
+          ${record.reviewStatus === "approved" ? `<button type="button" data-vault-stage="needs-review" data-record-id="${escapeHtml(record.id)}">Reopen Review</button>` : ""}
+          ${canExport ? `<button type="button" data-vault-export-extraction="${escapeHtml(record.id)}">Export Extraction JSON</button>` : ""}
         </div>
         <footer class="vault-record-footer">
-          <span>${record.local ? "Local entry" : "Seed entry"} · ${escapeHtml(record.updatedAt || record.createdAt || "Date pending")}</span>
+          <span>${record.local ? "Local observation" : "Seed observation"} · ${escapeHtml(record.updatedAt || record.createdAt || "Date pending")}</span>
           ${sourceLink ? `<a href="${escapeHtml(sourceLink)}" target="_blank" rel="noreferrer">Open source</a>` : `<span class="research-link-pending">Link pending</span>`}
         </footer>
       </article>
@@ -179,11 +189,12 @@
   function filteredRecords() {
     const query = state.filters.query.trim().toLowerCase();
     return allRecords().filter((record) => {
-      const haystack = [record.character, record.partner, record.fuse, record.sourceType, record.notes, ...record.tags].join(" ").toLowerCase();
+      const haystack = [record.match, ...record.teams, record.sourceType, record.observation, ...record.extractionTargets, ...record.tags].join(" ").toLowerCase();
       return (!query || haystack.includes(query))
         && (state.filters.source === "all" || record.sourceType === state.filters.source)
-        && (state.filters.status === "all" || record.verificationStatus === state.filters.status)
+        && (state.filters.review === "all" || record.reviewStatus === state.filters.review)
         && (state.filters.confidence === "all" || record.confidence === state.filters.confidence)
+        && (state.filters.target === "all" || record.extractionTargets.includes(state.filters.target))
         && (state.filters.tag === "all" || record.tags.includes(state.filters.tag));
     });
   }
@@ -196,24 +207,57 @@
     return [...new Set(records.flatMap((record) => record.tags))].sort((a, b) => a.localeCompare(b));
   }
 
-  function normalizeRecord(record, local = false) {
-    const legacyStatus = record.verificationStatus === "verified" ? "approved" : record.verificationStatus === "unverified" ? "draft" : record.verificationStatus;
+  function normalizeObservation(record, local = false) {
+    const reviewStatus = normalizeReviewStatus(record.reviewStatus || record.verificationStatus);
+    const teams = normalizeTeams(record);
     return {
       id: String(record.id || `research-${Date.now()}`),
-      character: String(record.character || "Unassigned").trim(),
-      partner: String(record.partner || "").trim(),
-      fuse: String(record.fuse || "").trim(),
+      match: String(record.match || record.topic || record.character || "Unassigned Match").trim(),
+      teams,
+      timestamp: String(record.timestamp || record.createdAt || "").trim(),
+      observation: String(record.observation || record.notes || "").trim(),
+      extractionTargets: normalizeExtractionTargets(record.extractionTargets || record.targetTypes || inferTargets(record)),
       sourceType: String(record.sourceType || record.source || "Personal Notes").trim(),
       sourceLink: String(record.sourceLink || record.link || "").trim(),
-      timestamp: String(record.timestamp || record.createdAt || "").trim(),
-      notes: String(record.notes || "").trim(),
       tags: normalizeTags(record.tags),
       confidence: confidenceLevels.includes(record.confidence) ? record.confidence : "Medium",
-      verificationStatus: statuses.some(([value]) => value === legacyStatus) ? legacyStatus : "draft",
+      reviewStatus,
       createdAt: record.createdAt || "",
       updatedAt: record.updatedAt || record.createdAt || "",
       local,
     };
+  }
+
+  function normalizeReviewStatus(value) {
+    if (value === "approved" || value === "verified") return "approved";
+    if (value === "needs-review") return "needs-review";
+    return "observation";
+  }
+
+  function normalizeTeams(record) {
+    const values = Array.isArray(record.teams) ? record.teams : [
+      record.teamA,
+      record.teamB,
+      record.team,
+      [record.character, record.partner].filter(Boolean).join(" + "),
+    ];
+    return [...new Set(values.map((team) => String(team || "").trim()).filter(Boolean))];
+  }
+
+  function inferTargets(record) {
+    const tags = normalizeTags(record.tags).join(" ").toLowerCase();
+    const targets = [];
+    if (record.partner || tags.includes("synergy") || tags.includes("duo")) targets.push("Synergy Files");
+    if (record.fuse || tags.includes("fuse")) targets.push("Fuse Notes");
+    if (tags.includes("route")) targets.push("Route Entries");
+    if (tags.includes("matchup") || tags.includes("anti-")) targets.push("Matchup Notes");
+    if (record.character || tags.includes("character")) targets.push("Character Notes");
+    return targets;
+  }
+
+  function normalizeExtractionTargets(value) {
+    const values = Array.isArray(value) ? value : String(value || "").split(",");
+    return [...new Set(values.map((item) => item.trim()).filter((item) => extractionTargets.includes(item)))];
   }
 
   function normalizeTags(value) {
@@ -230,17 +274,15 @@
     }
   }
 
-  function formatTimestamp(value) {
-    if (!value) return "Not recorded";
-    const date = new Date(value);
-    return Number.isNaN(date.getTime()) ? value : date.toLocaleString([], { dateStyle: "medium", timeStyle: "short" });
-  }
-
   function loadLocalRecords() {
     try {
       const current = localStorage.getItem(storageKey);
-      const legacy = localStorage.getItem(legacyStorageKey);
-      return (JSON.parse(current || legacy || "[]") || []).map((record) => normalizeRecord(record, true));
+      if (current) return (JSON.parse(current) || []).map((record) => normalizeObservation(record, true));
+      for (const key of legacyStorageKeys) {
+        const legacy = localStorage.getItem(key);
+        if (legacy) return (JSON.parse(legacy) || []).map((record) => normalizeObservation(record, true));
+      }
+      return [];
     } catch {
       return [];
     }
@@ -258,30 +300,30 @@
   function addRecord(form) {
     const values = new FormData(form);
     const today = new Date().toISOString().slice(0, 10);
-    const record = normalizeRecord({
+    const record = normalizeObservation({
       id: `local-${Date.now()}`,
-      character: values.get("character"),
-      partner: values.get("partner"),
-      fuse: values.get("fuse"),
+      match: values.get("match"),
+      teams: [values.get("teamA"), values.get("teamB")].filter(Boolean),
       timestamp: values.get("timestamp"),
       sourceType: values.get("sourceType"),
       sourceLink: values.get("sourceLink"),
-      notes: values.get("notes"),
+      observation: values.get("observation"),
+      extractionTargets: values.getAll("extractionTargets"),
       tags: values.get("tags"),
       confidence: values.get("confidence"),
-      verificationStatus: "draft",
+      reviewStatus: "observation",
       createdAt: today,
       updatedAt: today,
     }, true);
     state.localRecords.unshift(record);
-    if (!saveLocalRecords()) state.error = "This browser could not save the local entry.";
+    if (!saveLocalRecords()) state.error = "This browser could not save the local observation.";
     rerender();
   }
 
-  function setStage(id, verificationStatus) {
+  function setStage(id, reviewStatus) {
     const source = allRecords().find((record) => record.id === id);
     if (!source) return;
-    const next = normalizeRecord({ ...source, verificationStatus, updatedAt: new Date().toISOString().slice(0, 10) }, true);
+    const next = normalizeObservation({ ...source, reviewStatus, updatedAt: new Date().toISOString().slice(0, 10) }, true);
     state.localRecords = [next, ...state.localRecords.filter((record) => record.id !== id)];
     if (!saveLocalRecords()) state.error = "This browser could not save the review change.";
     rerender();
@@ -289,62 +331,66 @@
 
   function exportRecords() {
     downloadJson("2xko-research-vault.json", {
-      version: 3,
+      version: 4,
+      workflow: "Video -> Observation -> Research Vault -> Review -> Synergy Database",
       updatedAt: new Date().toISOString(),
       records: allRecords().map(({ local, ...record }) => record),
     });
   }
 
-  function exportableRecords() {
-    return allRecords().filter((record) => record.verificationStatus === "approved" && record.character && record.partner);
+  function approvedObservations() {
+    return allRecords().filter((record) => record.reviewStatus === "approved");
   }
 
-  function synergyRecord(records) {
-    const team = [...new Set(records.flatMap((record) => [slugify(record.character), slugify(record.partner)]))].sort();
+  function extractionCandidate(record) {
     return {
-      team,
-      rating: null,
-      difficulty: null,
-      playstyles: [],
-      strengths: [],
-      weaknesses: [],
-      recommendedFuses: [...new Set(records.map((record) => record.fuse).filter(Boolean))],
-      routes: [],
-      notes: [...new Set(records.map((record) => record.notes).filter(Boolean))],
-      sources: records.map((record) => ({
-        researchId: record.id,
+      observationId: record.id,
+      reviewStatus: record.reviewStatus,
+      match: record.match,
+      teams: record.teams,
+      timestamp: record.timestamp,
+      observation: record.observation,
+      tags: record.tags,
+      confidence: record.confidence,
+      extractionTargets: record.extractionTargets,
+      source: {
         type: record.sourceType,
         link: record.sourceLink,
-        timestamp: record.timestamp,
-        confidence: record.confidence,
-        tags: record.tags,
-      })),
+      },
+      extracted: {
+        characterNotes: [],
+        synergyFiles: [],
+        routeEntries: [],
+        fuseNotes: [],
+        matchupNotes: [],
+      },
       verified: false,
     };
   }
 
-  function exportPair(id) {
-    const selected = allRecords().find((record) => record.id === id);
+  function exportExtraction(id) {
+    const selected = allRecords().find((record) => record.id === id && record.reviewStatus === "approved");
     if (!selected) return;
-    const pairId = pairSlug(selected);
-    const records = exportableRecords().filter((record) => pairSlug(record) === pairId);
-    downloadJson(`${pairId}.json`, synergyRecord(records));
+    downloadJson(`${slugify(selected.match || selected.id)}-extraction.json`, extractionCandidate(selected));
   }
 
-  function exportSynergies() {
-    const grouped = Object.groupBy
-      ? Object.groupBy(exportableRecords(), pairSlug)
-      : exportableRecords().reduce((groups, record) => ({ ...groups, [pairSlug(record)]: [...(groups[pairSlug(record)] || []), record] }), {});
-    const files = Object.entries(grouped).map(([id, records]) => ({ file: `${id}.json`, data: synergyRecord(records) }));
-    downloadJson("2xko-approved-synergy-import.json", { version: 1, generatedAt: new Date().toISOString(), files });
-  }
-
-  function pairSlug(record) {
-    return [slugify(record.character), slugify(record.partner)].sort().join("-");
+  function exportExtractions() {
+    downloadJson("2xko-approved-extraction-candidates.json", {
+      version: 1,
+      generatedAt: new Date().toISOString(),
+      workflow: "Reviewed observations only. Merge manually into character notes, synergies, routes, Fuses, or matchups.",
+      schemas: {
+        researchEntry: "/public/data/fg-lab/schemas/research-entry.json",
+        synergyEntry: "/public/data/fg-lab/schemas/synergy-entry.json",
+        routeEntry: "/public/data/fg-lab/schemas/route-entry.json",
+        matchupEntry: "/public/data/fg-lab/schemas/matchup-entry.json",
+      },
+      observations: approvedObservations().map(extractionCandidate),
+    });
   }
 
   function slugify(value) {
-    return String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    return String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "observation";
   }
 
   function downloadJson(filename, payload) {
@@ -379,9 +425,9 @@
   document.addEventListener("click", (event) => {
     const stageButton = event.target.closest("[data-vault-stage]");
     if (stageButton) return setStage(stageButton.dataset.recordId, stageButton.dataset.vaultStage);
-    const pairButton = event.target.closest("[data-vault-export-pair]");
-    if (pairButton) return exportPair(pairButton.dataset.vaultExportPair);
-    if (event.target.closest("[data-vault-export-synergies]")) return exportSynergies();
+    const extractionButton = event.target.closest("[data-vault-export-extraction]");
+    if (extractionButton) return exportExtraction(extractionButton.dataset.vaultExportExtraction);
+    if (event.target.closest("[data-vault-export-extractions]")) return exportExtractions();
     if (event.target.closest("[data-vault-export]")) exportRecords();
   });
 

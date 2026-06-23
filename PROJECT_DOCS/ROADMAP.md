@@ -1,6 +1,6 @@
 # FG Lab Roadmap
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 This folder is the project planning source of truth. Future planning should use these docs instead of relying on chat history.
 
@@ -64,6 +64,8 @@ Use `TASKS.md` as the active project work queue.
 
 ## Completed
 
+- Two-stage 2XKO Research Vault workflow that separates raw match observations from reviewed knowledge extraction.
+- Reusable JSON schemas for research observations, synergy entries, route entries, and matchup entries.
 - Local Research Import Workflow from source capture through review, approval, and synergy JSON export.
 - Research Entry schema covering timestamp, character pair, Fuse, tags, notes, source, and confidence.
 - Generated 2XKO Synergy Database covering all 105 unique roster pairings.
@@ -108,7 +110,7 @@ Use `TASKS.md` as the active project work queue.
 
 ## In Progress
 
-- 2XKO research collection and source verification.
+- 2XKO research collection and source verification using the two-stage observation/extraction workflow.
 - Character Modal.
 - Better Filters.
 - Admin Inline Editing.
@@ -210,7 +212,8 @@ The DBFZ Lab continues evolving from a simple Team Builder into a DBFZ companion
 - [x] Decision-support data foundation.
 - [x] Character intelligence source files.
 - [x] Complete placeholder synergy pairing database.
-- [x] Local research capture, review, approval, and synergy export workflow.
+- [x] Local research capture, review, approval, and extraction export workflow.
+- [x] Raw observation schema and reusable future database entry schemas.
 - [x] Mock character recommendation flow.
 - [x] Ranked duo recommendation prototype.
 - [ ] Fuse explanations.

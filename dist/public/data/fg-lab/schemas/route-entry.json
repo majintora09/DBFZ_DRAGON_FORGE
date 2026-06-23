@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fg-lab.local/schemas/route-entry.json",
+  "title": "FG Lab Route Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "gameId", "characters", "goal", "summary", "tags", "sources", "verified"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "gameId": { "type": "string", "minLength": 1 },
+    "characters": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "team": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "fuse": { "type": ["string", "null"] },
+    "goal": { "type": "string" },
+    "summary": { "type": "string" },
+    "difficulty": { "type": ["string", "null"] },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "verified": { "type": "boolean" }
+  }
+}

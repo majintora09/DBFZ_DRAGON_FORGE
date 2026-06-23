@@ -1,36 +1,82 @@
 {
-  "version": 3,
-  "updatedAt": "2026-06-22",
+  "version": 4,
+  "workflow": "Video -> Observation -> Research Vault -> Review -> Synergy Database",
+  "updatedAt": "2026-06-23",
   "records": [
     {
-      "id": "general-fuse-rules",
-      "character": "General Systems",
-      "partner": "",
-      "fuse": "",
-      "sourceType": "Personal Notes",
-      "sourceLink": "",
-      "timestamp": "2026-06-22",
-      "notes": "Document confirmed Fuse behavior and tag rules before converting them into recommendations.",
-      "tags": ["Fuses", "Tag System"],
+      "id": "sajam-slam-ahri-teemo-pebble-cover",
+      "match": "Sajam Slam Dunk - Elite Bracket Winners Semis Game 1",
+      "teams": [
+        "Cloud805: Yasuo + Blitzcrank",
+        "Redditto/Inzem: Teemo + Ahri"
+      ],
+      "timestamp": "3:08:40",
+      "observation": "Teemo pebbles covered Ahri after a whiffed assist call, turning what looked punishable into a safer approach and allowing the team to keep playing forward.",
+      "extractionTargets": [
+        "Synergy Files",
+        "Fuse Notes"
+      ],
+      "sourceType": "YouTube",
+      "sourceLink": "https://youtu.be/8wVRr-LqQ4Y?si=1hr-coWmPZZaRGI6&t=11320",
+      "tags": [
+        "Assist Cover",
+        "Pressure",
+        "Neutral"
+      ],
       "confidence": "Medium",
-      "verificationStatus": "needs-review",
-      "createdAt": "2026-06-22",
-      "updatedAt": "2026-06-22"
+      "reviewStatus": "needs-review",
+      "createdAt": "2026-06-23",
+      "updatedAt": "2026-06-23"
     },
     {
-      "id": "tournament-duo-patterns",
-      "character": "Tournament Roster",
-      "partner": "",
-      "fuse": "",
-      "sourceType": "Tournament",
-      "sourceLink": "",
-      "timestamp": "2026-06-22",
-      "notes": "Track stable duo patterns and common assist choices once public footage is reviewed.",
-      "tags": ["Duos", "Match Footage"],
+      "id": "sajam-slam-yasuo-blitz-tag-oki",
+      "match": "Sajam Slam Dunk - Elite Bracket Winners Semis Game 1",
+      "teams": [
+        "Cloud805: Yasuo + Blitzcrank",
+        "Redditto/Inzem: Teemo + Ahri"
+      ],
+      "timestamp": "3:09:40",
+      "observation": "After a perfect parry, Blitzcrank shortened the combo and still routed into a tag switch, letting Yasuo set up corner windwall wakeup pressure with air S1 into air S2 finisher.",
+      "extractionTargets": [
+        "Route Entries",
+        "Synergy Files"
+      ],
+      "sourceType": "YouTube",
+      "sourceLink": "https://youtu.be/8wVRr-LqQ4Y?si=1hr-coWmPZZaRGI6&t=11320",
+      "tags": [
+        "Tag Routes",
+        "Oki",
+        "Corner"
+      ],
+      "confidence": "Medium",
+      "reviewStatus": "needs-review",
+      "createdAt": "2026-06-23",
+      "updatedAt": "2026-06-23"
+    },
+    {
+      "id": "sajam-slam-ahri-teemo-mid-screen-mix",
+      "match": "Sajam Slam Dunk - Elite Bracket Winners Semis Game 1",
+      "teams": [
+        "Cloud805: Yasuo + Blitzcrank",
+        "Redditto/Inzem: Teemo + Ahri"
+      ],
+      "timestamp": "3:10:15",
+      "observation": "Ahri used Teemo assist into tag and a held special sequence to create a midscreen mixup situation after pressure was already established.",
+      "extractionTargets": [
+        "Synergy Files",
+        "Route Entries"
+      ],
+      "sourceType": "YouTube",
+      "sourceLink": "https://youtu.be/8wVRr-LqQ4Y?si=1hr-coWmPZZaRGI6&t=11320",
+      "tags": [
+        "Mix",
+        "Tag Routes",
+        "Pressure"
+      ],
       "confidence": "Low",
-      "verificationStatus": "draft",
-      "createdAt": "2026-06-22",
-      "updatedAt": "2026-06-22"
+      "reviewStatus": "observation",
+      "createdAt": "2026-06-23",
+      "updatedAt": "2026-06-23"
     }
   ]
 }

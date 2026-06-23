@@ -1,6 +1,6 @@
 # FG Lab Tasks
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 This file is the active project work queue. Use it with `TASK_REQUEST.md` before starting implementation.
 
@@ -23,7 +23,7 @@ Current critical work.
 - Expand the completed "Who pairs with my character?" prototype into team-weakness and easy-team decision flows.
 - Keep recommendations, reasoning, tradeoffs, and next actions more prominent than raw reference data.
 - Keep the shared decision contract and 2XKO collections small, modular, and source-backed.
-- Use the completed Research Import Workflow to capture and approve 2XKO evidence before updating recommendations.
+- Use the completed two-stage Research Vault workflow to capture raw match observations, review them, and only then extract knowledge into recommendation data.
 
 ## Medium Priority
 
@@ -39,7 +39,7 @@ Important but not blocking.
 - Maintain frame data readability where it supports decisions, without expanding FG Lab into a frame-data wiki.
 - Keep DBZ Broly tagged as Grappler.
 - Keep character page clicks separate from Team Builder modal behavior.
-- Merge approved Research Vault exports into the canonical 2XKO synergy files after human review.
+- Convert approved Research Vault extraction candidates into canonical 2XKO character notes, synergy files, route entries, Fuse notes, or matchup notes after human review.
 - Replace TODO fields in the 15 2XKO intelligence records only after relevant Research Vault evidence is verified.
 - Populate the 105 2XKO synergy files incrementally from verified Research Vault sources.
 - Replace Synergy Engine mock records with reviewed recommendations before presenting them as gameplay guidance.

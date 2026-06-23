@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-23 - Two-Stage Research Vault
+
+- Updated the Research Vault workflow from direct pair evidence export into Raw Observation -> Review -> Knowledge Extraction.
+- Replaced character/partner-first capture with match, teams, timestamp, observation, tags, confidence, source, and extraction target fields.
+- Added filters for extraction targets alongside source, review stage, confidence, tag, and search.
+- Changed approved exports into extraction candidates instead of direct synergy files.
+- Added reusable JSON schemas for research observations, synergy entries, route entries, and matchup entries.
+- Updated seed 2XKO research data into concrete match observations from the Sajam Slam source.
+
 ## 2026-06-22 - Research Import Workflow
 
 - Expanded Research Entries with timestamp, partner, Fuse, confidence, and explicit review stage.

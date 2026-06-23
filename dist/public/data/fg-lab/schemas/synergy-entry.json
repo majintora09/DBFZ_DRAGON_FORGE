@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fg-lab.local/schemas/synergy-entry.json",
+  "title": "FG Lab Synergy Entry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["team", "rating", "difficulty", "playstyles", "strengths", "weaknesses", "recommendedFuses", "routes", "notes", "sources", "verified"],
+  "properties": {
+    "team": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "type": "string" }
+    },
+    "rating": { "type": ["number", "null"], "minimum": 1, "maximum": 10 },
+    "difficulty": { "type": ["string", "null"] },
+    "playstyles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "strengths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "weaknesses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommendedFuses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "routes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "verified": { "type": "boolean" }
+  }
+}

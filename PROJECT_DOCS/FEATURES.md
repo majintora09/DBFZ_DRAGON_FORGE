@@ -1,6 +1,6 @@
 # FG Lab Features
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 This file tracks implemented and active features. Do not remove implementation details when expanding this doc.
 
@@ -122,20 +122,29 @@ Status: Internal Collection Tool
 Implemented:
 
 - Direct internal route at `/games/2xko/research-vault`.
-- Research Entry fields for Source, Timestamp, Character, Partner, Fuse, Tags, Notes, and Confidence.
-- Quick Add form with automatic local timestamp and Draft status.
+- Two-stage research workflow: Raw Observation -> Review -> Knowledge Extraction.
+- Raw Observation fields for Match, Teams, Timestamp, Observation, Tags, and Confidence.
+- Supporting source fields for Source Type and Source Link.
+- Extraction target hints for Character Notes, Synergy Files, Route Entries, Fuse Notes, and Matchup Notes.
+- Quick Add form with Raw Observation status.
 - Local browser persistence for working records.
-- Migration support for records saved by the original Vault storage schema.
-- Search across characters, partners, Fuses, sources, notes, and tags.
-- Combined Source, Review Stage, Confidence, and Tag filters.
-- Explicit Draft -> Needs Review -> Approved workflow controls.
+- Migration support for records saved by the original Vault storage schemas.
+- Search across matches, teams, sources, observations, extraction targets, and tags.
+- Combined Source, Review Stage, Confidence, Extraction Target, and Tag filters.
+- Explicit Raw Observation -> Needs Review -> Approved for Extraction controls.
 - Source links, seed/local origin, and updated-date tracking.
 - Full Vault JSON export for backup and repository updates.
-- Approved-only bulk synergy export grouped by canonical character pair.
-- Per-pair synergy JSON export using the existing synergy database schema.
-- Exported evidence preserves source, timestamp, confidence, tags, notes, and Fuse observations while leaving ratings unverified.
+- Approved-only extraction export for later manual conversion.
+- Per-observation extraction JSON export.
+- Exported candidates preserve source, match, teams, timestamp, confidence, tags, and observation text.
+- Exported candidates keep Character Notes, Synergy Files, Route Entries, Fuse Notes, and Matchup Notes empty until reviewed humans fill them.
 - Responsive two-column and one-column layouts.
 - Dedicated `research-vault.js` and `research-vault.css` modules.
+- Reusable JSON schemas under `public/data/fg-lab/schemas`:
+  - `research-entry.json`
+  - `synergy-entry.json`
+  - `route-entry.json`
+  - `matchup-entry.json`
 
 The vault is removed from public 2XKO navigation. Static hosting cannot provide real authentication, so the direct route is hidden rather than secured.
 

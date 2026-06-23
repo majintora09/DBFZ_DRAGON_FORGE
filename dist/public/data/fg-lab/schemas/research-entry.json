@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fg-lab.local/schemas/research-entry.json",
+  "title": "FG Lab Research Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "match", "teams", "timestamp", "observation", "tags", "confidence", "reviewStatus"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "match": { "type": "string", "minLength": 1 },
+    "teams": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "timestamp": { "type": "string" },
+    "observation": { "type": "string", "minLength": 1 },
+    "extractionTargets": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Character Notes", "Synergy Files", "Route Entries", "Fuse Notes", "Matchup Notes"]
+      }
+    },
+    "sourceType": {
+      "type": "string",
+      "enum": ["YouTube", "Discord", "Stream", "Tournament", "Personal Notes"]
+    },
+    "sourceLink": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 32 }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High"]
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": ["observation", "needs-review", "approved"]
+    },
+    "createdAt": { "type": "string" },
+    "updatedAt": { "type": "string" }
+  }
+}
