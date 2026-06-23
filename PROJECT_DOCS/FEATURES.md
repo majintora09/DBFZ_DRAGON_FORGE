@@ -52,6 +52,8 @@ Implemented:
 - Existing DBFZ app preserved as the active first game portal.
 - Legacy DBFZ anchors route to the corresponding DBFZ portal views.
 - 2XKO early-build portal with Characters, Duo Builder, Fuses, Synergies, Routes, and Research Vault sections.
+- 2XKO overview now starts with "I play..." instead of a module dashboard.
+- 2XKO champion decision pages exist at `/games/2xko/characters/{champion}`.
 - Lightweight 2XKO Research Vault JSON structure.
 - Mobile-stacked game cards, roadmap phases, 2XKO navigation, and research records.
 
@@ -150,7 +152,7 @@ The vault is removed from public 2XKO navigation. Static hosting cannot provide 
 
 ## 2XKO Character Intelligence
 
-Status: Source Structure Ready
+Status: Source Structure Ready / Decision Pages Active
 
 Fifteen small source records live under `data/games/2xko`:
 
@@ -168,6 +170,22 @@ Each record follows:
 - Decision questions.
 
 Unverified conclusions are TODO-marked and recommendation arrays remain empty. The files contain no move lists, commands, controls, or frame data. `data/games.js` exposes the complete 15-character intelligence registry for future loaders.
+
+Implemented decision-page behavior:
+
+- `/games/2xko` asks "I play..." and shows the full champion selector.
+- `/games/2xko/characters/{champion}` renders a player-first decision page.
+- Character pages show:
+  - Who is this character?
+  - What does this character want?
+  - Who should I pair them with?
+  - What Fuses should I consider?
+  - What routes should I learn first?
+  - Research status.
+  - Latest observations from the Research Vault.
+- Partner and Fuse sections are split into Verified, Potential, and Research buckets.
+- Unverified mock data is kept in Potential buckets rather than presented as final guidance.
+- Static build creates physical pages for all champion decision routes.
 
 ## 2XKO Synergy Database
 

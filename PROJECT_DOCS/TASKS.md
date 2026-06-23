@@ -24,6 +24,7 @@ Current critical work.
 - Keep recommendations, reasoning, tradeoffs, and next actions more prominent than raw reference data.
 - Keep the shared decision contract and 2XKO collections small, modular, and source-backed.
 - Use the completed two-stage Research Vault workflow to capture raw match observations, review them, and only then extract knowledge into recommendation data.
+- Keep the 2XKO experience centered on "I play X. What should I do next?" rather than module dashboards.
 
 ## Medium Priority
 
@@ -45,6 +46,7 @@ Important but not blocking.
 - Replace Synergy Engine mock records with reviewed recommendations before presenting them as gameplay guidance.
 - Populate the completed 2XKO character, Fuse, synergy, route, matchup, and community-note schemas from reviewed sources.
 - Build 2XKO partner and Fuse recommendation logic only after the supporting research is verified.
+- Expand the 2XKO character decision pages with reviewed partner, Fuse, route, and matchup content as research is approved.
 - Organize route discovery by player goal, such as damage, ease, consistency, side switch, or tag access.
 - Organize matchup notes around team problems, counterplay choices, and actionable adjustments.
 - Tag community tech by the decision or problem it helps solve.

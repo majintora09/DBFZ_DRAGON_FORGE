@@ -5,35 +5,37 @@ Completed on 2026-06-23.
 
 ## Objective
 
-Update the Research Vault into a two-stage workflow that separates raw match observations from reviewed knowledge extraction.
+Redesign the 2XKO player experience around "I play X. What should I do next?" instead of exposing architecture/modules.
 
 ## Scope
 
-- Stage 1 stores raw match observations with match, teams, timestamp, observation, tags, and confidence.
-- Stage 2 marks reviewed observations as extraction candidates for Character Notes, Synergy Files, Route Entries, Fuse Notes, or Matchup Notes.
-- Update the Vault UI copy, form fields, filters, review controls, and exports to match the two-stage workflow.
-- Add reusable JSON schemas for research, synergy, route, and matchup entries.
-- Keep data local JSON only.
+- Replace the 2XKO overview module grid with an "I play..." champion selector.
+- Use all currently tracked 2XKO champions.
+- Clicking a champion opens a character decision page.
+- Character pages show identity, playstyle, difficulty, archetypes, needs, likes, partner buckets, Fuse buckets, routes, research status, and latest observations.
+- Pull latest observations from Research Vault records.
+- Keep DBFZ stable and do not rebuild the whole app.
 
 ## Out Of Scope
 
 - No AI APIs or generated gameplay conclusions.
 - No external services, database, authentication system, or production server.
-- No direct writing into synergy files from raw observations.
-- No automatic overwrite of repository synergy, route, Fuse, matchup, or character-note files from the browser.
-- No public navigation link for the internal Research Vault.
+- No wiki-style 2XKO pages.
+- No frame data, command lists, or move lists.
+- No speculative verified recommendations.
+- No public Research Vault navigation.
 
 ## Success Criteria
 
-- Raw observations persist locally as JSON in browser storage and can be exported.
-- Existing v1/v2 local entries migrate into the new normalized observation schema.
-- Review stage changes persist locally.
-- Only reviewed/approved observations can be exported as extraction candidates.
-- Exports keep extracted Character Notes, Synergy Files, Route Entries, Fuse Notes, and Matchup Notes empty until manually filled.
-- Search and filters work across match, teams, source, review stage, confidence, tags, and extraction targets.
-- Reusable schemas exist for `research-entry.json`, `synergy-entry.json`, `route-entry.json`, and `matchup-entry.json`.
-- The Vault remains responsive and absent from public 2XKO navigation.
+- `/games/2xko` immediately asks the player who they play.
+- Champion selector includes Ahri, Akali, Blitzcrank, Braum, Caitlyn, Darius, Ekko, Illaoi, Jinx, Senna, Teemo, Thresh, Vi, Warwick, and Yasuo.
+- `/games/2xko/characters/{champion}` renders a decision page.
+- Character pages show Verified, Potential, and Research In Progress buckets for partners and Fuses.
+- Research status counts observations, verified synergies, verified routes, and community notes.
+- Latest observations render directly from Research Vault data.
+- Mobile layout stacks without horizontal overflow.
+- Static build includes physical character decision routes.
 
 ## Notes
 
-The browser cannot safely write into the repository. The Vault now exports reviewed extraction candidates, not final gameplay conclusions. A human should convert those candidates into canonical character notes, synergy files, routes, Fuse notes, or matchup notes.
+Unverified and mock records must be labeled as potential or research, never as verified gameplay conclusions.

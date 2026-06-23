@@ -119,6 +119,30 @@ Rules:
 - Promote evidence from Research Vault only after source and verification review.
 - Never add move lists, frame data, commands, controls, or general encyclopedia sections.
 
+## 2XKO Character Decision Page Format
+
+The 2XKO user flow should start from:
+
+- I play this character. What should I do next?
+
+Recommended page order:
+
+1. Who is this character?
+2. What does this character want?
+3. Who should I pair them with?
+4. What Fuses should I consider?
+5. What routes should I learn first?
+6. Research status.
+7. Latest observations.
+
+Rules:
+
+- Separate Verified, Potential, and Research In Progress recommendations.
+- Do not present mock or unreviewed research as verified.
+- Use Research Vault observations as evidence, not conclusions.
+- Show incomplete data as "Research in progress" instead of dumping TODO text.
+- Keep the page useful before all data is verified by showing what is known, what is potential, and what still needs review.
+
 ## 2XKO Synergy File Format
 
 Use one file per unique unordered pair.
@@ -258,6 +282,7 @@ Rules:
 - Contributors should suggest; Editors/Admins should publish.
 
 Keep descriptions short, structured and easy to scan.
+
 ## Research Entry Standard
 
 Research is evidence for later recommendations, not a recommendation by itself.

@@ -4,6 +4,7 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const output = path.join(root, "dist");
 const basePath = "/";
+const twoXkoCharacters = ["ahri", "akali", "blitzcrank", "braum", "caitlyn", "darius", "ekko", "illaoi", "jinx", "senna", "teemo", "thresh", "vi", "warwick", "yasuo"];
 const routes = [
   "/roadmap",
   "/games/dbfz",
@@ -22,6 +23,7 @@ const routes = [
   "/games/2xko/synergies",
   "/games/2xko/routes",
   "/games/2xko/research-vault",
+  ...twoXkoCharacters.map((id) => `/games/2xko/characters/${id}`),
 ];
 
 fs.rmSync(output, { recursive: true, force: true });

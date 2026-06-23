@@ -64,6 +64,7 @@ Use `TASKS.md` as the active project work queue.
 
 ## Completed
 
+- 2XKO decision-first homepage and champion decision pages built around "I play X. What should I do next?"
 - Two-stage 2XKO Research Vault workflow that separates raw match observations from reviewed knowledge extraction.
 - Reusable JSON schemas for research observations, synergy entries, route entries, and matchup entries.
 - Local Research Import Workflow from source capture through review, approval, and synergy JSON export.
@@ -216,6 +217,7 @@ The DBFZ Lab continues evolving from a simple Team Builder into a DBFZ companion
 - [x] Raw observation schema and reusable future database entry schemas.
 - [x] Mock character recommendation flow.
 - [x] Ranked duo recommendation prototype.
+- [x] Player-first 2XKO character selector and decision pages.
 - [ ] Fuse explanations.
 - [ ] Tag routes and matchup notes.
 

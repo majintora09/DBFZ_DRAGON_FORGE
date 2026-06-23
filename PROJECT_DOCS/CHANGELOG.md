@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-23 - 2XKO Player-First Decision Pages
+
+- Replaced the 2XKO overview module dashboard with an "I play..." champion selector.
+- Added decision pages for all 15 tracked 2XKO champions.
+- Added character page sections for identity, team needs, partners, Fuses, route priorities, research progress, and latest observations.
+- Split partner and Fuse output into Verified, Potential, and Research In Progress buckets.
+- Pulled latest character observations directly from Research Vault data.
+- Added physical static routes for `/games/2xko/characters/{champion}` pages.
+- Updated 2XKO route copy away from architecture/module language and toward player questions.
+
 ## 2026-06-23 - Two-Stage Research Vault
 
 - Updated the Research Vault workflow from direct pair evidence export into Raw Observation -> Review -> Knowledge Extraction.

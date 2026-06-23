@@ -17,7 +17,22 @@
     "/games/2xko/fuses",
     "/games/2xko/synergies",
     "/games/2xko/routes",
-    "/games/2xko/research-vault"
+    "/games/2xko/research-vault",
+    "/games/2xko/characters/ahri",
+    "/games/2xko/characters/akali",
+    "/games/2xko/characters/blitzcrank",
+    "/games/2xko/characters/braum",
+    "/games/2xko/characters/caitlyn",
+    "/games/2xko/characters/darius",
+    "/games/2xko/characters/ekko",
+    "/games/2xko/characters/illaoi",
+    "/games/2xko/characters/jinx",
+    "/games/2xko/characters/senna",
+    "/games/2xko/characters/teemo",
+    "/games/2xko/characters/thresh",
+    "/games/2xko/characters/vi",
+    "/games/2xko/characters/warwick",
+    "/games/2xko/characters/yasuo"
   ],
-  "generatedAt": "2026-06-23T03:28:53.291Z"
+  "generatedAt": "2026-06-23T03:46:12.507Z"
 }
