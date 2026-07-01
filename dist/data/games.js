@@ -47,6 +47,7 @@ window.FG_LAB_GAMES = [
       communityNotes: "community-notes.json",
       researchVault: "research-vault.json",
       knowledgeStore: "knowledge-store.json",
+      tournamentEvidence: "tournament-evidence.json",
     },
     pages: {
       overview: {
@@ -83,6 +84,11 @@ window.FG_LAB_GAMES = [
         title: "Knowledge Sources",
         eyebrow: "Admin Ingestion",
         summary: "Import transcripts and written sources, generate source-backed knowledge drafts, and keep raw evidence separate from extracted notes.",
+      },
+      "tournament-evidence": {
+        title: "Tournament Evidence",
+        eyebrow: "Admin Evidence",
+        summary: "Log timestamped match examples from tournaments without turning commentary transcripts into strategy claims.",
       },
       "research-vault": {
         title: "2XKO Research Vault",

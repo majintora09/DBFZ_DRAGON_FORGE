@@ -83,6 +83,7 @@
       ["Synergy Lab", "/games/2xko/synergies"],
       ["Routes", "/games/2xko/routes"],
       ["Knowledge Sources", "/games/2xko/knowledge-sources"],
+      ["Tournament Evidence", "/games/2xko/tournament-evidence"],
     ];
     twoXkoNav.innerHTML = routes.map(([label, route]) => `<a href="${deploymentPath(route)}" data-route="${route}">${label}</a>`).join("");
   }
@@ -186,6 +187,11 @@
       return;
     }
 
+    if (section === "tournament-evidence") {
+      window.FG_LAB_2XKO_TOURNAMENT_EVIDENCE?.render(twoXkoContent, page);
+      return;
+    }
+
     if (section === "overview") {
       renderTwoXkoOverview();
       return;
@@ -276,6 +282,7 @@
     const first = findTwoXkoCharacter(firstId);
     const second = findTwoXkoCharacter(secondId);
     const pairNotes = window.FG_LAB_2XKO_KNOWLEDGE?.recordsForPair?.(firstId, secondId) || [];
+    const tournamentEvidence = window.FG_LAB_2XKO_TOURNAMENT_EVIDENCE?.recordsForPair?.(firstId, secondId) || [];
     const observations = observationsForPair(first, second);
     const officialRecords = twoXkoDecisionState.synergies.filter((item) => {
       const ids = [item.characterId, item.partnerId].sort().join("|");
@@ -286,6 +293,7 @@
         ${toolHeroMarkup(page, "Synergy Lab", "Inspect a pair as a research file: what is known, what is only observed, and what still needs proof.", [
           ["Pair Notes", pairNotes.length],
           ["Observations", observations.length],
+          ["Tournament Examples", tournamentEvidence.length],
           ["Verified Synergies", officialRecords.filter((item) => item.verified).length],
         ])}
         <section class="tool-panel tool-panel--wide">
@@ -319,6 +327,7 @@
             </div>
           </article>
         </section>
+        ${tournamentEvidencePairMarkup(first, second, tournamentEvidence)}
       </section>
     `;
   }
@@ -486,6 +495,7 @@
         </section>
 
         ${sourceBackedCharacterKnowledgeMarkup(character)}
+        ${tournamentEvidenceCharacterMarkup(character)}
 
         <section class="decision-section decision-needs" aria-labelledby="needsTitle">
           <div class="decision-section-heading"><p class="eyebrow">Decision check</p><h2 id="needsTitle">What does this character want?</h2></div>
@@ -736,6 +746,8 @@
       twoXkoDecisionState.observations = (researchVault.records || []).map(normalizeObservation);
       window.FG_LAB_2XKO_KNOWLEDGE?.setCharacters(twoXkoDecisionState.characters);
       window.FG_LAB_2XKO_KNOWLEDGE?.load(twoXkoGame, twoXkoDecisionState.characters);
+      window.FG_LAB_2XKO_TOURNAMENT_EVIDENCE?.setCharacters(twoXkoDecisionState.characters);
+      window.FG_LAB_2XKO_TOURNAMENT_EVIDENCE?.load(twoXkoGame, twoXkoDecisionState.characters);
       twoXkoDecisionState.loaded = true;
       twoXkoDecisionState.error = "";
     } catch (error) {
@@ -933,6 +945,67 @@
     `;
   }
 
+  function tournamentEvidenceCharacterMarkup(character) {
+    const records = window.FG_LAB_2XKO_TOURNAMENT_EVIDENCE?.recordsForCharacter?.(character.id) || [];
+    return `
+      <section class="decision-section tournament-evidence-stack" aria-labelledby="tournamentEvidenceCharacterTitle">
+        <div class="decision-section-heading">
+          <p class="eyebrow">Tournament Evidence</p>
+          <h2 id="tournamentEvidenceCharacterTitle">Timestamped Examples</h2>
+        </div>
+        <div class="tournament-evidence-note-grid">
+          ${records.length ? records.slice(0, 6).map(tournamentEvidenceCompactMarkup).join("") : `<article class="tournament-evidence-empty"><strong>Research In Progress</strong><p>No timestamped tournament examples have been logged for ${escapeHtml(character.name)} yet.</p></article>`}
+        </div>
+      </section>
+    `;
+  }
+
+  function tournamentEvidencePairMarkup(first, second, records) {
+    return `
+      <section class="tool-panel tool-panel--wide tournament-evidence-stack" aria-labelledby="pairTournamentEvidenceTitle">
+        <div class="tool-panel-heading">
+          <p class="eyebrow">Tournament Evidence</p>
+          <h2 id="pairTournamentEvidenceTitle">${escapeHtml(pairName(first, second))} Examples</h2>
+        </div>
+        <div class="tournament-evidence-note-grid">
+          ${records.length ? records.slice(0, 6).map(tournamentEvidenceCompactMarkup).join("") : `<article class="tournament-evidence-empty"><strong>Research In Progress</strong><p>No tournament footage examples are tied to this duo yet.</p></article>`}
+        </div>
+      </section>
+    `;
+  }
+
+  function tournamentEvidenceCompactMarkup(record) {
+    return `
+      <details class="tournament-evidence-card tournament-evidence-card--compact">
+        <summary>
+          <span>${escapeHtml(titleCase(record.situationType || "example"))}</span>
+          <strong>${escapeHtml(record.shortNote || "Tournament example")}</strong>
+          <small>${escapeHtml(record.eventName || "Event pending")} · ${escapeHtml(record.timestamp || "Timestamp pending")}</small>
+        </summary>
+        <p>${escapeHtml(record.whyItMatters || "Why this matters is pending.")}</p>
+        <dl class="tournament-evidence-meta">
+          <div><dt>Players</dt><dd>${escapeHtml([record.player1, record.player2].filter(Boolean).join(" vs ") || "Players pending")}</dd></div>
+          <div><dt>Fuse Used</dt><dd>${escapeHtml(record.fuseUsed || "Fuse pending")}</dd></div>
+          <div><dt>Source</dt><dd>${record.youtubeUrl ? `<a href="${escapeHtml(timestampUrl(record.youtubeUrl, record.timestamp))}" target="_blank" rel="noreferrer">Open timestamp</a>` : "Source pending"}</dd></div>
+        </dl>
+      </details>
+    `;
+  }
+
+  function timestampUrl(url, timestamp) {
+    const cleanUrl = cleanText(url);
+    if (!cleanUrl) return "";
+    const seconds = String(timestamp || "").trim().split(":").map((part) => Number(part)).reduce((total, part) => Number.isNaN(part) ? 0 : total * 60 + part, 0);
+    if (!seconds) return cleanUrl;
+    try {
+      const parsed = new URL(cleanUrl);
+      parsed.searchParams.set("t", `${seconds}s`);
+      return parsed.toString();
+    } catch {
+      return cleanUrl;
+    }
+  }
+
   function sourceBackedNoteMarkup(note) {
     const source = note.sourceRefs?.[0] || {};
     return `
@@ -1087,6 +1160,9 @@
   window.FG_LAB_SYNERGY_ENGINE?.load(twoXkoGame);
   loadTwoXkoDecisionData(twoXkoGame);
   document.addEventListener("fg-lab:2xko-knowledge-updated", () => {
+    if (currentRoute().startsWith("/games/2xko")) renderTwoXkoPage(currentRoute());
+  });
+  document.addEventListener("fg-lab:2xko-tournament-evidence-updated", () => {
     if (currentRoute().startsWith("/games/2xko")) renderTwoXkoPage(currentRoute());
   });
   renderRoute();

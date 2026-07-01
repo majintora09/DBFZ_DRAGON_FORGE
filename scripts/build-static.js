@@ -24,14 +24,15 @@ const routes = [
   "/games/2xko/routes",
   "/games/2xko/research-vault",
   "/games/2xko/knowledge-sources",
+  "/games/2xko/tournament-evidence",
   ...twoXkoCharacters.map((id) => `/games/2xko/characters/${id}`),
 ];
 
 fs.rmSync(output, { recursive: true, force: true });
 fs.mkdirSync(output, { recursive: true });
 
-copyFiles(["styles.css", "research-vault.css", "app.js", "platform.js", "synergy-engine.js", "research-vault.js", "knowledge-ingestion.js", "_redirects"]);
-copyTree("data", "data", (source) => !source.endsWith(".md"));
+copyFiles(["styles.css", "research-vault.css", "app.js", "platform.js", "synergy-engine.js", "research-vault.js", "knowledge-ingestion.js", "tournament-evidence.js", "_redirects"]);
+copyTree("data", "data", (source) => !source.endsWith(".md") && !isLocalTwoXkoResearchNote(source));
 copyTree("assets/backgrounds", "assets/backgrounds");
 copyTree("assets/games", "assets/games");
 copyFiles(["assets/manifest.js"]);
@@ -89,6 +90,10 @@ function copyDirectory(source, destination, include) {
       fs.copyFileSync(nextSource, nextDestination);
     }
   }
+}
+
+function isLocalTwoXkoResearchNote(source) {
+  return source.includes(`${path.sep}data${path.sep}games${path.sep}2xko${path.sep}research${path.sep}`) && source.endsWith(".txt");
 }
 
 function writeFile(relativePath, content) {
